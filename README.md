@@ -10,14 +10,14 @@ Asistente de investigación con segundo cerebro y fuentes verificadas. Aplicaci�
 
 ## Qué hace
 
-- **Consulta en lenguaje natural, escrita o dictada.** La IA convierte la pregunta en una o dos búsquedas en inglés para [OpenAlex](https://openalex.org) (todas las disciplinas, solo trabajos con resumen).
+- **Consulta en lenguaje natural, escrita o dictada** (al terminar de hablar, la pregunta se envía sola). La IA convierte la pregunta en una o dos búsquedas en inglés para [OpenAlex](https://openalex.org) (todas las disciplinas, solo trabajos con resumen).
 - **Verifica cada DOI en [Crossref](https://www.crossref.org):** ✓ si existe y su título coincide; avisa si no existe o el título es otro. Los trabajos **retractados** (según OpenAlex) se marcan en rojo.
 - **Responde solo con los resúmenes recuperados.** Cada afirmación lleva una cita literal del resumen de su fuente y el **código** comprueba que la cita está: ✓ verificada, ⚠ no verificada. También detecta fuentes que la IA cite sin haberlas recibido y cifras que no aparecen en las fuentes.
-- **Segundo cerebro:** las fuentes se capturan como notas con su referencia y la cita verificada; las respuestas se guardan como ideas enlazadas a sus fuentes. Las notas se organizan con el método PARA (Proyectos, Áreas, Recursos, Archivo) y se enlazan escribiendo `[[Título]]`, con retroenlaces y enlaces rotos que se pueden crear con un clic.
+- **Segundo cerebro, con guardado automático (activado por defecto):** cada respuesta se guarda como idea enlazada a sus fuentes, y las fuentes con afirmaciones verificadas se capturan como notas con su referencia y la cita; lo no verificado no se guarda solo. Se puede desactivar y guardar a mano. Las notas se organizan con el método PARA (Proyectos, Áreas, Recursos, Archivo) y se enlazan escribiendo `[[Título]]`, con retroenlaces y enlaces rotos que se pueden crear con un clic.
 - **Conexiones con lo que ya sabes:** antes de preguntar, el código busca tus notas relacionadas; la IA indica si la evidencia las apoya, matiza, contradice o amplía.
 - **Grafo de conocimiento** animado de notas y enlaces.
-- **Sincronización con Google Drive para ordenador** (Chrome/Edge de escritorio): un único `sinapsia-cerebro.json` en la carpeta elegida, fusionado nota a nota (gana la modificación más reciente; los borrados se guardan como lápidas) y copia diaria (se conservan las 14 últimas). En otros navegadores, abrir y descargar el expediente a mano.
-- **Voz:** dictado de la pregunta y lectura de las respuestas en voz alta con las funciones del navegador.
+- **El cerebro, primero:** la portada empieza por elegir dónde vive. Con Google Drive para ordenador (Chrome/Edge de escritorio), se elige una carpeta dentro de «Mi unidad»; SinapsIA escribe allí `sinapsia-cerebro.json` y el cliente de Drive lo sube a la nube. En otro ordenador, eligiendo la misma carpeta, se tiene el mismo cerebro. El fichero se fusiona nota a nota (gana la modificación más reciente; los borrados se guardan como lápidas) y se hace una copia diaria (se conservan las 14 últimas). En otros navegadores, abrir y descargar el expediente a mano.
+- **Voz:** dictado de la pregunta (se envía sola al terminar de hablar) y lectura de las respuestas en voz alta con las funciones del navegador.
 - **Descargas:** bibliografía en CSV y bóveda Markdown en ZIP (se abre en Obsidian o Logseq), sin depender de ninguna librería externa.
 - **Ejemplo sin clave** en los tres idiomas, con fuentes ficticias marcadas como tales.
 
@@ -40,7 +40,7 @@ Con la propia clave de OpenAI, Google Gemini o Anthropic Claude, y una **clave g
 - La verificación comprueba que la cita está en el resumen, no que la afirmación de la IA la interprete correctamente: léela.
 - Si se edita la misma nota en dos equipos a la vez, gana la última guardada; los retrasos de sincronización dependen del cliente de Drive.
 - El dictado solo funciona en navegadores con reconocimiento de voz (Chrome, Edge).
-- Probada con IA, OpenAlex, Crossref, carpeta de Drive y voz **simulados** (55 pruebas en Chromium, 29 de lógica en Node, 0 infracciones WCAG 2.2 AA con axe-core); pendiente de prueba con claves y servicios reales.
+- Probada con IA, OpenAlex, Crossref, carpeta de Drive y voz **simulados** (63 pruebas en Chromium, 29 de lógica en Node, 0 infracciones WCAG 2.2 AA con axe-core); pendiente de prueba con claves y servicios reales.
 
 ## Autoría
 
@@ -51,8 +51,13 @@ ORCID: Fernando Borrás Rocher [0000-0002-5519-4573](https://orcid.org/0000-0002
 
 ## Cómo citar
 
-Borrás Rocher, F. (2026). *SinapsIA* (v1.0.0) [Software]. DOI: [10.5281/zenodo.23985229](https://doi.org/10.5281/zenodo.23985229)
+Borrás Rocher, F. (2026). *SinapsIA* (v1.1.0) [Software]. DOI: [10.5281/zenodo.23985229](https://doi.org/10.5281/zenodo.23985229)
 
 ## Licencia
 
 MIT. Véase [LICENSE](LICENSE).
+
+## Cambios
+
+- **1.1.0** — La carpeta del cerebro (Google Drive para ordenador) pasa a ser el primer paso de la portada, con instrucciones; indicador del cerebro en la consulta; el dictado envía la pregunta al terminar de hablar; guardado automático de respuestas y fuentes verificadas (desactivable); colores de Forja con contraste AA.
+- **1.0.0** — Primera versión.
