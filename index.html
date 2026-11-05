@@ -392,158 +392,128 @@ table{border-collapse:collapse;width:100%;font-size:13.8px}th{background:var(--p
 @media(max-width:900px){.tb-btn .lbl{display:none}}@media(max-width:720px){.hero{padding:28px 20px 24px}}
 @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
 
-/* ══ SinapsIA · tema HUD oscuro (cian + ámbar) sobre Forja ══ */
-:root{--papel:#050B14;--blanco:#0B1726;--linea:#1D3550;--linea-2:#132A42;--gris:#A3B7CC;--acero:#B9CDE2;--acero-claro:#8AA3BC;
-  --brasa:#22D3EE;--brasa-osc:#0FB5D0;--brasa-suave:#0B3340;--forjado:#34D399;--forjado-suave:#0B3328;--aviso:#FCA5A5;
-  --hud:#22D3EE;--hud2:#F5B544;--txt:#E6F0FA;--sombra:0 0 0 1px rgba(34,211,238,.06),0 18px 40px -26px rgba(0,0,0,.9);--sombra-alta:0 0 0 1px rgba(34,211,238,.1),0 30px 60px -30px rgba(0,0,0,.95)}
-body{background:radial-gradient(1200px 600px at 80% -10%,rgba(34,211,238,.12),transparent 60%),radial-gradient(900px 500px at -10% 30%,rgba(167,139,250,.10),transparent 60%),linear-gradient(rgba(34,211,238,.035) 1px,transparent 1px) 0 0/34px 34px,linear-gradient(90deg,rgba(34,211,238,.035) 1px,transparent 1px) 0 0/34px 34px,#050B14;background-attachment:fixed;color:var(--txt)}
-a{color:#67E8F9}
-.topbar{background:rgba(5,11,20,.86);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid rgba(34,211,238,.18)}
-.logo .anv{background:conic-gradient(from 200deg,#22D3EE,#A78BFA,#F5B544,#22D3EE);color:#04121C;box-shadow:0 0 18px rgba(34,211,238,.55)}
-.logo em{color:#22D3EE;font-style:normal}
-.progress span{background:linear-gradient(90deg,#22D3EE,#F5B544)!important;box-shadow:0 0 12px #22D3EE}
-.sdot[data-state="now"] .n{color:#04121C;box-shadow:0 0 0 4px rgba(34,211,238,.25),0 0 18px rgba(34,211,238,.6)}
-.btn-primary{color:#04121C;background:linear-gradient(135deg,#22D3EE,#67E8F9);box-shadow:0 0 22px -6px rgba(34,211,238,.8)}
-.btn-primary:hover{filter:brightness(1.08)}
-.btn-ghost{background:rgba(11,23,38,.7);border-color:var(--linea);color:var(--txt)}
-.btn-ghost:hover{border-color:#22D3EE}
-.card,.modal-box,.jstop{background:linear-gradient(180deg,rgba(14,29,48,.92),rgba(9,19,32,.92));border-color:rgba(34,211,238,.16);color:var(--txt)}
-.modal-head{background:#071322;border-bottom:1px solid rgba(34,211,238,.25)}
-input[type=text],input[type=password],input[type=number],textarea,select,.field input[type=text],.field select,.field textarea{background:#071322!important;color:var(--txt)!important;border-color:var(--linea)!important}
-input::placeholder,textarea::placeholder{color:#7F97AF}
-.field input:focus,.field select:focus,.field textarea:focus,textarea:focus,input:focus{border-color:#22D3EE!important;box-shadow:0 0 0 3px rgba(34,211,238,.22)!important;outline:none}
-select option{background:#0B1726;color:#E6F0FA}
-.eye{background:#071322;border-color:var(--linea);color:var(--txt)}
-.bottomnav{background:rgba(5,11,20,.9);border-top-color:rgba(34,211,238,.18)}
-.bn-hint{color:#A3B7CC}
-.sh h2,.sec-title,.card h3{color:#F2F8FE}
-.sh-ico{box-shadow:0 0 28px -6px var(--c);color:#04121C}
-.jstop .ji{color:#04121C;box-shadow:0 0 20px -6px var(--c)}
-.jstop b{color:#F2F8FE}
-.glos div{background:#0A1828}.glos span{color:#C3D3E2}
-.empty{color:#A3B7CC}.help{color:#A3B7CC}
-.toast{background:#0B1726;border:1px solid #22D3EE;color:#E6F0FA;box-shadow:0 0 24px -6px #22D3EE}
-.aviso{background:#2A1408;border-color:#8A4B1F;color:#FFD9B8}
-.fa-pre{background:#030912;border:1px solid var(--linea)}
-.fa-chip{background:#132A42;color:#C9D8E8}.fa-chip.ok{background:#0B3328;color:#86EFAC}.fa-chip.aviso{background:#33260A;color:#FCD34D}.fa-chip.error{background:#3A1212;color:#FCA5A5}
-a.fa-chip{text-decoration:none}
-.zona{background:rgba(11,23,38,.8)!important}.zona.l{border-color:#1F6F5C}.zona.n{border-color:#7A5A16}.zona h4{color:#F2F8FE}.zona ul{color:#C9D8E8}
-.fa-foot p{color:#8FA7BE}.fa-foot hr{border-top-color:var(--linea)}
-.muted{color:#8FA7BE}
+/* ══ SinapsIA · estilos propios con la paleta de Forja (papel, tinta, brasa y acentos de sección) ══ */
 .sx-sr{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
-
-/* portada con núcleo */
-.hero.sx-hero{background:radial-gradient(600px 400px at 85% 40%,rgba(34,211,238,.18),transparent 70%),linear-gradient(160deg,#081A2C,#050E1A);border:1px solid rgba(34,211,238,.22);display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:24px;align-items:center}
-.hero.sx-hero h1 em{color:#22D3EE;text-shadow:0 0 24px rgba(34,211,238,.55);font-style:normal}
-.hero .eyebrow{color:#67E8F9}
-.hero .actions .btn-ghost{background:transparent}
+.hero.sx-hero{display:grid;grid-template-columns:minmax(0,1fr) 260px;gap:24px;align-items:center}
+.hero.sx-hero>*{position:relative;z-index:1}
 @media(max-width:860px){.hero.sx-hero{grid-template-columns:minmax(0,1fr)}.sx-core-big{display:none}}
-
-/* el núcleo: anillos HUD que cambian con el estado */
+/* núcleo animado: anillos que cambian con el estado (brasa, verde forjado, violeta) */
 .sx-core{position:relative;display:grid;place-items:center;flex:none}
-.sx-core i{position:absolute;inset:0;border-radius:50%;border:2px solid rgba(34,211,238,.55);border-top-color:transparent;border-left-color:rgba(245,181,68,.7)}
-.sx-core i:nth-child(2){inset:12%;border-color:rgba(167,139,250,.6);border-right-color:transparent}
-.sx-core i:nth-child(3){inset:24%;border-style:dashed;border-color:rgba(34,211,238,.45)}
-.sx-core b{width:34%;height:34%;border-radius:50%;background:radial-gradient(circle,#E0FBFF,#22D3EE 45%,rgba(34,211,238,0) 72%);box-shadow:0 0 30px 6px rgba(34,211,238,.55)}
-.sx-core-big{width:270px;height:270px;justify-self:center}
-.sx-core-sm{width:58px;height:58px}
-.sx-core-xs{width:22px;height:22px}.sx-core-xs i{border-width:1.5px}
+.sx-core i{position:absolute;inset:0;border-radius:50%;border:2.5px solid rgba(228,87,46,.75);border-top-color:transparent;border-left-color:rgba(14,140,122,.8)}
+.sx-core i:nth-child(2){inset:13%;border-color:rgba(107,79,216,.65);border-right-color:transparent}
+.sx-core i:nth-child(3){inset:26%;border-style:dashed;border-color:rgba(201,130,0,.6)}
+.sx-core b{width:34%;height:34%;border-radius:50%;background:radial-gradient(circle,#FFE3D6,#E4572E 55%,#C9441F);box-shadow:0 0 26px 4px rgba(228,87,46,.45)}
+.sx-core-big{width:240px;height:240px;justify-self:center}.sx-core-sm{width:54px;height:54px}.sx-core-xs{width:22px;height:22px}.sx-core-xs i{border-width:1.5px}
 .sx-core i{animation:sx-rot 9s linear infinite}.sx-core i:nth-child(2){animation-duration:6s;animation-direction:reverse}.sx-core i:nth-child(3){animation-duration:14s}
 .sx-core b{animation:sx-lat 3.2s ease-in-out infinite}
-.sx-core[data-estado="buscando"] i,.sx-core[data-estado="pensando"] i{animation-duration:1.4s}
-.sx-core[data-estado="pensando"] b{background:radial-gradient(circle,#FFF4DA,#F5B544 45%,rgba(245,181,68,0) 72%);box-shadow:0 0 30px 8px rgba(245,181,68,.55)}
-.sx-core[data-estado="escuchando"] b{animation-duration:.8s;background:radial-gradient(circle,#FFE4E6,#FB7185 45%,rgba(251,113,133,0) 72%);box-shadow:0 0 30px 8px rgba(251,113,133,.6)}
+.sx-core[data-estado="buscando"] i,.sx-core[data-estado="pensando"] i{animation-duration:1.3s}
+.sx-core[data-estado="pensando"] b{background:radial-gradient(circle,#FFF1CC,#C98200 55%,#8F5D00);box-shadow:0 0 26px 6px rgba(201,130,0,.45)}
+.sx-core[data-estado="buscando"] b{background:radial-gradient(circle,#DCEBFA,#1F6FB2 55%,#164F80);box-shadow:0 0 26px 6px rgba(31,111,178,.45)}
+.sx-core[data-estado="escuchando"] b{animation-duration:.8s;background:radial-gradient(circle,#D9F4EE,#0E8C7A 55%,#0B5A4E);box-shadow:0 0 26px 6px rgba(14,140,122,.5)}
 .sx-core[data-estado="hablando"] b{animation-duration:.5s}
-@keyframes sx-rot{to{transform:rotate(360deg)}}@keyframes sx-lat{50%{transform:scale(1.18);filter:brightness(1.25)}}
+@keyframes sx-rot{to{transform:rotate(360deg)}}@keyframes sx-lat{50%{transform:scale(1.16);filter:brightness(1.12)}}
+
+/* portada: el cerebro, primero */
+.sx-drive{border-top:4px solid var(--brasa);margin-bottom:26px}
+.sx-drive[data-estado="ok"]{border-top-color:var(--forjado)}
+.sx-drive-in{display:flex;gap:14px;align-items:center;flex-wrap:wrap}
+.sx-drive-n{width:40px;height:40px;border-radius:12px;background:var(--brasa);color:#fff;display:grid;place-items:center;font:800 18px var(--display);flex:none}
+.sx-drive[data-estado="ok"] .sx-drive-n{background:var(--forjado)}
+.sx-drive-t{flex:1;min-width:220px}.sx-drive-t h2{margin:0;font:800 22px/1.2 var(--display);color:var(--tinta)}
+.sx-drive-t span{display:block;margin-top:3px;font-size:14px;color:var(--gris)}.sx-drive-t span.ok{color:var(--forjado);font-weight:600}.sx-drive-t span.mal{color:var(--aviso);font-weight:600}
+.sx-drive-pasos{margin:14px 0 6px;padding-left:22px;font-size:15px;line-height:1.6;color:var(--tinta)}.sx-drive-pasos li{margin-bottom:4px}
+.sx-drive .actions label.btn{margin:0;cursor:pointer}
 
 /* consola de consulta */
-.sx-console{border:1px solid rgba(34,211,238,.25);border-radius:20px;background:linear-gradient(180deg,rgba(9,22,38,.95),rgba(5,12,22,.95));box-shadow:0 0 50px -24px rgba(34,211,238,.6),inset 0 0 0 1px rgba(255,255,255,.02);overflow:hidden;margin-bottom:18px}
-.sx-console-h{display:flex;gap:14px;align-items:center;padding:14px 18px;border-bottom:1px solid rgba(34,211,238,.15);background:rgba(3,10,19,.6)}
+.sx-console{border:1px solid var(--linea);border-radius:20px;background:#fff;box-shadow:var(--sombra-alta);overflow:hidden;margin-bottom:18px}
+.sx-console-h{display:flex;gap:14px;align-items:center;padding:14px 18px;background:var(--tinta);color:#EAF1F7}
 .sx-console-h>div:nth-child(2){flex:1;min-width:0}
-.sx-estado{margin:0;font:600 14px var(--mono);color:#67E8F9;letter-spacing:.02em;min-height:1.4em}
-.sx-fuentesinfo{margin:2px 0 0;font-size:12.5px;color:#8FA7BE}
-.sx-ibtn,.sx-mic{width:46px;height:46px;border-radius:50%;border:1.5px solid var(--linea);background:#071322;color:#C9D8E8;display:grid;place-items:center;cursor:pointer;flex:none}
-.sx-ibtn[aria-pressed="true"]{border-color:#F5B544;color:#F5B544;box-shadow:0 0 16px -4px #F5B544}
-.sx-mic[aria-pressed="true"]{border-color:#FB7185;color:#FB7185;box-shadow:0 0 0 6px rgba(251,113,133,.15),0 0 22px -2px #FB7185;animation:sx-lat 1s infinite}
-.sx-ibtn:hover,.sx-mic:hover{border-color:#22D3EE;color:#fff}
-.sx-chat{max-height:min(66vh,780px);min-height:260px;overflow:auto;padding:18px;display:flex;flex-direction:column;gap:14px;scroll-behavior:smooth}
-.sx-ask{display:flex;gap:10px;align-items:flex-end;padding:14px 18px;border-top:1px solid rgba(34,211,238,.15);background:rgba(3,10,19,.6)}
-.sx-ask textarea{flex:1;min-width:0;resize:none;border-radius:14px;padding:12px 14px;font:15.5px var(--texto)}
-.sx-ask .btn{height:46px}
-.sx-ask-foot{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;padding:0 18px 12px;font-size:12px;color:#7F97AF;background:rgba(3,10,19,.6)}
-.sx-link{background:none;border:0;padding:2px 0;color:#67E8F9;font:inherit;cursor:pointer;text-decoration:underline;text-underline-offset:3px}
-.sx-link:hover{color:#fff}.sx-link.roto{color:#FCD34D;text-decoration-style:dashed}
-.sx-msg{max-width:100%;animation:sx-in .35s ease-out}
-@keyframes sx-in{from{opacity:0;transform:translateY(6px)}}
-.sx-msg.yo{align-self:flex-end;max-width:min(78%,640px);background:linear-gradient(135deg,#0E3A4A,#0B2A3C);border:1px solid rgba(34,211,238,.35);border-radius:18px 18px 4px 18px;padding:10px 14px}
-.sx-msg.yo p{margin:0}
-.sx-msg.err{align-self:center;background:#2A0F12;border:1px solid #7F1D1D;color:#FECACA;border-radius:12px;padding:10px 14px}.sx-msg.err p{margin:0}
-.sx-msg.ia{border:1px solid rgba(34,211,238,.2);border-left:3px solid #22D3EE;border-radius:4px 18px 18px 18px;padding:14px 16px;background:rgba(10,24,40,.85)}
-.sx-msg-h{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:6px}.sx-msg-h>b{font:700 14px var(--display);letter-spacing:.04em;color:#67E8F9}
-.sx-resp{font-size:16.5px;line-height:1.6;margin:6px 0 12px;color:#F2F8FE}
+.sx-estado{margin:0;font:600 14px var(--mono);color:#fff;min-height:1.4em}
+.sx-fuentesinfo{margin:2px 0 4px;font-size:12.5px;color:#C3D3E2}
+.sx-chipcer{border:1px solid #4A6787;background:transparent;color:#EAF1F7;border-radius:999px;padding:3px 10px;font:600 12px var(--texto);cursor:pointer}
+.sx-chipcer::before{content:"";display:inline-block;width:8px;height:8px;border-radius:50%;background:#C98200;margin-right:6px;vertical-align:1px}
+.sx-chipcer.ok::before{background:#34D399}.sx-chipcer.mal::before{background:#F87171}.sx-chipcer:hover{border-color:#fff}
+.sx-ibtn,.sx-mic{width:44px;height:44px;border-radius:50%;border:1.5px solid #4A6787;background:transparent;color:#EAF1F7;display:grid;place-items:center;cursor:pointer;flex:none}
+.sx-ibtn[aria-pressed="true"]{background:var(--brasa);border-color:var(--brasa);color:#fff}
+.sx-ibtn:hover{border-color:#fff}
+.sx-mic{border-color:var(--linea);background:#fff;color:var(--acero);width:48px;height:48px}
+.sx-mic:hover{border-color:var(--brasa);color:var(--brasa)}
+.sx-mic[aria-pressed="true"]{background:var(--forjado);border-color:var(--forjado);color:#fff;box-shadow:0 0 0 6px rgba(14,124,107,.18);animation:sx-lat 1s infinite}
+.sx-chat{max-height:min(66vh,780px);min-height:260px;overflow:auto;padding:18px;display:flex;flex-direction:column;gap:14px;background:var(--papel)}
+.sx-ask{display:flex;gap:10px;align-items:flex-end;padding:14px 18px;border-top:1px solid var(--linea);background:#fff}
+.sx-ask textarea{flex:1;min-width:0;resize:none;border-radius:14px;padding:12px 14px;font:15.5px var(--texto);border:1.5px solid var(--linea);color:var(--tinta)}
+.sx-ask textarea:focus{outline:none;border-color:var(--brasa);box-shadow:0 0 0 3px rgba(228,87,46,.18)}
+.sx-ask .btn{height:48px}
+.sx-ask-foot{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;padding:0 18px 12px;font-size:12px;color:var(--gris);background:#fff}
+.sx-link{background:none;border:0;padding:2px 0;color:var(--acero);font:inherit;font-weight:600;cursor:pointer;text-decoration:underline;text-underline-offset:3px;text-align:left}
+.sx-link:hover{color:var(--brasa-osc)}.sx-link.roto{color:var(--aviso);text-decoration-style:dashed}
+.sx-msg{max-width:100%;animation:sx-in .35s ease-out}@keyframes sx-in{from{opacity:0;transform:translateY(6px)}}
+.sx-msg.yo{align-self:flex-end;max-width:min(78%,640px);background:var(--tinta);color:#fff;border-radius:18px 18px 4px 18px;padding:10px 14px}.sx-msg.yo p{margin:0}
+.sx-msg.err{align-self:center;background:var(--brasa-suave);border:1px solid #F3C7B5;color:var(--aviso);border-radius:12px;padding:10px 14px}.sx-msg.err p{margin:0}
+.sx-msg.ia{background:#fff;border:1px solid var(--linea);border-left:4px solid var(--brasa);border-radius:4px 18px 18px 18px;padding:14px 16px;box-shadow:var(--sombra)}
+.sx-msg-h{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:6px}.sx-msg-h>b{font:800 15px var(--display);color:var(--tinta)}
+.sx-resp{font-size:16.5px;line-height:1.6;margin:6px 0 12px}
 .sx-afs{list-style:none;padding:0;margin:0 0 12px;display:grid;gap:8px}
-.sx-afs li{display:flex;gap:10px;padding:9px 12px;border-radius:12px;background:#08192A;border:1px solid #143049}
-.sx-afs li.no{border-color:#6B4A12;background:#1C1608}
-.sx-st{font-weight:800;width:22px;height:22px;border-radius:50%;display:grid;place-items:center;flex:none;font-size:13px;background:#0B3328;color:#86EFAC}
-.sx-afs li.no .sx-st{background:#3A2A08;color:#FCD34D}
-.sx-afs small{display:block;color:#A3B7CC;font-size:13px;margin-top:3px;font-style:italic}
-.sx-afs li.no small{font-style:normal;color:#FCD34D}
-.sx-reflink{font:700 11.5px var(--mono);color:#04121C!important;background:#22D3EE;border-radius:6px;padding:1px 6px;text-decoration:none;margin-left:4px}
+.sx-afs li{display:flex;gap:10px;padding:9px 12px;border-radius:12px;background:var(--forjado-suave);border:1px solid #BFE6DA}
+.sx-afs li.no{background:#FFF8E6;border-color:#F3DDA0}
+.sx-st{font-weight:800;width:22px;height:22px;border-radius:50%;display:grid;place-items:center;flex:none;font-size:13px;background:var(--forjado);color:#fff}
+.sx-afs li.no .sx-st{background:#C98200}
+.sx-afs small{display:block;color:var(--acero);font-size:13px;margin-top:3px;font-style:italic}
+.sx-afs li.no small{font-style:normal;color:#6B4E00}
+.sx-reflink{font:700 11.5px var(--mono);color:#fff!important;background:var(--acero);border-radius:6px;padding:1px 6px;text-decoration:none;margin-left:4px}
 .sx-con,.sx-huecos{border-radius:12px;padding:10px 12px;margin-bottom:10px;font-size:14px}
-.sx-con{background:#160F2A;border:1px solid #4C3A8A}.sx-con b{color:#C4B5FD}.sx-con p{margin:6px 0 0}
-.sx-huecos{background:#0B1F2E;border:1px dashed #2E5A7A;color:#C9D8E8}.sx-huecos b{color:#67E8F9}
+.sx-con{background:#EEEAFB;border:1px solid #D3C9F5}.sx-con b{color:#4B32B0}.sx-con p{margin:6px 0 0}
+.sx-huecos{background:var(--papel);border:1px dashed var(--acero-claro)}.sx-huecos b{color:var(--acero)}
 .sx-srcs{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:10px;margin:12px 0 6px}
-.sx-src{position:relative;border:1px solid #1D3550;border-radius:14px;padding:12px 12px 10px;background:#071322;display:flex;flex-direction:column;gap:6px;scroll-margin-top:90px}
-.sx-src:target{border-color:#22D3EE;box-shadow:0 0 22px -6px #22D3EE}
-.sx-src.ret{border-color:#B91C1C;background:#1A0A0D}
-.sx-src h4{margin:0 30px 0 0;font:600 14px/1.35 var(--texto)}.sx-src h4 a{color:#E6F0FA;text-decoration:none}.sx-src h4 a:hover{color:#67E8F9;text-decoration:underline}
-.sx-ref{position:absolute;top:10px;right:10px;font:700 11px var(--mono);color:#04121C;background:#22D3EE;border-radius:6px;padding:1px 6px}
-.sx-src-m{margin:0;font-size:12.5px;color:#A3B7CC}.sx-badges{margin:0;display:flex;gap:5px;flex-wrap:wrap}
+.sx-src{position:relative;border:1px solid var(--linea);border-radius:14px;padding:12px 12px 10px;background:var(--papel);display:flex;flex-direction:column;gap:6px;scroll-margin-top:90px}
+.sx-src:target{border-color:var(--brasa);box-shadow:0 0 0 3px rgba(228,87,46,.2)}
+.sx-src.ret{border-color:var(--brasa);background:var(--brasa-suave)}
+.sx-src h4{margin:0 30px 0 0;font:600 14px/1.35 var(--texto)}.sx-src h4 a{color:var(--tinta);text-decoration:none}.sx-src h4 a:hover{color:var(--brasa-osc);text-decoration:underline}
+.sx-ref{position:absolute;top:10px;right:10px;font:700 11px var(--mono);color:#fff;background:var(--acero);border-radius:6px;padding:1px 6px}
+.sx-src-m{margin:0;font-size:12.5px;color:var(--gris)}.sx-badges{margin:0;display:flex;gap:5px;flex-wrap:wrap;align-items:flex-start}
 .sx-src .btn{align-self:flex-start;margin-top:auto}
-.sx-vacio{margin:auto;text-align:center;max-width:560px;color:#C9D8E8}
+.sx-vacio{margin:auto;text-align:center;max-width:560px;color:var(--acero)}
 .sx-sug{display:flex;flex-direction:column;gap:8px;margin-top:14px}
-.sx-sugb{background:#071322;border:1px solid #1D3550;border-radius:12px;padding:10px 14px;color:#C9D8E8;font:14px var(--texto);cursor:pointer;text-align:left}
-.sx-sugb:hover{border-color:#22D3EE;color:#fff}
+.sx-sugb{background:#fff;border:1.5px solid var(--linea);border-radius:12px;padding:10px 14px;color:var(--tinta);font:14px var(--texto);cursor:pointer;text-align:left}
+.sx-sugb:hover{border-color:var(--brasa)}
 
 /* cerebro */
-.sx-drive-in{display:flex;gap:14px;align-items:center;flex-wrap:wrap}.sx-drive-ico{width:30px;height:30px;color:#F5B544}
-.sx-drive-t{flex:1;min-width:220px}.sx-drive-t b{display:block;color:#F2F8FE}.sx-drive-t span{font-size:13.5px;color:#A3B7CC}.sx-drive-t span.ok{color:#86EFAC}.sx-drive-t span.mal{color:#FCA5A5}
-.sx-drive-b{display:flex;gap:8px;flex-wrap:wrap}.sx-drive-b label.btn{margin:0;cursor:pointer}
-.sx-ejbar{display:flex;gap:12px;align-items:center;justify-content:space-between;flex-wrap:wrap;background:#33260A;border:1px solid #7A5A16;color:#FDE68A;border-radius:12px;padding:10px 14px;margin-bottom:14px;font-size:14px}
+.sx-ejbar{display:flex;gap:12px;align-items:center;justify-content:space-between;flex-wrap:wrap;background:#FFF8E6;border:1px solid #F3DDA0;color:#6B4E00;border-radius:12px;padding:10px 14px;margin-bottom:14px;font-size:14px}
 .sx-ejbar[hidden]{display:none}
 .sx-tools{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin-bottom:14px}.sx-busca{flex:1;min-width:200px;margin:0}
 .sx-tabs{display:flex;gap:6px;flex-wrap:wrap}
-.sx-tabs button{border:1.5px solid var(--linea);background:#071322;color:#C9D8E8;border-radius:999px;padding:6px 12px;font:600 13px var(--texto);cursor:pointer}
-.sx-tabs button small{opacity:.7;margin-left:2px}
-.sx-tabs button[aria-pressed="true"]{border-color:var(--c);color:#04121C;background:var(--c);box-shadow:0 0 14px -4px var(--c)}
+.sx-tabs button{border:1.5px solid var(--linea);background:#fff;color:var(--acero);border-radius:999px;padding:6px 12px;font:600 13px var(--texto);cursor:pointer}
+.sx-tabs button small{opacity:.75;margin-left:2px}
+.sx-tabs button[aria-pressed="true"]{border-color:var(--c);color:#fff;background:var(--c)}
 .sx-brain{display:grid;grid-template-columns:minmax(0,340px) minmax(0,1fr);gap:16px;align-items:start;margin-bottom:18px}
 @media(max-width:900px){.sx-brain{grid-template-columns:minmax(0,1fr)}}
 .sx-lista{display:flex;flex-direction:column;gap:8px;max-height:72vh;overflow:auto;padding-right:4px}
-.sx-nota{text-align:left;background:#0A1828;border:1px solid #17304A;border-left:4px solid var(--c);border-radius:12px;padding:10px 12px;color:var(--txt);font:inherit;cursor:pointer}
-.sx-nota:hover{border-color:var(--c)}.sx-nota.sel{background:#0E2236;box-shadow:0 0 0 1px var(--c),0 0 20px -8px var(--c)}
+.sx-nota{text-align:left;background:#fff;border:1px solid var(--linea);border-left:4px solid var(--c);border-radius:12px;padding:10px 12px;color:var(--tinta);font:inherit;cursor:pointer}
+.sx-nota:hover{border-color:var(--c)}.sx-nota.sel{box-shadow:0 0 0 2px var(--c)}
 .sx-nota-t{display:flex;gap:7px;align-items:flex-start}.sx-nota-t svg{color:var(--c);margin-top:3px}.sx-nota-t b{font-size:14.5px;line-height:1.3}
-.sx-nota small{display:block;color:#A3B7CC;font-size:12.5px;margin:4px 0;line-height:1.4}
-.sx-nota-m{font:600 11px var(--mono);color:#8FA7BE;letter-spacing:.03em}
+.sx-nota small{display:block;color:var(--gris);font-size:12.5px;margin:4px 0;line-height:1.4}
+.sx-nota-m{font:600 11px var(--mono);color:var(--gris);letter-spacing:.03em}
 .sx-editor .field{margin-bottom:12px}.sx-editor textarea{font:14.5px/1.6 var(--texto)}
-.sx-fbox{border:1px solid #1D3550;border-radius:12px;padding:12px;background:#071322;margin-bottom:12px;font-size:13.5px}.sx-fbox b{color:#67E8F9}.sx-fbox p{margin:6px 0}
-.sx-fbox summary{cursor:pointer;color:#67E8F9;font-size:13px}.sx-cita{font-style:italic;color:#C9D8E8}
-.sx-links{display:grid;grid-template-columns:1fr 1fr;gap:12px;font-size:14px}.sx-links>div{display:flex;flex-direction:column;align-items:flex-start;gap:3px}.sx-links b{color:#F2F8FE;font-size:12px;font:700 11px var(--mono);letter-spacing:.08em;text-transform:uppercase;color:#8FA7BE}
+.sx-fbox{border:1px solid var(--linea);border-radius:12px;padding:12px;background:var(--papel);margin-bottom:12px;font-size:13.5px}.sx-fbox b{color:var(--acero)}.sx-fbox p{margin:6px 0}
+.sx-fbox summary{cursor:pointer;color:var(--acero);font-size:13px;font-weight:600}.sx-cita{font-style:italic}
+.sx-links{display:grid;grid-template-columns:1fr 1fr;gap:12px;font-size:14px}.sx-links>div{display:flex;flex-direction:column;align-items:flex-start;gap:3px}.sx-links b{font:700 11px var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--gris)}
 @media(max-width:600px){.sx-links{grid-template-columns:1fr}}
 
-/* grafo */
-.sx-graph{position:relative;border:1px solid rgba(34,211,238,.25);border-radius:20px;overflow:hidden;background:radial-gradient(circle at 50% 45%,#0B2033,#040A13 75%);box-shadow:0 0 60px -30px rgba(34,211,238,.7);margin-bottom:18px}
+/* grafo sobre tinta, como la portada de Forja */
+.sx-graph{position:relative;border-radius:20px;overflow:hidden;background:radial-gradient(circle at 50% 45%,#16314F,var(--tinta) 75%);box-shadow:var(--sombra-alta);margin-bottom:18px}
 .sx-graph canvas{display:block;width:100%}
-.sx-leyenda{position:absolute;left:12px;bottom:10px;display:flex;gap:12px;flex-wrap:wrap;font:600 11.5px var(--mono);color:#A3B7CC;pointer-events:none}
-.sx-leyenda i{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:5px;box-shadow:0 0 8px currentColor}
-#topNotas{display:flex;flex-wrap:wrap;gap:6px 18px}#topNotas small{font:700 11px var(--mono);color:#04121C;background:#F5B544;border-radius:6px;padding:0 5px;margin-left:3px}
+.sx-leyenda{position:absolute;left:12px;bottom:10px;display:flex;gap:12px;flex-wrap:wrap;font:600 11.5px var(--mono);color:#C3D3E2;pointer-events:none}
+.sx-leyenda i{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:5px}
+#topNotas{display:flex;flex-wrap:wrap;gap:6px 18px}#topNotas small{font:700 11px var(--mono);color:#fff;background:var(--brasa);border-radius:6px;padding:0 5px;margin-left:3px}
+.muted{color:var(--gris)}
 @media (prefers-reduced-motion:reduce){.sx-core i,.sx-core b,.sx-mic{animation:none!important}}
-.hero.sx-hero::before{background:radial-gradient(circle,rgba(167,139,250,.28),transparent 65%)}
-.hero.sx-hero::after{background:radial-gradient(circle,rgba(34,211,238,.18),transparent 65%)}
-.hero.sx-hero>*{position:relative;z-index:1}
-.fa-av{background:linear-gradient(135deg,#22D3EE,#A78BFA)!important;color:#04121C!important}
-.sx-badges{align-items:flex-start}
 /* pasos no actuales: nombre oculto a la vista pero legible por lectores de pantalla */
 .sdot:not([data-state="now"]) .lbl{display:inline!important;position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+/* contraste AA sobre papel y blanco: mismos tonos de Forja, ligeramente más oscuros */
+:root{--gris:#55708C}
+.sh-step,.fa-foot p{color:#55708C}
+.btn-primary{background:var(--brasa-osc);box-shadow:0 8px 18px -10px var(--brasa-osc)}.btn-primary:hover{background:#B03A19}
+@media(max-width:860px){.sx-core-big{display:none!important}}
 </style></head>
 <body>
 <svg style="display:none" aria-hidden="true">
@@ -626,12 +596,19 @@ a.fa-chip{text-decoration:none}
     </div>
     <div class="sx-core sx-core-big" data-estado="reposo" aria-hidden="true"><i></i><i></i><i></i><b></b></div>
   </div>
+  <section class="card sx-drive" id="driveCard" aria-labelledby="driveT">
+    <div class="sx-drive-in"><span class="sx-drive-n">1</span><div class="sx-drive-t"><h2 id="driveT" data-i18n="s.drive.t">Primero, elige dónde vive tu cerebro</h2><span id="driveEstado" role="status"></span></div>
+      <div class="sx-drive-b"><button class="btn btn-primary" id="btnCarpeta" type="button"><svg class="i"><use href="#i-folder"/></svg><span id="btnCarpetaTx">Conectar carpeta</span></button></div></div>
+    <ol class="sx-drive-pasos" data-i18n="s.drive.pasos"><li>Instala <b>Google Drive para ordenador</b> (gratuito). Tu Drive aparece como una carpeta más de tu equipo: <i>Google Drive › Mi unidad</i>.</li><li>Pulsa <b>Conectar carpeta</b> y elige una carpeta dentro de <i>Mi unidad</i>, por ejemplo <i>Mi unidad › SinapsIA</i>.</li><li>SinapsIA guarda allí <code>sinapsia-cerebro.json</code> cada vez que cambias algo, y Google Drive lo sube a la nube solo. En otro ordenador, elige la misma carpeta y tendrás el mismo cerebro.</li></ol>
+    <p class="help" data-i18n="s.drive.ayuda">Funciona en Chrome y Edge de escritorio. Las notas se fusionan una a una y cada día se guarda una copia en la subcarpeta «copias». Si no conectas nada, el cerebro vive solo en este navegador; en móvil u otros navegadores puedes abrir y descargar el expediente a mano.</p>
+    <div class="actions"><label class="btn btn-ghost btn-sm" for="fileExp"><svg class="i"><use href="#i-upload"/></svg><span data-i18n="Abrir expediente">Abrir expediente</span></label><input type="file" id="fileExp" accept=".json,application/json" hidden><button class="btn btn-ghost btn-sm" id="btnDescExp" type="button"><svg class="i"><use href="#i-download"/></svg><span data-i18n="Descargar expediente">Descargar expediente</span></button></div>
+  </section>
   <h2 class="sec-title" data-i18n="Cómo funciona">Cómo funciona</h2>
   <div class="journey" style="grid-template-columns:repeat(auto-fit,minmax(200px,1fr))">
-    <div class="jstop" style="--c:#22D3EE"><span class="jn">1</span><div class="ji"><svg class="i"><use href="#i-mic"/></svg></div><b data-i18n="s.j1b">Preguntas o dictas</b><span data-i18n="s.j1s">En lenguaje natural, escrito o por voz.</span></div>
-    <div class="jstop" style="--c:#A78BFA"><span class="jn">2</span><div class="ji"><svg class="i"><use href="#i-shield"/></svg></div><b data-i18n="s.j2b">Busca y verifica</b><span data-i18n="s.j2s">OpenAlex encuentra los trabajos, Crossref confirma cada DOI y el código comprueba cada cita.</span></div>
-    <div class="jstop" style="--c:#F5B544"><span class="jn">3</span><div class="ji"><svg class="i"><use href="#i-bookmark"/></svg></div><b data-i18n="s.j3b">Capturas y destilas</b><span data-i18n="s.j3s">Guardas lo útil como notas con su fuente, ordenadas en Proyectos, Áreas, Recursos y Archivo.</span></div>
-    <div class="jstop" style="--c:#34D399"><span class="jn">4</span><div class="ji"><svg class="i"><use href="#i-grafo"/></svg></div><b data-i18n="s.j4b">Conectas</b><span data-i18n="s.j4s">Enlazas ideas con [[corchetes]]; el grafo muestra cómo crece tu conocimiento.</span></div>
+    <div class="jstop" style="--c:#E4572E"><span class="jn">1</span><div class="ji"><svg class="i"><use href="#i-mic"/></svg></div><b data-i18n="s.j1b">Preguntas o dictas</b><span data-i18n="s.j1s">En lenguaje natural, escrito o por voz.</span></div>
+    <div class="jstop" style="--c:#6B4FD8"><span class="jn">2</span><div class="ji"><svg class="i"><use href="#i-shield"/></svg></div><b data-i18n="s.j2b">Busca y verifica</b><span data-i18n="s.j2s">OpenAlex encuentra los trabajos, Crossref confirma cada DOI y el código comprueba cada cita.</span></div>
+    <div class="jstop" style="--c:#C98200"><span class="jn">3</span><div class="ji"><svg class="i"><use href="#i-bookmark"/></svg></div><b data-i18n="s.j3b">Capturas y destilas</b><span data-i18n="s.j3s">Guardas lo útil como notas con su fuente, ordenadas en Proyectos, Áreas, Recursos y Archivo.</span></div>
+    <div class="jstop" style="--c:#0E8C7A"><span class="jn">4</span><div class="ji"><svg class="i"><use href="#i-grafo"/></svg></div><b data-i18n="s.j4b">Conectas</b><span data-i18n="s.j4s">Enlazas ideas con [[corchetes]]; el grafo muestra cómo crece tu conocimiento.</span></div>
   </div>
   <h2 class="sec-title" data-i18n="Dónde va cada cosa">Dónde va cada cosa</h2>
   <div class="zonas"><div class="zona l"><h4 data-i18n="Siempre contigo">Siempre contigo</h4><ul data-i18n="s.zl">
@@ -642,9 +619,9 @@ a.fa-chip{text-decoration:none}
 
 <!-- 1 · CONSULTA -->
 <section class="screen" data-step="1">
-  <header class="sh" style="--c:#22D3EE"><div class="sh-ico"><svg class="i"><use href="#i-mic"/></svg></div><div><p class="sh-step" data-i18n="s.paso1">Paso 1 de 3</p><h2 data-i18n="Consulta">Consulta</h2><p class="sh-lede" data-i18n="s.consulta.lede">Pregunta lo que quieras investigar. SinapsIA busca trabajos académicos, responde solo con lo que dicen sus resúmenes y marca con ✓ cada afirmación cuya cita ha comprobado el código.</p></div></header>
+  <header class="sh" style="--c:#E4572E"><div class="sh-ico"><svg class="i"><use href="#i-mic"/></svg></div><div><p class="sh-step" data-i18n="s.paso1">Paso 1 de 3</p><h2 data-i18n="Consulta">Consulta</h2><p class="sh-lede" data-i18n="s.consulta.lede">Pregunta lo que quieras investigar, escribiendo o con el micrófono. SinapsIA busca trabajos académicos, responde solo con lo que dicen sus resúmenes, marca con ✓ cada afirmación cuya cita ha comprobado el código y guarda la respuesta en tu cerebro.</p></div></header>
   <div class="sx-console">
-    <div class="sx-console-h"><div class="sx-core sx-core-sm" id="coreSm" data-estado="reposo" aria-hidden="true"><i></i><i></i><i></i><b></b></div><div><p class="sx-estado" id="sxEstado" role="status" aria-live="polite"></p><p class="sx-fuentesinfo" data-i18n="s.fuentesinfo">Fuentes: OpenAlex (todas las disciplinas) · DOI verificados en Crossref</p></div><button class="sx-ibtn" id="btnLeer" type="button" aria-pressed="false" aria-label="Leer las respuestas en voz alta" data-i18n-attr="aria-label:Leer las respuestas en voz alta;title:Leer las respuestas en voz alta" title="Leer las respuestas en voz alta"><svg class="i"><use href="#i-voz"/></svg></button></div>
+    <div class="sx-console-h"><div class="sx-core sx-core-sm" id="coreSm" data-estado="reposo" aria-hidden="true"><i></i><i></i><i></i><b></b></div><div><p class="sx-estado" id="sxEstado" role="status" aria-live="polite"></p><p class="sx-fuentesinfo" data-i18n="s.fuentesinfo">Fuentes: OpenAlex (todas las disciplinas) · DOI verificados en Crossref</p><button class="sx-chipcer" id="chipCerebro" type="button"></button></div><button class="sx-ibtn" id="btnAuto" type="button" aria-pressed="true" aria-label="Guardar cada respuesta en el cerebro" data-i18n-attr="aria-label:Guardar cada respuesta en el cerebro;title:Guardar cada respuesta en el cerebro" title="Guardar cada respuesta en el cerebro"><svg class="i"><use href="#i-save"/></svg></button><button class="sx-ibtn" id="btnLeer" type="button" aria-pressed="false" aria-label="Leer las respuestas en voz alta" data-i18n-attr="aria-label:Leer las respuestas en voz alta;title:Leer las respuestas en voz alta" title="Leer las respuestas en voz alta"><svg class="i"><use href="#i-voz"/></svg></button></div>
     <div class="sx-chat" id="chat" aria-live="polite"></div>
     <div class="sx-ask">
       <label for="pregunta" class="sx-sr" data-i18n="Tu pregunta">Tu pregunta</label>
@@ -652,16 +629,13 @@ a.fa-chip{text-decoration:none}
       <button class="sx-mic" id="btnMic" type="button" aria-pressed="false" aria-label="Dictar la pregunta" data-i18n-attr="aria-label:Dictar la pregunta;title:Dictar la pregunta" title="Dictar la pregunta"><svg class="i"><use href="#i-mic"/></svg></button>
       <button class="btn btn-primary" id="btnPreguntar" type="button"><svg class="i"><use href="#i-right"/></svg><span data-i18n="Preguntar">Preguntar</span></button>
     </div>
-    <div class="sx-ask-foot"><span data-i18n="s.ask.foot">Intro para enviar · Mayúsculas+Intro para una línea nueva</span><button class="sx-link" id="btnLimpiaChat" type="button" data-i18n="Borrar la conversación">Borrar la conversación</button></div>
+    <div class="sx-ask-foot"><span data-i18n="s.ask.foot">Intro para enviar · Mayúsculas+Intro para una línea nueva · Con el micrófono, la pregunta se envía al terminar de hablar</span><button class="sx-link" id="btnLimpiaChat" type="button" data-i18n="Borrar la conversación">Borrar la conversación</button></div>
   </div>
 </section>
 
 <!-- 2 · CEREBRO -->
 <section class="screen" data-step="2">
-  <header class="sh" style="--c:#F5B544"><div class="sh-ico"><svg class="i"><use href="#i-nucleo"/></svg></div><div><p class="sh-step" data-i18n="s.paso2">Paso 2 de 3</p><h2 data-i18n="Tu segundo cerebro">Tu segundo cerebro</h2><p class="sh-lede" data-i18n="s.cerebro.lede">Tus notas, ordenadas con el método PARA (Proyectos, Áreas, Recursos, Archivo). Escribe [[Título de otra nota]] para enlazarlas.</p></div></header>
-  <div class="card sx-drive"><div class="sx-drive-in"><svg class="i sx-drive-ico"><use href="#i-folder"/></svg><div class="sx-drive-t"><b data-i18n="Sincronización con Google Drive">Sincronización con Google Drive</b><span id="driveEstado" role="status"></span></div>
-    <div class="sx-drive-b"><button class="btn btn-primary btn-sm" id="btnCarpeta" type="button"><svg class="i"><use href="#i-folder"/></svg><span id="btnCarpetaTx">Conectar carpeta</span></button><label class="btn btn-ghost btn-sm" for="fileExp"><svg class="i"><use href="#i-upload"/></svg><span data-i18n="Abrir expediente">Abrir expediente</span></label><input type="file" id="fileExp" accept=".json,application/json" hidden><button class="btn btn-ghost btn-sm" id="btnDescExp" type="button"><svg class="i"><use href="#i-download"/></svg><span data-i18n="Descargar expediente">Descargar expediente</span></button></div></div>
-    <p class="help" id="driveAyuda" data-i18n="s.drive.ayuda">Elige una carpeta de Google Drive para ordenador: SinapsIA guarda allí sinapsia-cerebro.json, lo fusiona nota a nota y hace una copia diaria. Funciona en Chrome y Edge de escritorio; en otros navegadores, abre y descarga el expediente a mano.</p></div>
+  <header class="sh" style="--c:#C98200"><div class="sh-ico"><svg class="i"><use href="#i-nucleo"/></svg></div><div><p class="sh-step" data-i18n="s.paso2">Paso 2 de 3</p><h2 data-i18n="Tu segundo cerebro">Tu segundo cerebro</h2><p class="sh-lede" data-i18n="s.cerebro.lede">Tus notas, ordenadas con el método PARA (Proyectos, Áreas, Recursos, Archivo). Escribe [[Título de otra nota]] para enlazarlas.</p></div></header>
   <div class="sx-ejbar" id="ejBar" hidden><span data-i18n="s.ejbar">Estás viendo un cerebro de ejemplo con fuentes ficticias. No se sincroniza con Drive.</span><button class="btn btn-sm btn-ghost" id="btnSalirEj" type="button" data-i18n="Salir del ejemplo">Salir del ejemplo</button></div>
   <div class="sx-tools"><div class="field sx-busca"><label for="busca" class="sx-sr" data-i18n="Buscar en tus notas">Buscar en tus notas</label><input type="text" id="busca" placeholder="Buscar en tus notas…" data-i18n-attr="placeholder:s.busca.ph"></div>
     <div class="sx-tabs" id="tabsPara" role="group" aria-label="Filtrar por PARA" data-i18n-attr="aria-label:Filtrar por PARA"></div>
@@ -672,7 +646,7 @@ a.fa-chip{text-decoration:none}
 
 <!-- 3 · GRAFO -->
 <section class="screen" data-step="3">
-  <header class="sh" style="--c:#34D399"><div class="sh-ico"><svg class="i"><use href="#i-grafo"/></svg></div><div><p class="sh-step" data-i18n="s.paso3">Paso 3 de 3</p><h2 data-i18n="Grafo de conocimiento">Grafo de conocimiento</h2><p class="sh-lede" data-i18n="s.grafo.lede">Cada punto es una nota y cada línea, un enlace. Pulsa una nota para abrirla. Las notas aisladas son ideas que aún no has conectado.</p></div></header>
+  <header class="sh" style="--c:#0E8C7A"><div class="sh-ico"><svg class="i"><use href="#i-grafo"/></svg></div><div><p class="sh-step" data-i18n="s.paso3">Paso 3 de 3</p><h2 data-i18n="Grafo de conocimiento">Grafo de conocimiento</h2><p class="sh-lede" data-i18n="s.grafo.lede">Cada punto es una nota y cada línea, un enlace. Pulsa una nota para abrirla. Las notas aisladas son ideas que aún no has conectado.</p></div></header>
   <div class="sx-graph"><canvas id="lienzo" role="img" aria-label="Grafo de notas y enlaces" data-i18n-attr="aria-label:Grafo de notas y enlaces"></canvas><div class="sx-leyenda" id="leyenda"></div></div>
   <div class="card"><h3 data-i18n="Notas más conectadas">Notas más conectadas</h3><div id="topNotas"></div></div>
 </section>
@@ -1468,21 +1442,31 @@ const I18N = {
 "s.paso2": "Step 2 of 3",
 "s.paso3": "Step 3 of 3",
 "Consulta": "Ask",
-"s.consulta.lede": "Ask whatever you want to research. SinapsIA searches scholarly works, answers only with what their abstracts say and marks with ✓ every claim whose quote the code has checked.",
+"s.consulta.lede": "Ask whatever you want to research, by typing or with the microphone. SinapsIA searches scholarly works, answers only with what their abstracts say, marks with ✓ every claim whose quote the code has checked and saves the answer in your brain.",
+"Guardar cada respuesta en el cerebro": "Save every answer to the brain",
+"Guardada en tu cerebro: abrir": "Saved in your brain: open",
+"Guardado en tu cerebro: la respuesta y {0} fuente(s) verificada(s)": "Saved in your brain: the answer and {0} verified source(s)",
+"Cada respuesta se guardará en tu cerebro": "Every answer will be saved in your brain",
+"Guardado automático desactivado: guarda a mano lo que quieras": "Automatic saving off: save by hand what you want",
+"Cerebro de ejemplo": "Example brain",
+"Cerebro en Drive: {0} notas": "Brain in Drive: {0} notes",
+"Reconecta la carpeta del cerebro": "Reconnect the brain folder",
+"Cerebro solo en este navegador: conectar Drive": "Brain only in this browser: connect Drive",
 "s.fuentesinfo": "Sources: OpenAlex (all disciplines) · DOIs verified in Crossref",
 "Leer las respuestas en voz alta": "Read answers aloud",
 "Tu pregunta": "Your question",
 "s.pregunta.ph": "What do you want to know? For example: does retrieval practice improve long-term learning?",
 "Dictar la pregunta": "Dictate the question",
 "Preguntar": "Ask",
-"s.ask.foot": "Enter to send · Shift+Enter for a new line",
+"s.ask.foot": "Enter to send · Shift+Enter for a new line · With the microphone, the question is sent when you finish speaking",
 "Borrar la conversación": "Clear the conversation",
 "Tu segundo cerebro": "Your second brain",
 "s.cerebro.lede": "Your notes, organised with the PARA method (Projects, Areas, Resources, Archive). Type [[Title of another note]] to link them.",
-"Sincronización con Google Drive": "Google Drive sync",
 "Abrir expediente": "Open file",
 "Descargar expediente": "Download file",
-"s.drive.ayuda": "Choose a Google Drive for desktop folder: SinapsIA keeps sinapsia-cerebro.json there, merges it note by note and makes a daily copy. It works in desktop Chrome and Edge; in other browsers, open and download the file by hand.",
+"s.drive.ayuda": "It works in desktop Chrome and Edge. Notes are merged one by one and a copy is kept every day in the “copias” subfolder. If you connect nothing, the brain lives only in this browser; on mobile or other browsers you can open and download the file by hand.",
+"s.drive.t": "First, choose where your brain lives",
+"s.drive.pasos": "<li>Install <b>Google Drive for desktop</b> (free). Your Drive appears as one more folder on your computer: <i>Google Drive › My Drive</i>.</li><li>Press <b>Connect folder</b> and choose a folder inside <i>My Drive</i>, for example <i>My Drive › SinapsIA</i>.</li><li>SinapsIA saves <code>sinapsia-cerebro.json</code> there every time you change something, and Google Drive uploads it to the cloud by itself. On another computer, choose the same folder and you will have the same brain.</li>",
 "s.ejbar": "You are viewing an example brain with fictitious sources. It is not synced with Drive.",
 "Salir del ejemplo": "Leave the example",
 "Buscar en tus notas": "Search your notes",
@@ -1527,7 +1511,7 @@ const I18N = {
 "Drive": "Drive",
 "Conecta una carpeta de Google Drive para ordenador (Chrome o Edge de escritorio). SinapsIA guarda allí sinapsia-cerebro.json, lo fusiona nota a nota con lo que haya y hace una copia diaria (conserva las 14 últimas). Si editas la misma nota en dos equipos a la vez, gana la última guardada. En móvil u otros navegadores, usa «Abrir expediente» y «Descargar expediente».": "Connect a Google Drive for desktop folder (desktop Chrome or Edge). SinapsIA keeps sinapsia-cerebro.json there, merges it note by note with what is already there and makes a daily copy (it keeps the last 14). If you edit the same note on two computers at once, the last one saved wins. On mobile or other browsers, use “Open file” and “Download file”.",
 "Voz": "Voice",
-"El micrófono dicta la pregunta (Chrome y Edge; el audio pasa por el servicio de voz del navegador). El altavoz lee las respuestas con la voz de tu sistema, sin coste.": "The microphone dictates the question (Chrome and Edge; the audio goes through the browser’s speech service). The speaker reads the answers with your system’s voice, at no cost.",
+"Pulsa el micrófono y habla: al terminar, la pregunta se envía sola (Chrome y Edge; el audio pasa por el servicio de voz del navegador). El altavoz lee las respuestas con la voz de tu sistema, sin coste.": "Press the microphone and speak: when you finish, the question is sent automatically (Chrome and Edge; the audio goes through the browser’s speech service). The speaker reads the answers with your system’s voice, at no cost.",
 "Claves": "Keys",
 "La clave de IA (OpenAI, Gemini o Claude) y la de OpenAlex se guardan solo en este navegador. Nunca van al fichero de Drive ni a las descargas.": "The AI key (OpenAI, Gemini or Claude) and the OpenAlex key are stored only in this browser. They never go into the Drive file or the downloads.",
 "Lista. Pregunta lo que quieras investigar.": "Ready. Ask whatever you want to research.",
@@ -1581,7 +1565,6 @@ const I18N = {
 "Leyendo la respuesta…": "Reading the answer…",
 "Tu navegador no permite dictar. Usa Chrome o Edge, o escribe la pregunta.": "Your browser does not support dictation. Use Chrome or Edge, or type the question.",
 "El navegador no ha dado permiso para usar el micrófono.": "The browser did not grant permission to use the microphone.",
-"Revisa la pregunta y pulsa «Preguntar»": "Check the question and press “Ask”",
 "Escuchando…": "Listening…",
 "Todas": "All",
 "(sin título)": "(untitled)",
@@ -1672,21 +1655,31 @@ const I18N = {
 "s.paso2": "Passo 2 de 3",
 "s.paso3": "Passo 3 de 3",
 "Consulta": "Consulta",
-"s.consulta.lede": "Pergunte o que quiser investigar. A SinapsIA pesquisa trabalhos académicos, responde só com o que dizem os seus resumos e marca com ✓ cada afirmação cuja citação o código verificou.",
+"s.consulta.lede": "Pergunte o que quiser investigar, por escrito ou com o microfone. A SinapsIA pesquisa trabalhos académicos, responde só com o que dizem os seus resumos, marca com ✓ cada afirmação cuja citação o código verificou e guarda a resposta no seu cérebro.",
+"Guardar cada respuesta en el cerebro": "Guardar cada resposta no cérebro",
+"Guardada en tu cerebro: abrir": "Guardada no seu cérebro: abrir",
+"Guardado en tu cerebro: la respuesta y {0} fuente(s) verificada(s)": "Guardado no seu cérebro: a resposta e {0} fonte(s) verificada(s)",
+"Cada respuesta se guardará en tu cerebro": "Cada resposta será guardada no seu cérebro",
+"Guardado automático desactivado: guarda a mano lo que quieras": "Gravação automática desativada: guarde à mão o que quiser",
+"Cerebro de ejemplo": "Cérebro de exemplo",
+"Cerebro en Drive: {0} notas": "Cérebro no Drive: {0} notas",
+"Reconecta la carpeta del cerebro": "Volte a ligar a pasta do cérebro",
+"Cerebro solo en este navegador: conectar Drive": "Cérebro só neste navegador: ligar o Drive",
 "s.fuentesinfo": "Fontes: OpenAlex (todas as disciplinas) · DOI verificados no Crossref",
 "Leer las respuestas en voz alta": "Ler as respostas em voz alta",
 "Tu pregunta": "A sua pergunta",
 "s.pregunta.ph": "O que quer saber? Por exemplo: a prática de recuperação melhora a aprendizagem a longo prazo?",
 "Dictar la pregunta": "Ditar a pergunta",
 "Preguntar": "Perguntar",
-"s.ask.foot": "Enter para enviar · Shift+Enter para uma nova linha",
+"s.ask.foot": "Enter para enviar · Shift+Enter para uma nova linha · Com o microfone, a pergunta é enviada quando terminar de falar",
 "Borrar la conversación": "Apagar a conversa",
 "Tu segundo cerebro": "O seu segundo cérebro",
 "s.cerebro.lede": "As suas notas, organizadas com o método PARA (Projetos, Áreas, Recursos, Arquivo). Escreva [[Título de outra nota]] para as ligar.",
-"Sincronización con Google Drive": "Sincronização com o Google Drive",
 "Abrir expediente": "Abrir ficheiro",
 "Descargar expediente": "Descarregar ficheiro",
-"s.drive.ayuda": "Escolha uma pasta do Google Drive para computador: a SinapsIA guarda aí sinapsia-cerebro.json, funde-o nota a nota e faz uma cópia diária. Funciona no Chrome e no Edge de computador; noutros navegadores, abra e descarregue o ficheiro manualmente.",
+"s.drive.ayuda": "Funciona no Chrome e no Edge de computador. As notas são fundidas uma a uma e todos os dias é guardada uma cópia na subpasta «copias». Se não ligar nada, o cérebro vive só neste navegador; no telemóvel ou noutros navegadores pode abrir e descarregar o ficheiro manualmente.",
+"s.drive.t": "Primeiro, escolha onde vive o seu cérebro",
+"s.drive.pasos": "<li>Instale o <b>Google Drive para computador</b> (gratuito). O seu Drive aparece como mais uma pasta do seu computador: <i>Google Drive › O meu disco</i>.</li><li>Prima <b>Ligar pasta</b> e escolha uma pasta dentro de <i>O meu disco</i>, por exemplo <i>O meu disco › SinapsIA</i>.</li><li>A SinapsIA guarda aí <code>sinapsia-cerebro.json</code> sempre que muda algo, e o Google Drive envia-o para a nuvem sozinho. Noutro computador, escolha a mesma pasta e terá o mesmo cérebro.</li>",
 "s.ejbar": "Está a ver um cérebro de exemplo com fontes fictícias. Não é sincronizado com o Drive.",
 "Salir del ejemplo": "Sair do exemplo",
 "Buscar en tus notas": "Pesquisar nas suas notas",
@@ -1731,7 +1724,7 @@ const I18N = {
 "Drive": "Drive",
 "Conecta una carpeta de Google Drive para ordenador (Chrome o Edge de escritorio). SinapsIA guarda allí sinapsia-cerebro.json, lo fusiona nota a nota con lo que haya y hace una copia diaria (conserva las 14 últimas). Si editas la misma nota en dos equipos a la vez, gana la última guardada. En móvil u otros navegadores, usa «Abrir expediente» y «Descargar expediente».": "Ligue uma pasta do Google Drive para computador (Chrome ou Edge de computador). A SinapsIA guarda aí sinapsia-cerebro.json, funde-o nota a nota com o que lá houver e faz uma cópia diária (conserva as 14 últimas). Se editar a mesma nota em dois computadores ao mesmo tempo, ganha a última guardada. No telemóvel ou noutros navegadores, use «Abrir ficheiro» e «Descarregar ficheiro».",
 "Voz": "Voz",
-"El micrófono dicta la pregunta (Chrome y Edge; el audio pasa por el servicio de voz del navegador). El altavoz lee las respuestas con la voz de tu sistema, sin coste.": "O microfone dita a pergunta (Chrome e Edge; o áudio passa pelo serviço de voz do navegador). O altifalante lê as respostas com a voz do seu sistema, sem custo.",
+"Pulsa el micrófono y habla: al terminar, la pregunta se envía sola (Chrome y Edge; el audio pasa por el servicio de voz del navegador). El altavoz lee las respuestas con la voz de tu sistema, sin coste.": "Prima o microfone e fale: ao terminar, a pergunta é enviada automaticamente (Chrome e Edge; o áudio passa pelo serviço de voz do navegador). O altifalante lê as respostas com a voz do seu sistema, sem custo.",
 "Claves": "Chaves",
 "La clave de IA (OpenAI, Gemini o Claude) y la de OpenAlex se guardan solo en este navegador. Nunca van al fichero de Drive ni a las descargas.": "A chave de IA (OpenAI, Gemini ou Claude) e a do OpenAlex são guardadas apenas neste navegador. Nunca vão para o ficheiro do Drive nem para as transferências.",
 "Lista. Pregunta lo que quieras investigar.": "Pronta. Pergunte o que quiser investigar.",
@@ -1785,7 +1778,6 @@ const I18N = {
 "Leyendo la respuesta…": "A ler a resposta…",
 "Tu navegador no permite dictar. Usa Chrome o Edge, o escribe la pregunta.": "O seu navegador não permite ditar. Use o Chrome ou o Edge, ou escreva a pergunta.",
 "El navegador no ha dado permiso para usar el micrófono.": "O navegador não deu permissão para usar o microfone.",
-"Revisa la pregunta y pulsa «Preguntar»": "Reveja a pergunta e prima «Perguntar»",
 "Escuchando…": "A ouvir…",
 "Todas": "Todas",
 "(sin título)": "(sem título)",
@@ -1999,11 +1991,12 @@ const GLOS = [
   ['Límites', 'SinapsIA lee resúmenes, no artículos completos: lo que no está en el resumen no lo sabe. Una búsqueda trae unos pocos trabajos, no una revisión sistemática. Consulta el artículo antes de citarlo en tu trabajo.'],
   ['Segundo cerebro (PARA)', 'Proyectos: lo que tiene un objetivo y una fecha. Áreas: responsabilidades que mantienes. Recursos: temas que te interesan. Archivo: lo que ya no está activo. Capturas una fuente, la destilas con tus palabras y la enlazas con [[Título]].'],
   ['Drive', 'Conecta una carpeta de Google Drive para ordenador (Chrome o Edge de escritorio). SinapsIA guarda allí sinapsia-cerebro.json, lo fusiona nota a nota con lo que haya y hace una copia diaria (conserva las 14 últimas). Si editas la misma nota en dos equipos a la vez, gana la última guardada. En móvil u otros navegadores, usa «Abrir expediente» y «Descargar expediente».'],
-  ['Voz', 'El micrófono dicta la pregunta (Chrome y Edge; el audio pasa por el servicio de voz del navegador). El altavoz lee las respuestas con la voz de tu sistema, sin coste.'],
+  ['Voz', 'Pulsa el micrófono y habla: al terminar, la pregunta se envía sola (Chrome y Edge; el audio pasa por el servicio de voz del navegador). El altavoz lee las respuestas con la voz de tu sistema, sin coste.'],
   ['Claves', 'La clave de IA (OpenAI, Gemini o Claude) y la de OpenAlex se guardan solo en este navegador. Nunca van al fichero de Drive ni a las descargas.']
 ];
 const PARA_TX = {proyectos: 'Proyectos', areas: 'Áreas', recursos: 'Recursos', archivo: 'Archivo'};
-const PARA_COL = {proyectos: '#F5B544', areas: '#A78BFA', recursos: '#22D3EE', archivo: '#7C93AC'};
+const PARA_COL = {proyectos: '#E4572E', areas: '#6B4FD8', recursos: '#1F6FB2', archivo: '#5D7691'};
+const PARA_COL_G = {proyectos: '#F07A55', areas: '#A08BF2', recursos: '#5AA9EC', archivo: '#A9C0D4'};   // mismas tonalidades, más claras para el fondo tinta del grafo
 let S = {cerebro: {id: uid('c'), notas: [], borrados: []}, chat: [], fuentes: {}, sel: null, filtro: 'todas', esEjemplo: false, antes: null, drive: null};
 let ENVIO_OK = false, busy = false;
 
@@ -2074,6 +2067,7 @@ function estado(e, txt = '') { ESTADO = e; pintaCore(); $('sxEstado').textConten
 
 /* ── pantalla 0 ── */
 function pintaInicio() {
+  pintaDrive();
   const n = S.cerebro.notas.length;
   $('inicioProj').innerHTML = S.esEjemplo ? `${esc(t('Estás viendo el ejemplo.'))} <button class="btn btn-ghost btn-sm" id="btnSalirEj0" type="button">${esc(t('Salir del ejemplo'))}</button>`
     : n ? `${esc(n === 1 ? t('Tu cerebro tiene 1 nota.') : t('Tu cerebro tiene {0} notas.', n))} <button class="btn btn-ghost btn-sm" id="btnCont" type="button">${esc(t('Abrirlo'))}</button>` : '';
@@ -2168,6 +2162,7 @@ async function preguntar() {
     const res = procesaRespuesta(raw, fuentes, ns);
     fuentes.forEach(f => { S.fuentes[f.id] = sinResumen(f); S.fuentes[f.id].resumen = f.resumen; });
     S.chat.push({rol: 'ia', q, consultas, res});
+    if (autoOn() && res.afirmaciones.length) guardaRespuesta(S.chat.length - 1, true);
     await guardaYa();
     habla(res.respuesta);
   } catch (e) {
@@ -2212,7 +2207,7 @@ function pintaMsg(m, i) {
     ${r.huecos ? `<div class="sx-huecos"><b>${esc(t('Lo que estas fuentes no responden'))}</b> ${esc(r.huecos)}</div>` : ''}
     ${(r.nuevos || []).length ? `<div class="aviso">${esc(t('Cifras que no están en las fuentes ni en tus notas: {0}. Compruébalas.', r.nuevos.join(', ')))}</div>` : ''}
     <div class="sx-srcs">${fs.map(f => tarjetaFuente(f, refDeId[f.id])).join('')}</div>
-    <div class="actions"><button class="btn btn-primary btn-sm" type="button" data-guarda="${i}">${ico('nucleo')}<span>${esc(t('Guardar en mi cerebro'))}</span></button><button class="btn btn-ghost btn-sm" type="button" data-lee="${i}">${ico('voz')}<span>${esc(t('Leer en voz alta'))}</span></button></div>
+    <div class="actions">${m.guardada && S.cerebro.notas.some(n => n.id === m.guardada) ? `<button class="btn btn-ghost btn-sm" type="button" data-abre="${esc(m.guardada)}">${ico('check')}<span>${esc(t('Guardada en tu cerebro: abrir'))}</span></button>` : `<button class="btn btn-primary btn-sm" type="button" data-guarda="${i}">${ico('nucleo')}<span>${esc(t('Guardar en mi cerebro'))}</span></button>`}<button class="btn btn-ghost btn-sm" type="button" data-lee="${i}">${ico('voz')}<span>${esc(t('Leer en voz alta'))}</span></button></div>
     <p class="help">${esc(t('Búsqueda: {0}', (m.consultas || []).join(' · ')))} · ${esc(t('SinapsIA lee resúmenes, no artículos completos: consulta el artículo antes de citarlo.'))}</p></div>`;
 }
 function pintaChat(alFinal = true) {
@@ -2221,7 +2216,7 @@ function pintaChat(alFinal = true) {
   if (alFinal) { const ult = c.querySelector('.sx-msg.ia:last-of-type'), yo = [...c.querySelectorAll('.sx-msg.yo')].pop(); const ancla = S.chat.at(-1)?.rol === 'ia' ? (yo || ult) : null; c.scrollTop = ancla ? ancla.offsetTop - c.offsetTop - 8 : c.scrollHeight; }
   pintaCore();
 }
-function pintaConsulta() { pintaChat(); if (!busy) estado(ESTADO === 'hablando' ? 'hablando' : 'reposo'); $('btnLeer').setAttribute('aria-pressed', String(leerOn())); }
+function pintaConsulta() { pintaChat(); if (!busy) estado(ESTADO === 'hablando' ? 'hablando' : 'reposo'); $('btnLeer').setAttribute('aria-pressed', String(leerOn())); $('btnAuto').setAttribute('aria-pressed', String(autoOn())); pintaDrive(); }
 $('chat').addEventListener('click', e => {
   const b = e.target.closest('[data-cap],[data-guarda],[data-lee],[data-abre],[data-sug]'); if (!b) return;
   if (b.dataset.sug) { $('pregunta').value = b.dataset.sug; $('pregunta').focus(); return; }
@@ -2241,21 +2236,24 @@ function captura(fid, silencio = false) {
   S.cerebro.notas.push(n); cambioCerebro(); if (!silencio) toast(t('Fuente capturada en Recursos'));
   return n;
 }
-function guardaRespuesta(i) {
+function guardaRespuesta(i, auto = false) {
   const m = S.chat[i]; if (!m?.res) return;
+  if (m.guardada && S.cerebro.notas.some(n => n.id === m.guardada)) return;
   const r = m.res, ok = r.afirmaciones.filter(a => a.estado === 'ok');
   const fuentesNotas = [...new Set(ok.map(a => a.fuente))].map(fid => captura(fid, true)).filter(Boolean);
   const idea = nuevaNota({tipo: 'idea', para: 'recursos', titulo: m.q.slice(0, 110),
     texto: r.respuesta + (ok.length ? '\n\n' + t('Evidencia verificada:') + '\n' + ok.map(a => `- ${a.texto} — [[${S.fuentes[a.fuente]?.titulo || a.ref}]]`).join('\n') : '') + (r.huecos ? '\n\n' + t('Lo que no responden:') + ' ' + r.huecos : ''),
     rel: [...fuentesNotas.map(n => n.id), ...r.conexiones.map(c => c.nota)], etiquetas: []});
-  S.cerebro.notas.push(idea); S.sel = idea.id; cambioCerebro();
-  toast(t('Guardada como nota, con {0} fuente(s) enlazada(s)', fuentesNotas.length));
+  S.cerebro.notas.push(idea); m.guardada = idea.id; if (!auto) S.sel = idea.id; cambioCerebro();
+  toast(auto ? t('Guardado en tu cerebro: la respuesta y {0} fuente(s) verificada(s)', fuentesNotas.length) : t('Guardada como nota, con {0} fuente(s) enlazada(s)', fuentesNotas.length));
 }
 
 /* ── voz: dictado (Web Speech API del navegador) y lectura (síntesis del sistema, sin coste) ── */
 const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
 let rec = null;
 const leerOn = () => localStorage.getItem(APP + '_leer') === '1';
+const autoOn = () => localStorage.getItem(APP + '_auto') !== '0';   // guardar en el cerebro: activado por defecto
+$('btnAuto').onclick = () => { const v = !autoOn(); localStorage.setItem(APP + '_auto', v ? '1' : '0'); $('btnAuto').setAttribute('aria-pressed', String(v)); toast(v ? t('Cada respuesta se guardará en tu cerebro') : t('Guardado automático desactivado: guarda a mano lo que quieras')); };
 $('btnLeer').onclick = () => { const v = !leerOn(); localStorage.setItem(APP + '_leer', v ? '1' : '0'); $('btnLeer').setAttribute('aria-pressed', String(v)); if (!v) detenVoz(); toast(v ? t('Leeré las respuestas en voz alta') : t('Lectura en voz alta desactivada')); };
 function habla(txt, forzar = false) {
   if (!txt || !(forzar || leerOn()) || !window.speechSynthesis) return;
@@ -2270,8 +2268,9 @@ function dicta() {
   detenVoz(); rec = new SR(); rec.lang = locale(); rec.interimResults = true; rec.continuous = false;
   const base = $('pregunta').value.trim();
   rec.onresult = ev => { $('pregunta').value = (base ? base + ' ' : '') + [...ev.results].map(r => r[0].transcript).join(' '); };
-  rec.onerror = ev => { if (ev.error === 'not-allowed' || ev.error === 'service-not-allowed') toast(t('El navegador no ha dado permiso para usar el micrófono.'), 6000); };
-  rec.onend = () => { rec = null; $('btnMic').setAttribute('aria-pressed', 'false'); estado('reposo'); if ($('pregunta').value.trim().length >= 8) toast(t('Revisa la pregunta y pulsa «Preguntar»')); };
+  rec.onerror = ev => { error = true; if (ev.error === 'not-allowed' || ev.error === 'service-not-allowed') toast(t('El navegador no ha dado permiso para usar el micrófono.'), 6000); };
+  let error = false;
+  rec.onend = () => { rec = null; $('btnMic').setAttribute('aria-pressed', 'false'); estado('reposo'); if (!error && $('pregunta').value.trim().length >= 8) preguntar(); };   // al terminar de hablar, se envía sin esperar
   try { rec.start(); $('btnMic').setAttribute('aria-pressed', 'true'); estado('escuchando', t('Escuchando…')); } catch { rec = null; }
 }
 $('btnMic').onclick = () => { if (localStorage.getItem(APP + '_voz_ok') === '1') return dicta(); $('mVoz').classList.add('on'); };
@@ -2279,12 +2278,12 @@ $('vozSi').onclick = () => { localStorage.setItem(APP + '_voz_ok', '1'); $('mVoz
 $('vozNo').onclick = () => $('mVoz').classList.remove('on');
 
 /* ── cerebro: lista, filtros PARA, editor, enlaces ── */
-function cambioCerebro() { guarda(); programaDrive(); }
+function cambioCerebro() { guarda(); programaDrive(); if ($('chipCerebro')) pintaDrive(); }
 const notaSel = () => S.cerebro.notas.find(n => n.id === S.sel);
 function pintaCerebro() {
   $('ejBar').hidden = !S.esEjemplo;
   const N = S.cerebro.notas, cnt = k => k === 'todas' ? N.length : N.filter(n => n.para === k).length;
-  $('tabsPara').innerHTML = ['todas', ...PARA].map(k => `<button type="button" data-para="${k}" aria-pressed="${S.filtro === k}" style="--c:${PARA_COL[k] || '#E3EEF9'}">${esc(k === 'todas' ? t('Todas') : t(PARA_TX[k]))} <small>${cnt(k)}</small></button>`).join('');
+  $('tabsPara').innerHTML = ['todas', ...PARA].map(k => `<button type="button" data-para="${k}" aria-pressed="${S.filtro === k}" style="--c:${PARA_COL[k] || '#0F2237'}">${esc(k === 'todas' ? t('Todas') : t(PARA_TX[k]))} <small>${cnt(k)}</small></button>`).join('');
   pintaLista(); pintaEditor(); pintaDrive();
 }
 function pintaLista() {
@@ -2358,6 +2357,8 @@ function pintaDrive() {
   const tx = {sin: t('No conectado: tus notas están solo en este navegador.'), ok: t('Conectado a la carpeta «{0}». Última sincronización: {1}.', DIR?.name || '', S.drive ? new Date(S.drive).toLocaleString(locale()) : '—'),
     rec: t('La carpeta «{0}» necesita permiso de nuevo.', DIR?.name || ''), sync: t('Sincronizando…'), ej: t('El ejemplo no se sincroniza.'), err: t('No se pudo escribir en la carpeta. Comprueba que existe y que Drive está en marcha.')}[S.esEjemplo ? 'ej' : DRV];
   $('driveEstado').textContent = tx; $('driveEstado').className = DRV === 'ok' && !S.esEjemplo ? 'ok' : DRV === 'err' || DRV === 'rec' ? 'mal' : '';
+  $('driveCard').dataset.estado = S.esEjemplo ? 'ej' : DRV;
+  const chip = $('chipCerebro'); if (chip) { chip.className = 'sx-chipcer ' + (DRV === 'ok' && !S.esEjemplo ? 'ok' : DRV === 'rec' || DRV === 'err' ? 'mal' : ''); chip.textContent = S.esEjemplo ? t('Cerebro de ejemplo') : DRV === 'ok' ? t('Cerebro en Drive: {0} notas', S.cerebro.notas.length) : DRV === 'rec' ? t('Reconecta la carpeta del cerebro') : t('Cerebro solo en este navegador: conectar Drive'); }
   $('btnCarpetaTx').textContent = DRV === 'rec' ? t('Reconectar carpeta') : DIR ? t('Cambiar carpeta') : t('Conectar carpeta');
 }
 async function leeFich(dir, nombre) { try { const fh = await dir.getFileHandle(nombre); return await (await fh.getFile()).text(); } catch { return null; } }
@@ -2393,6 +2394,7 @@ $('btnCarpeta').onclick = async () => {
   try { await kv('readwrite', s => s.put(DIR, 'dir')); } catch {}
   await syncDrive();
 };
+$('chipCerebro').onclick = () => { go(0); $('driveCard').scrollIntoView({behavior: 'smooth', block: 'center'}); };
 document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'visible') syncDrive(); });
 $('fileExp').onchange = async e => {
   const f = e.target.files[0]; e.target.value = ''; if (!f) return;
@@ -2413,7 +2415,7 @@ function pintaGrafo() {
   const nodos = gr.nodos.map((n, i) => { const p = prev[n.id]; const a = i * 2.39996; return {...n, x: p ? p.x : w / 2 + Math.cos(a) * (40 + 9 * i), y: p ? p.y : h / 2 + Math.sin(a) * (40 + 9 * i), vx: 0, vy: 0}; });
   const idx = Object.fromEntries(nodos.map((n, i) => [n.id, i]));
   G = {nodos, aristas: gr.aristas.map(([a, b]) => [idx[a], idx[b]]), w, h, dpr, hover: -1, tick: 0};
-  $('leyenda').innerHTML = PARA.map(p => `<span><i style="background:${PARA_COL[p]}"></i>${esc(t(PARA_TX[p]))}</span>`).join('') + `<span>${esc(t('{0} notas · {1} enlaces', nodos.length, gr.aristas.length))}</span>`;
+  $('leyenda').innerHTML = PARA.map(p => `<span><i style="background:${PARA_COL_G[p]}"></i>${esc(t(PARA_TX[p]))}</span>`).join('') + `<span>${esc(t('{0} notas · {1} enlaces', nodos.length, gr.aristas.length))}</span>`;
   const top = [...nodos].sort((a, b) => b.grado - a.grado).filter(n => n.grado).slice(0, 8);
   $('topNotas').innerHTML = top.length ? top.map(n => `<button class="sx-link" type="button" data-abre-g="${esc(n.id)}">${esc(n.titulo)} <small>${n.grado}</small></button>`).join('') : `<p class="empty">${esc(t('Aún no hay enlaces. Escribe [[Título de otra nota]] dentro de una nota para conectarlas.'))}</p>`;
   cancelAnimationFrame(_raf);
@@ -2429,14 +2431,14 @@ function paso() {
 function dibuja() {
   const cv = $('lienzo'), c = cv.getContext('2d'), {nodos, aristas, w, h, dpr} = G, tk = G.tick;
   c.setTransform(dpr, 0, 0, dpr, 0, 0); c.clearRect(0, 0, w, h);
-  c.strokeStyle = 'rgba(34,211,238,.06)'; c.lineWidth = 1; for (let x = 0; x < w; x += 32) { c.beginPath(); c.moveTo(x, 0); c.lineTo(x, h); c.stroke(); } for (let y = 0; y < h; y += 32) { c.beginPath(); c.moveTo(0, y); c.lineTo(w, y); c.stroke(); }
-  aristas.forEach(([i, j], k) => { const a = nodos[i], b = nodos[j], on = G.hover === i || G.hover === j; c.strokeStyle = on ? 'rgba(245,181,68,.9)' : 'rgba(103,232,249,.35)'; c.lineWidth = on ? 2 : 1.2; c.beginPath(); c.moveTo(a.x, a.y); c.lineTo(b.x, b.y); c.stroke();
-    if (!reducido()) { const p = ((tk / 90) + k * 0.17) % 1; c.fillStyle = 'rgba(165,243,252,.9)'; c.beginPath(); c.arc(a.x + (b.x - a.x) * p, a.y + (b.y - a.y) * p, 1.8, 0, 7); c.fill(); } });
-  nodos.forEach((n, i) => { const r = 8 + Math.min(12, n.grado * 2.6), col = PARA_COL[n.para] || '#22D3EE';
+  c.strokeStyle = 'rgba(255,255,255,.04)'; c.lineWidth = 1; for (let x = 0; x < w; x += 32) { c.beginPath(); c.moveTo(x, 0); c.lineTo(x, h); c.stroke(); } for (let y = 0; y < h; y += 32) { c.beginPath(); c.moveTo(0, y); c.lineTo(w, y); c.stroke(); }
+  aristas.forEach(([i, j], k) => { const a = nodos[i], b = nodos[j], on = G.hover === i || G.hover === j; c.strokeStyle = on ? 'rgba(240,122,85,.95)' : 'rgba(195,211,226,.35)'; c.lineWidth = on ? 2 : 1.2; c.beginPath(); c.moveTo(a.x, a.y); c.lineTo(b.x, b.y); c.stroke();
+    if (!reducido()) { const p = ((tk / 90) + k * 0.17) % 1; c.fillStyle = 'rgba(253,235,228,.9)'; c.beginPath(); c.arc(a.x + (b.x - a.x) * p, a.y + (b.y - a.y) * p, 1.8, 0, 7); c.fill(); } });
+  nodos.forEach((n, i) => { const r = 8 + Math.min(12, n.grado * 2.6), col = PARA_COL_G[n.para] || '#A9C0D4';
     c.shadowColor = col; c.shadowBlur = G.hover === i ? 34 : 18; c.fillStyle = col; c.beginPath(); c.arc(n.x, n.y, r, 0, 7); c.fill(); c.shadowBlur = 0;
-    if (n.tipo === 'fuente') { c.strokeStyle = '#06101C'; c.lineWidth = 2; c.beginPath(); c.arc(n.x, n.y, r * 0.45, 0, 7); c.stroke(); }
-    if (n.grado || G.hover === i || nodos.length < 14) { c.font = `${G.hover === i ? 700 : 500} 12px "Instrument Sans",system-ui,sans-serif`; c.fillStyle = G.hover === i ? '#FFFFFF' : '#C9D8E8'; const tx = n.titulo.length > 34 ? n.titulo.slice(0, 33) + '…' : n.titulo; c.fillText(tx, Math.max(4, Math.min(n.x + r + 5, w - c.measureText(tx).width - 4)), n.y + 4); } });
-  if (!nodos.length) { c.fillStyle = '#9FB3C8'; c.font = '15px "Instrument Sans",system-ui,sans-serif'; const tx = t('Tu grafo aparecerá aquí cuando tengas notas.'); c.fillText(tx, Math.max(8, (w - c.measureText(tx).width) / 2), h / 2); }
+    if (n.tipo === 'fuente') { c.strokeStyle = '#0F2237'; c.lineWidth = 2; c.beginPath(); c.arc(n.x, n.y, r * 0.45, 0, 7); c.stroke(); }
+    if (n.grado || G.hover === i || nodos.length < 14) { c.font = `${G.hover === i ? 700 : 500} 12px "Instrument Sans",system-ui,sans-serif`; c.fillStyle = G.hover === i ? '#FFFFFF' : '#C3D3E2'; const tx = n.titulo.length > 34 ? n.titulo.slice(0, 33) + '…' : n.titulo; c.fillText(tx, Math.max(4, Math.min(n.x + r + 5, w - c.measureText(tx).width - 4)), n.y + 4); } });
+  if (!nodos.length) { c.fillStyle = '#C3D3E2'; c.font = '15px "Instrument Sans",system-ui,sans-serif'; const tx = t('Tu grafo aparecerá aquí cuando tengas notas.'); c.fillText(tx, Math.max(8, (w - c.measureText(tx).width) / 2), h / 2); }
 }
 function anima() { G.tick++; if (G.tick < 400) paso(); dibuja(); if (step === 3) _raf = requestAnimationFrame(anima); }
 const nodoEn = ev => { const r = $('lienzo').getBoundingClientRect(), x = ev.clientX - r.left, y = ev.clientY - r.top; let mejor = -1, md = 22 * 22; G?.nodos.forEach((n, i) => { const d = (n.x - x) ** 2 + (n.y - y) ** 2; if (d < md) { md = d; mejor = i; } }); return mejor; };
