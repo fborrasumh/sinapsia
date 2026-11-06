@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#0F2237">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src data: blob:; media-src blob: data:; connect-src https://api.openai.com https://generativelanguage.googleapis.com https://api.anthropic.com https://api.openalex.org https://api.crossref.org; base-uri 'none'; form-action 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline' https://cdnjs.cloudflare.com https://cdn.jsdelivr.net; style-src 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src data: blob:; media-src blob: data:; connect-src https://api.openai.com https://generativelanguage.googleapis.com https://api.anthropic.com https://api.openalex.org https://api.crossref.org; worker-src blob: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net; base-uri 'none'; form-action 'none'">
 <meta name="author" content="Fernando Borrás Rocher">
 <meta name="description" content="Asistente de investigación con segundo cerebro y fuentes verificadas">
 <title>SinapsIA · Asistente de investigación con segundo cerebro y fuentes verificadas</title><link rel="preconnect" href="https://fonts.googleapis.com">
@@ -514,6 +514,33 @@ table{border-collapse:collapse;width:100%;font-size:13.8px}th{background:var(--p
 .sh-step,.fa-foot p{color:#55708C}
 .btn-primary{background:var(--brasa-osc);box-shadow:0 8px 18px -10px var(--brasa-osc)}.btn-primary:hover{background:#B03A19}
 @media(max-width:860px){.sx-core-big{display:none!important}}
+.sx-graph canvas{touch-action:none}
+/* ══ 1.2 ══ */
+.sx-modos{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-bottom:10px}
+@media(max-width:700px){.sx-modos{grid-template-columns:minmax(0,1fr)}}
+.sx-modos button{display:flex;gap:10px;align-items:flex-start;text-align:left;border:1.5px solid var(--linea);background:#fff;border-radius:14px;padding:10px 12px;cursor:pointer;color:var(--tinta);font:inherit}
+.sx-modos button svg{color:var(--acero);margin-top:2px;flex:none}.sx-modos button b{display:block;font-size:14.5px}.sx-modos button small{display:block;color:var(--gris);font-size:12.5px;line-height:1.35}
+.sx-modos button:hover{border-color:var(--brasa)}
+.sx-modos button[aria-pressed="true"]{border-color:var(--brasa);background:var(--brasa-suave);box-shadow:0 0 0 1px var(--brasa)}.sx-modos button[aria-pressed="true"] svg{color:var(--brasa-osc)}
+.sx-optprof{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-bottom:10px;font-size:14px}.sx-optprof[hidden]{display:none}.sx-optprof select{border:1.5px solid var(--linea);border-radius:10px;padding:6px 8px;font:inherit;background:#fff;color:var(--tinta)}
+.sx-modo-tag{display:inline-block;font:700 10.5px var(--mono);letter-spacing:.06em;text-transform:uppercase;background:rgba(255,255,255,.18);border-radius:6px;padding:1px 6px;margin-right:4px}
+.sx-msg-cer{border-left-color:#6B4FD8}.sx-msg-prof{border-left-color:#C98200}
+.sx-informe p{font-size:16px;line-height:1.65;margin:0 0 10px}
+.sx-con ul,.sx-huecos ul{margin:6px 0 0;padding-left:20px}
+.sx-sec{border:1px solid var(--linea);border-radius:12px;padding:8px 12px;margin:8px 0;background:var(--papel)}.sx-sec summary{cursor:pointer;font-size:14.5px}.sx-sec summary small{color:var(--gris);margin-left:6px}.sx-sec .sx-afs{margin-top:10px}
+.sx-tools2{display:flex;gap:8px;flex-wrap:wrap;margin:-4px 0 14px}
+.sx-docnotas{list-style:none;padding:0;display:grid;gap:8px}.sx-docnotas li{border:1px solid var(--linea);border-radius:12px;padding:10px 12px;background:var(--papel)}.sx-docnotas p{margin:6px 0 4px;font-size:14px}.sx-docnotas small{color:var(--acero);font-style:italic}
+.sx-rv{margin-bottom:14px}.sx-rv h3{font:800 16px var(--display);margin:0 0 6px}.sx-rv h3 small{font:700 12px var(--mono);background:var(--linea-2);border-radius:6px;padding:1px 6px;margin-left:4px}.sx-rv ul{padding-left:18px;margin:0}.sx-rv li{margin-bottom:8px}
+.sx-pap{list-style:none;padding:0}.sx-pap li{display:flex;gap:8px;align-items:center;flex-wrap:wrap;border-bottom:1px solid var(--linea-2);padding:8px 0}.sx-pap li b{flex:1;min-width:160px}
+.sx-pal .modal-box{max-width:620px;padding:14px}.sx-pal #palIn{width:100%;border:1.5px solid var(--linea);border-radius:12px;padding:12px 14px;font:16px var(--texto);color:var(--tinta)}.sx-pal #palIn:focus{outline:none;border-color:var(--brasa);box-shadow:0 0 0 3px rgba(228,87,46,.18)}
+#palRes{list-style:none;padding:0;margin:10px 0;max-height:52vh;overflow:auto}#palRes li{display:flex;gap:10px;align-items:center;padding:9px 10px;border-radius:10px;cursor:pointer}#palRes li span{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}#palRes li small{color:var(--gris);font-size:12px}
+#palRes li[aria-selected="true"]{background:var(--brasa-suave);box-shadow:inset 3px 0 0 var(--brasa)}#palRes li svg{color:var(--acero);flex:none}
+.sx-estado-c{margin:10px 0 0;font:600 13.5px var(--mono);color:var(--acero);min-height:1.3em}
+.sx-radar-it{display:flex;flex-direction:column;gap:6px}.sx-radar-it .sx-src{flex:1}.sx-nota10{margin:0;font-size:13.5px}.sx-nota10 b{font:800 18px var(--display);color:var(--brasa-osc)}.sx-radar-it details{font-size:13px}.sx-radar-it summary{cursor:pointer;color:var(--acero);font-weight:600}
+.sx-gmodo{margin-bottom:10px}
+.sx-modos button[aria-pressed="true"] small{color:var(--acero)}
+.sx-gmodo button{--c:var(--tinta)}
+.sx-optprof select{width:auto;max-width:100%}
 </style></head>
 <body>
 <svg style="display:none" aria-hidden="true">
@@ -590,6 +617,7 @@ table{border-collapse:collapse;width:100%;font-size:13.8px}th{background:var(--p
       <p class="lede" data-i18n="hero.lede">SinapsIA busca en más de 250 millones de trabajos académicos de todas las disciplinas, responde solo con lo que dicen sus resúmenes y comprueba cada cita por código. Lo que te interesa se convierte en notas enlazadas que crecen contigo.</p>
       <div class="actions"><button class="btn btn-primary btn-big" id="btnStart" type="button"><svg class="i"><use href="#i-mic"/></svg><span data-i18n="s.empezar">Empezar a preguntar</span></button><button class="btn btn-ghost btn-big" id="btnEjemplo" type="button"><svg class="i"><use href="#i-eye"/></svg><span data-i18n="s.ejemplo">Ver un ejemplo</span></button></div>
       <p class="fa-inicio" id="inicioProj"></p>
+      <p class="fa-inicio" id="inicioRadar"></p>
     <div class="fa-autores"><span class="fa-autores-cap" data-i18n="Realizada por">Realizada por</span>
       <div class="fa-autor"><span class="fa-av" style="--c:#E4572E">FB</span><div><b>Fernando Borrás Rocher</b><small>Universidad Miguel Hernández de Elche</small><a class="fa-orcid" href="https://orcid.org/0000-0002-5519-4573" target="_blank" rel="noopener">ORCID 0000-0002-5519-4573</a></div></div>
       </div>
@@ -619,7 +647,13 @@ table{border-collapse:collapse;width:100%;font-size:13.8px}th{background:var(--p
 
 <!-- 1 · CONSULTA -->
 <section class="screen" data-step="1">
-  <header class="sh" style="--c:#E4572E"><div class="sh-ico"><svg class="i"><use href="#i-mic"/></svg></div><div><p class="sh-step" data-i18n="s.paso1">Paso 1 de 3</p><h2 data-i18n="Consulta">Consulta</h2><p class="sh-lede" data-i18n="s.consulta.lede">Pregunta lo que quieras investigar, escribiendo o con el micrófono. SinapsIA busca trabajos académicos, responde solo con lo que dicen sus resúmenes, marca con ✓ cada afirmación cuya cita ha comprobado el código y guarda la respuesta en tu cerebro.</p></div></header>
+  <header class="sh" style="--c:#E4572E"><div class="sh-ico"><svg class="i"><use href="#i-mic"/></svg></div><div><p class="sh-step" data-i18n="s.paso1">Paso 1 de 4</p><h2 data-i18n="Consulta">Consulta</h2><p class="sh-lede" data-i18n="s.consulta.lede">Pregunta lo que quieras investigar, escribiendo o con el micrófono. SinapsIA busca trabajos académicos, responde solo con lo que dicen sus resúmenes, marca con ✓ cada afirmación cuya cita ha comprobado el código y guarda la respuesta en tu cerebro.</p></div></header>
+  <div class="sx-modos" role="group" aria-label="Modo de consulta" data-i18n-attr="aria-label:Modo de consulta">
+    <button type="button" data-modo="ciencia"><svg class="i"><use href="#i-globe"/></svg><span><b data-i18n="Ciencia">Ciencia</b><small data-i18n="s.modo.ciencia">Respuesta rápida con trabajos de OpenAlex</small></span></button>
+    <button type="button" data-modo="profunda"><svg class="i"><use href="#i-sparkles"/></svg><span><b data-i18n="Investigación profunda">Investigación profunda</b><small data-i18n="s.modo.profunda">Varios agentes: plan, búsqueda por subpregunta, crítica e informe</small></span></button>
+    <button type="button" data-modo="cerebro"><svg class="i"><use href="#i-nucleo"/></svg><span><b data-i18n="Mi cerebro">Mi cerebro</b><small data-i18n="s.modo.cerebro">Responde solo con tus notas, citándolas</small></span></button>
+  </div>
+  <div class="sx-optprof" id="optProfunda" hidden><label for="rondas" data-i18n="Rondas de investigación">Rondas de investigación</label><select id="rondas"><option value="1" data-i18n="s.ronda1">1 · plan, búsqueda, crítica e informe</option><option value="2" data-i18n="s.ronda2">2 · además investiga los huecos que encuentre el crítico</option></select></div>
   <div class="sx-console">
     <div class="sx-console-h"><div class="sx-core sx-core-sm" id="coreSm" data-estado="reposo" aria-hidden="true"><i></i><i></i><i></i><b></b></div><div><p class="sx-estado" id="sxEstado" role="status" aria-live="polite"></p><p class="sx-fuentesinfo" data-i18n="s.fuentesinfo">Fuentes: OpenAlex (todas las disciplinas) · DOI verificados en Crossref</p><button class="sx-chipcer" id="chipCerebro" type="button"></button></div><button class="sx-ibtn" id="btnAuto" type="button" aria-pressed="true" aria-label="Guardar cada respuesta en el cerebro" data-i18n-attr="aria-label:Guardar cada respuesta en el cerebro;title:Guardar cada respuesta en el cerebro" title="Guardar cada respuesta en el cerebro"><svg class="i"><use href="#i-save"/></svg></button><button class="sx-ibtn" id="btnLeer" type="button" aria-pressed="false" aria-label="Leer las respuestas en voz alta" data-i18n-attr="aria-label:Leer las respuestas en voz alta;title:Leer las respuestas en voz alta" title="Leer las respuestas en voz alta"><svg class="i"><use href="#i-voz"/></svg></button></div>
     <div class="sx-chat" id="chat" aria-live="polite"></div>
@@ -635,20 +669,32 @@ table{border-collapse:collapse;width:100%;font-size:13.8px}th{background:var(--p
 
 <!-- 2 · CEREBRO -->
 <section class="screen" data-step="2">
-  <header class="sh" style="--c:#C98200"><div class="sh-ico"><svg class="i"><use href="#i-nucleo"/></svg></div><div><p class="sh-step" data-i18n="s.paso2">Paso 2 de 3</p><h2 data-i18n="Tu segundo cerebro">Tu segundo cerebro</h2><p class="sh-lede" data-i18n="s.cerebro.lede">Tus notas, ordenadas con el método PARA (Proyectos, Áreas, Recursos, Archivo). Escribe [[Título de otra nota]] para enlazarlas.</p></div></header>
+  <header class="sh" style="--c:#C98200"><div class="sh-ico"><svg class="i"><use href="#i-nucleo"/></svg></div><div><p class="sh-step" data-i18n="s.paso2">Paso 2 de 4</p><h2 data-i18n="Tu segundo cerebro">Tu segundo cerebro</h2><p class="sh-lede" data-i18n="s.cerebro.lede">Tus notas, ordenadas con el método PARA (Proyectos, Áreas, Recursos, Archivo). Escribe [[Título de otra nota]] para enlazarlas.</p></div></header>
   <div class="sx-ejbar" id="ejBar" hidden><span data-i18n="s.ejbar">Estás viendo un cerebro de ejemplo con fuentes ficticias. No se sincroniza con Drive.</span><button class="btn btn-sm btn-ghost" id="btnSalirEj" type="button" data-i18n="Salir del ejemplo">Salir del ejemplo</button></div>
   <div class="sx-tools"><div class="field sx-busca"><label for="busca" class="sx-sr" data-i18n="Buscar en tus notas">Buscar en tus notas</label><input type="text" id="busca" placeholder="Buscar en tus notas…" data-i18n-attr="placeholder:s.busca.ph"></div>
     <div class="sx-tabs" id="tabsPara" role="group" aria-label="Filtrar por PARA" data-i18n-attr="aria-label:Filtrar por PARA"></div>
     <button class="btn btn-primary btn-sm" id="btnNueva" type="button"><svg class="i"><use href="#i-plus"/></svg><span data-i18n="Nueva nota">Nueva nota</span></button></div>
+  <div class="sx-tools2"><button class="btn btn-ghost btn-sm" id="btnDoc" type="button"><svg class="i"><use href="#i-upload"/></svg><span data-i18n="Capturar documento">Capturar documento</span></button><button class="btn btn-ghost btn-sm" id="btnRevisa" type="button"><svg class="i"><use href="#i-check"/></svg><span data-i18n="Revisar mi cerebro">Revisar mi cerebro</span></button><button class="btn btn-ghost btn-sm" id="btnPapelera" type="button"><svg class="i"><use href="#i-trash"/></svg><span id="btnPapeleraTx">Papelera</span></button><button class="btn btn-ghost btn-sm" id="btnPaleta" type="button"><svg class="i"><use href="#i-grid"/></svg><span data-i18n="Buscar y ejecutar (Ctrl+K)">Buscar y ejecutar (Ctrl+K)</span></button></div>
   <div class="sx-brain"><div class="sx-lista" id="lista"></div><div class="card sx-editor" id="editor"></div></div>
   <div class="card"><h3 data-i18n="Descargar">Descargar</h3><div class="actions" style="margin-top:0"><button class="btn btn-ghost" id="btnBib" type="button"><svg class="i"><use href="#i-download"/></svg><span data-i18n="Bibliografía (CSV)">Bibliografía (CSV)</span></button><button class="btn btn-ghost" id="btnMd" type="button"><svg class="i"><use href="#i-download"/></svg><span data-i18n="Notas en Markdown (ZIP)">Notas en Markdown (ZIP)</span></button></div><p class="help" data-i18n="s.md.ayuda">El ZIP de Markdown conserva los [[enlaces]]: se abre como bóveda en Obsidian o Logseq.</p></div>
 </section>
 
 <!-- 3 · GRAFO -->
 <section class="screen" data-step="3">
-  <header class="sh" style="--c:#0E8C7A"><div class="sh-ico"><svg class="i"><use href="#i-grafo"/></svg></div><div><p class="sh-step" data-i18n="s.paso3">Paso 3 de 3</p><h2 data-i18n="Grafo de conocimiento">Grafo de conocimiento</h2><p class="sh-lede" data-i18n="s.grafo.lede">Cada punto es una nota y cada línea, un enlace. Pulsa una nota para abrirla. Las notas aisladas son ideas que aún no has conectado.</p></div></header>
+  <header class="sh" style="--c:#0E8C7A"><div class="sh-ico"><svg class="i"><use href="#i-grafo"/></svg></div><div><p class="sh-step" data-i18n="s.paso3">Paso 3 de 4</p><h2 data-i18n="Grafo de conocimiento">Grafo de conocimiento</h2><p class="sh-lede" data-i18n="s.grafo.lede">Cada punto es una nota y cada línea, un enlace. Pasa por encima para ver sus vecinas, arrástralas para ordenarlas y pulsa una para abrirla. Cada isla es un grupo de ideas conectadas entre sí; las notas sueltas aún no las has conectado.</p></div></header>
+  <div class="sx-tabs sx-gmodo" id="grafoModo" role="group" aria-label="Color del grafo" data-i18n-attr="aria-label:Color del grafo"><button type="button" data-gm="para" data-i18n="Color por PARA">Color por PARA</button><button type="button" data-gm="islas" data-i18n="Color por islas">Color por islas</button></div>
   <div class="sx-graph"><canvas id="lienzo" role="img" aria-label="Grafo de notas y enlaces" data-i18n-attr="aria-label:Grafo de notas y enlaces"></canvas><div class="sx-leyenda" id="leyenda"></div></div>
   <div class="card"><h3 data-i18n="Notas más conectadas">Notas más conectadas</h3><div id="topNotas"></div></div>
+</section>
+<!-- 4 · RADAR -->
+<section class="screen" data-step="4">
+  <header class="sh" style="--c:#1F6FB2"><div class="sh-ico"><svg class="i"><use href="#i-target"/></svg></div><div><p class="sh-step" data-i18n="s.paso4">Paso 4 de 4</p><h2 data-i18n="Radar de novedades">Radar de novedades</h2><p class="sh-lede" data-i18n="s.radar.lede">Describe tus intereses y SinapsIA buscará en OpenAlex los trabajos publicados recientemente. La IA puntúa de 0 a 10 cuánto encaja cada uno con tu perfil; los que ya has visto no vuelven a salir.</p></div></header>
+  <div class="card"><div class="field"><label for="perfil" data-i18n="Tu perfil de intereses">Tu perfil de intereses</label><textarea id="perfil" rows="5" placeholder="Ejemplo: análisis envolvente de datos (DEA) en hospitales; IA para síntesis de evidencia; bioestadística aplicada a ciencias de la salud. Poco interés en: visión artificial." data-i18n-attr="placeholder:s.perfil.ph"></textarea><p class="help" data-i18n="s.perfil.ayuda">Escribe temas de alto interés y lo que no te interesa. Se guarda solo en este navegador.</p></div>
+    <div class="grid2"><div class="field"><label for="radarDias" data-i18n="Publicados en los últimos">Publicados en los últimos</label><select id="radarDias"><option value="7" data-i18n="7 días">7 días</option><option value="30" selected data-i18n="30 días">30 días</option><option value="90" data-i18n="90 días">90 días</option></select></div>
+    <div class="field"><label for="radarUmbral" data-i18n="Mostrar a partir de">Mostrar a partir de</label><select id="radarUmbral"><option value="6">6 / 10</option><option value="7" selected>7 / 10</option><option value="8">8 / 10</option></select></div></div>
+    <div class="actions" style="margin-top:4px"><button class="btn btn-primary" id="btnRadar" type="button"><svg class="i"><use href="#i-target"/></svg><span data-i18n="Pasar el radar">Pasar el radar</span></button></div>
+    <p class="sx-estado-c" id="radarEstado" role="status" aria-live="polite"></p></div>
+  <div id="radarRes"></div>
 </section>
 </main>
 
@@ -665,6 +711,16 @@ table{border-collapse:collapse;width:100%;font-size:13.8px}th{background:var(--p
 <div class="modal" id="mEnvio" role="dialog" aria-modal="true" aria-labelledby="mEnT"><div class="modal-box"><div class="modal-head"><h2 id="mEnT" data-i18n="Esto es lo que saldría hacia tu proveedor de IA">Esto es lo que saldría hacia tu proveedor de IA</h2><button type="button" data-close data-i18n="Cerrar">Cerrar</button></div><div class="modal-body"><div id="envioInfo"></div><pre class="fa-pre" id="envioTxt"></pre><label class="fa-chk" style="margin:12px 0"><input type="checkbox" id="envioOk"> <span data-i18n="f.envio.chk">He revisado la muestra y confirmo que puede salir de mi ordenador.</span></label><div class="actions"><button class="btn btn-primary" id="envioSi" type="button" disabled data-i18n="s.enviar">Enviar y preguntar</button><button class="btn btn-ghost" id="envioNo" type="button" data-i18n="Cancelar">Cancelar</button></div></div></div></div>
 <div class="modal" id="mHelp" role="dialog" aria-modal="true" aria-labelledby="mHelpT"><div class="modal-box"><div class="modal-head"><h2 id="mHelpT" data-i18n="Ayuda">Ayuda</h2><button type="button" data-close data-i18n="Cerrar">Cerrar</button></div><div class="modal-body"><div class="glos" id="glos"></div></div></div></div>
 <div class="modal" id="mVoz" role="dialog" aria-modal="true" aria-labelledby="mVozT"><div class="modal-box"><div class="modal-head"><h2 id="mVozT" data-i18n="Antes de dictar">Antes de dictar</h2><button type="button" data-close data-i18n="Cerrar">Cerrar</button></div><div class="modal-body"><p data-i18n="s.voz.aviso">El dictado usa el reconocimiento de voz de tu navegador. En Chrome y Edge, el audio se envía a los servidores de voz de Google o Microsoft para convertirlo en texto; SinapsIA no lo guarda. Si prefieres que tu voz no salga de tu ordenador, escribe la pregunta.</p><div class="actions"><button class="btn btn-primary" id="vozSi" type="button" data-i18n="Entendido, dictar">Entendido, dictar</button><button class="btn btn-ghost" id="vozNo" type="button" data-i18n="Cancelar">Cancelar</button></div></div></div></div>
+<div class="modal" id="mDoc" role="dialog" aria-modal="true" aria-labelledby="mDocT"><div class="modal-box"><div class="modal-head"><h2 id="mDocT" data-i18n="Capturar documento">Capturar documento</h2><button type="button" data-close data-i18n="Cerrar">Cerrar</button></div><div class="modal-body">
+  <p class="help" data-i18n="s.doc.ayuda">Sube un PDF, Word, texto o Markdown, o pega el texto. La IA lo convierte en notas atómicas enlazadas con las que ya tienes, cada una con una cita literal que el código comprueba en el documento.</p>
+  <div class="field"><label for="docFile" data-i18n="Documento">Documento</label><input type="file" id="docFile" accept=".pdf,.docx,.txt,.md,.markdown"></div>
+  <div class="field"><label for="docTexto" data-i18n="O pega el texto">O pega el texto</label><textarea id="docTexto" rows="6"></textarea><p class="help" id="docInfo"></p></div>
+  <div class="field"><label for="docPlant" data-i18n="Tipo de notas">Tipo de notas</label><select id="docPlant"><option value="libre" data-i18n="Ideas atómicas">Ideas atómicas</option><option value="paper" data-i18n="Ficha de artículo científico">Ficha de artículo científico</option><option value="concepto" data-i18n="Conceptos técnicos">Conceptos técnicos</option><option value="clase" data-i18n="Clase o reunión">Clase o reunión</option></select></div>
+  <div class="actions"><button class="btn btn-primary" id="docProcesar" type="button"><svg class="i"><use href="#i-sparkles"/></svg><span data-i18n="Proponer notas">Proponer notas</span></button></div>
+  <div id="docPrev"></div></div></div></div>
+<div class="modal" id="mRevision" role="dialog" aria-modal="true" aria-labelledby="mRevT"><div class="modal-box"><div class="modal-head"><h2 id="mRevT" data-i18n="Revisión del cerebro">Revisión del cerebro</h2><button type="button" data-close data-i18n="Cerrar">Cerrar</button></div><div class="modal-body" id="revRes"></div></div></div>
+<div class="modal" id="mPapelera" role="dialog" aria-modal="true" aria-labelledby="mPapT"><div class="modal-box"><div class="modal-head"><h2 id="mPapT" data-i18n="Papelera">Papelera</h2><button type="button" data-close data-i18n="Cerrar">Cerrar</button></div><div class="modal-body" id="papRes"></div></div></div>
+<div class="modal sx-pal" id="mPaleta" role="dialog" aria-modal="true" aria-labelledby="mPalT"><div class="modal-box"><h2 id="mPalT" class="sx-sr" data-i18n="Buscar y ejecutar">Buscar y ejecutar</h2><input type="text" id="palIn" role="combobox" aria-expanded="true" aria-controls="palRes" aria-autocomplete="list" placeholder="Busca una nota o una acción…" data-i18n-attr="placeholder:s.pal.ph;aria-label:Buscar y ejecutar" aria-label="Buscar y ejecutar"><ul id="palRes" role="listbox"></ul><p class="help" data-i18n="s.pal.ayuda">↑↓ para moverte · Intro para abrir · Esc para cerrar</p></div></div>
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
 <script>const APP="sinapsia";const APP_NAME="SinapsIA";const LOGO_ICON="nucleo";const LANGS_ON=["es", "en", "pt"];
@@ -891,6 +947,52 @@ function md(s) {
     cierra(); out.push(`<p>${inl(l)}</p>`);
   }
   cierra(); return out.join('');
+}
+
+/* ── lectura de ficheros del usuario, todo en el navegador ───────────────────────────────────────────────
+   extrae(file) → {tipo:'texto'|'img'|'av', nombre, texto, imgs:[{nombre,data}], incr, aviso?, file?}
+   Admite TXT/MD/CSV/SRT, DOCX (texto + imágenes incrustadas), PPTX (texto + notas del ponente + imágenes),
+   PDF (texto; si no tiene texto, las primeras páginas como imágenes) e imágenes. Audio/vídeo se devuelven con tipo 'av'
+   para transcribirlos aparte (ver 50-transcribe.js). */
+const xmlDec = s => s.replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&quot;/g, '"').replace(/&apos;/g, "'").replace(/&amp;/g, '&');
+const pptxPars = xml => xml.split('</a:p>').map(p => [...p.matchAll(/<a:t[^>]*>([^<]*)<\/a:t>/g)].map(m => xmlDec(m[1])).join('')).map(s => s.trim()).filter(Boolean);
+const MAXIMG = 8;
+const MIMEIMG = {png: 'image/png', jpg: 'image/jpeg', jpeg: 'image/jpeg', gif: 'image/gif', webp: 'image/webp'};
+function reduceImg(src, max = 1280) { return new Promise((ok, ko) => { const im = new Image(); im.onload = () => { const k = Math.min(1, max / Math.max(im.width, im.height)), c = document.createElement('canvas'); c.width = Math.max(1, Math.round(im.width * k)); c.height = Math.max(1, Math.round(im.height * k)); const x = c.getContext('2d'); x.fillStyle = '#fff'; x.fillRect(0, 0, c.width, c.height); x.drawImage(im, 0, 0, c.width, c.height); ok(c.toDataURL('image/jpeg', .82)); }; im.onerror = () => ko(new Error('No se pudo leer una imagen')); im.src = src; }); }
+const dataUrl = blob => new Promise(ok => { const r = new FileReader(); r.onload = () => ok(r.result); r.readAsDataURL(blob); });
+async function extrae(file) {
+  const ext = file.name.split('.').pop().toLowerCase(), n = file.name;
+  if (['txt', 'md', 'markdown', 'csv', 'srt', 'vtt'].includes(ext)) return {tipo: 'texto', nombre: n, texto: await file.text(), imgs: [], incr: 0};
+  if (MIMEIMG[ext] || /^image\//.test(file.type)) return {tipo: 'img', nombre: n, texto: '', imgs: [{nombre: n, data: await reduceImg(await dataUrl(file))}], incr: 0};
+  if (/^(audio|video)\//.test(file.type) || /\.(mp3|wav|m4a|ogg|oga|flac|mp4|mov|webm|mkv|aac|mpga)$/i.test(n)) return {tipo: 'av', nombre: n, texto: '', imgs: [], incr: 0, file};
+  if (ext === 'docx') {
+    await cargaLib([LIB.mammoth]); const ab = await file.arrayBuffer(), imgs = []; let incr = 0;
+    await mammoth.convertToHtml({arrayBuffer: ab}, {convertImage: mammoth.images.imgElement(async im => { incr++; if (imgs.length < MAXIMG) { try { imgs.push({nombre: `${n} · imagen ${incr}`, data: await reduceImg(`data:${im.contentType};base64,${await im.read('base64')}`)}); } catch {} } return {src: ''}; })});
+    return {tipo: 'texto', nombre: n, texto: (await mammoth.extractRawText({arrayBuffer: ab})).value, imgs, incr};
+  }
+  if (ext === 'pptx') {
+    await cargaLib([LIB.jszip]); const z = await JSZip.loadAsync(await file.arrayBuffer()), num = f => +f.match(/(\d+)\.xml$/)[1];
+    const sl = Object.keys(z.files).filter(f => /^ppt\/slides\/slide\d+\.xml$/.test(f)).sort((a, b) => num(a) - num(b)); if (!sl.length) throw new Error(t('El PowerPoint no tiene diapositivas'));
+    const out = [];
+    for (const f of sl) {
+      const txt = pptxPars(await z.file(f).async('string')); let notas = [];
+      const rel = z.file(f.replace('slides/', 'slides/_rels/') + '.rels');
+      if (rel) { const m = (await rel.async('string')).match(/Target="\.\.\/notesSlides\/(notesSlide\d+\.xml)"/); if (m && z.file('ppt/notesSlides/' + m[1])) notas = pptxPars(await z.file('ppt/notesSlides/' + m[1]).async('string')).filter(x => !/^\d+$/.test(x)); }
+      out.push(`## Diapositiva ${num(f)}\n${txt.join('\n')}${notas.length ? '\n[Notas del ponente] ' + notas.join(' ') : ''}`);
+    }
+    const med = Object.keys(z.files).filter(f => /^ppt\/media\/.+\.(png|jpe?g|gif|webp)$/i.test(f)), imgs = [];
+    for (const f of med.slice(0, MAXIMG)) { try { const b = await z.file(f).async('blob'); imgs.push({nombre: `${n} · ${f.split('/').pop()}`, data: await reduceImg(await dataUrl(new Blob([b], {type: MIMEIMG[f.split('.').pop().toLowerCase()] || 'image/png'})))}); } catch {} }
+    return {tipo: 'texto', nombre: n, texto: out.join('\n\n'), imgs, incr: med.length};
+  }
+  if (ext === 'pdf') {
+    await cargaLib([LIB.pdf]); pdfjsLib.GlobalWorkerOptions.workerSrc = _libCargadas[LIB.pdf] && _libCargadas[LIB.pdf] !== LIB.pdf ? LIB_ESPEJO[LIB.pdfw] : LIB.pdfw;   // el worker, del mismo CDN que pdf.js
+    const doc = await pdfjsLib.getDocument({data: new Uint8Array(await file.arrayBuffer())}).promise, pags = [];
+    for (let i = 1; i <= doc.numPages; i++) { const c = await (await doc.getPage(i)).getTextContent(); let t = ''; c.items.forEach(it => { t += it.str + (it.hasEOL ? '\n' : ' '); }); pags.push(t.replace(/[ \t]+\n/g, '\n').trim()); }
+    const t = pags.join('\n\n');
+    if (t.replace(/\s/g, '').length < 80) { const imgs = []; for (let i = 1; i <= Math.min(doc.numPages, 6); i++) { const pg = await doc.getPage(i), vp = pg.getViewport({scale: 1.4}), c = document.createElement('canvas'); c.width = vp.width; c.height = vp.height; await pg.render({canvasContext: c.getContext('2d'), viewport: vp}).promise; imgs.push({nombre: `${n} · página ${i}`, data: await reduceImg(c.toDataURL('image/jpeg', .85))}); } return {tipo: 'texto', nombre: n, texto: '', imgs, incr: 0, aviso: 'PDF sin texto: se envían las primeras páginas como imágenes.'}; }
+    return {tipo: 'texto', nombre: n, texto: t, imgs: [], incr: 0, aviso: 'En los PDF no se detectan las imágenes incrustadas.'};
+  }
+  throw new Error(t('Formato no admitido (usa Word, PDF, PowerPoint, texto, imágenes, audio o vídeo)'));
 }
 
 /* ── navegación Forja: barra superior, stepper, barra inferior, ventanas, ayuda y ajustes de IA ─────────────
@@ -1438,9 +1540,9 @@ const I18N = {
 "Sale de tu ordenador": "Leaves your computer",
 "s.zl": "<li>Your notes, in this browser and, if you connect it, in a file in your Google Drive folder</li><li>Your AI and OpenAlex keys, only in this browser</li><li>The checks of quotes and DOIs, done by the code</li>",
 "s.zn": "<li>The search words, to OpenAlex; the DOIs, to Crossref</li><li>Your question, the abstracts found and your related notes, to your AI provider (with personal data masked and prior notice)</li><li>If you dictate in Chrome, the audio, to Google’s speech service</li>",
-"s.paso1": "Step 1 of 3",
-"s.paso2": "Step 2 of 3",
-"s.paso3": "Step 3 of 3",
+"s.paso1": "Step 1 of 4",
+"s.paso2": "Step 2 of 4",
+"s.paso3": "Step 3 of 4",
 "Consulta": "Ask",
 "s.consulta.lede": "Ask whatever you want to research, by typing or with the microphone. SinapsIA searches scholarly works, answers only with what their abstracts say, marks with ✓ every claim whose quote the code has checked and saves the answer in your brain.",
 "Guardar cada respuesta en el cerebro": "Save every answer to the brain",
@@ -1478,7 +1580,7 @@ const I18N = {
 "Notas en Markdown (ZIP)": "Notes in Markdown (ZIP)",
 "s.md.ayuda": "The Markdown ZIP keeps the [[links]]: it opens as a vault in Obsidian or Logseq.",
 "Grafo de conocimiento": "Knowledge graph",
-"s.grafo.lede": "Each dot is a note and each line, a link. Click a note to open it. Isolated notes are ideas you have not connected yet.",
+"s.grafo.lede": "Each dot is a note and each line, a link. Hover to see its neighbours, drag notes to arrange them and click one to open it. Each island is a group of ideas connected to each other; loose notes are ones you have not connected yet.",
 "Grafo de notas y enlaces": "Graph of notes and links",
 "Notas más conectadas": "Most connected notes",
 "Clave de OpenAlex (gratuita)": "OpenAlex key (free)",
@@ -1628,6 +1730,135 @@ const I18N = {
 "Fuente ficticia de ejemplo": "Fictitious example source",
 "La cita no aparece en el resumen de {0}: no la des por buena.": "The quote does not appear in the abstract of {0}: do not take it as valid.",
 "La IA citó una fuente ({0}) que no estaba entre las encontradas.": "The AI cited a source ({0}) that was not among those found.",
+"s.paso4": "Step 4 of 4",
+"30 días": "30 days",
+"7 días": "7 days",
+"90 días": "90 days",
+"Acción": "Action",
+"Autoenlazar": "Auto-link",
+"Aún no has pasado el radar de novedades.": "You have not run the news radar yet.",
+"Buscar y ejecutar": "Search and run",
+"Buscar y ejecutar (Ctrl+K)": "Search and run (Ctrl+K)",
+"Captura PDF, Word, texto o Markdown: la IA propone notas atómicas con una cita literal que el código busca en el documento, enlazadas con [[títulos]] que ya tienes. Tú eliges cuáles guardar. Avisa si el documento ya estaba capturado.": "Capture PDF, Word, text or Markdown: the AI proposes atomic notes with a literal quote that the code looks for in the document, linked with [[titles]] you already have. You choose which to save. It warns you if the document was already captured.",
+"Capturar documento": "Capture document",
+"Ciencia": "Science",
+"Ciencia: una búsqueda y una respuesta rápida. Investigación profunda: un planificador divide la pregunta en subpreguntas, cada una se investiga con sus propias fuentes verificadas, un crítico busca huecos y contradicciones y se redacta un informe solo con lo verificado (avisa antes de las llamadas que hará). Mi cerebro: responde solo con tus notas, y el código comprueba cada cita.": "Science: one search and a quick answer. Deep research: a planner splits the question into sub-questions, each one is researched with its own verified sources, a critic looks for gaps and contradictions and a report is written only with what was verified (it warns you of the calls it will make first). My brain: answers only with your notes, and the code checks every quote.",
+"Cifras que no están en tus notas: {0}. Compruébalas.": "Figures that are not in your notes: {0}. Check them.",
+"Cita no encontrada en el documento": "Quote not found in the document",
+"Cita verificada": "Verified quote",
+"Clase o reunión": "Class or meeting",
+"Color del grafo": "Graph colour",
+"Color por PARA": "Colour by PARA",
+"Color por islas": "Colour by islands",
+"Con tu perfil de intereses, SinapsIA busca trabajos recientes en OpenAlex, la IA puntúa de 0 a 10 cuánto encajan y verás solo los que superen tu umbral. Los ya vistos no se repiten. La portada te recuerda pasarlo si llevas una semana sin hacerlo.": "With your interest profile, SinapsIA searches OpenAlex for recent works, the AI scores from 0 to 10 how well they fit and you only see those above your threshold. Works already seen do not come back. The home page reminds you to run it if a week has passed.",
+"Conceptos técnicos": "Technical concepts",
+"Conclusiones": "Conclusions",
+"Contradicción:": "Contradiction:",
+"Crear la nota": "Create the note",
+"Descartar": "Dismiss",
+"Describe tu perfil de intereses con algo más de detalle": "Describe your interest profile in a bit more detail",
+"Documento": "Document",
+"Documento capturado: {0} notas nuevas enlazadas": "Document captured: {0} new linked notes",
+"Documentos": "Documents",
+"El crítico revisa la evidencia…": "The critic reviews the evidence…",
+"El crítico señala": "The critic points out",
+"El documento es largo: solo se han usado sus primeros 40.000 caracteres.": "The document is long: only its first 40,000 characters were used.",
+"El radar busca novedades según tu perfil.": "The radar looks for news based on your profile.",
+"El texto es demasiado corto para sacar notas (mínimo 200 caracteres).": "The text is too short to take notes from (minimum 200 characters).",
+"Eliminar definitivamente": "Delete permanently",
+"Enlaces rotos": "Broken links",
+"Este documento se parece mucho a «{0}», que ya capturaste. ¿Capturarlo de nuevo?": "This document is very similar to “{0}”, which you already captured. Capture it again?",
+"Ficha de artículo científico": "Scientific article sheet",
+"Fusionar en «{0}»": "Merge into “{0}”",
+"Guardado en tu cerebro: el informe y {0} fuente(s) verificada(s)": "Saved in your brain: the report and {0} verified source(s)",
+"Hace {0} días que no pasas el radar de novedades.": "You have not run the news radar for {0} days.",
+"Hay {0} menciones a títulos de otras notas sin enlazar, en {1} notas. Se convertirá en [[enlace]] la primera mención de cada título (como mucho 5 por nota).": "There are {0} unlinked mentions of other notes’ titles, in {1} notes. The first mention of each title will become a [[link]] (at most 5 per note).",
+"Hueco:": "Gap:",
+"Ideas atómicas": "Atomic ideas",
+"Informe: {0}": "Report: {0}",
+"Investigación profunda": "Deep research",
+"investigación profunda": "deep research",
+"Investigación profunda · {0} subpreguntas · {1} fuentes": "Deep research · {0} sub-questions · {1} sources",
+"La IA está leyendo el documento…": "The AI is reading the document…",
+"La IA no ha propuesto búsquedas. Prueba de nuevo.": "The AI did not propose any searches. Try again.",
+"La IA no ha propuesto un plan. Prueba de nuevo o reformula la pregunta.": "The AI did not propose a plan. Try again or rephrase the question.",
+"La investigación profunda hará unas {0} llamadas a la IA y hasta {1} búsquedas en OpenAlex, y puede tardar varios minutos. ¿Continuar?": "Deep research will make about {0} AI calls and up to {1} OpenAlex searches, and may take several minutes. Continue?",
+"La papelera está vacía.": "The bin is empty.",
+"Las notas borradas se quedan aquí (también en Drive) hasta que las elimines definitivamente.": "Deleted notes stay here (also in Drive) until you delete them permanently.",
+"Leyendo {0} notas tuyas…": "Reading {0} of your notes…",
+"Leyendo «{0}»…": "Reading “{0}”…",
+"Limitaciones:": "Limitations:",
+"Lo que tus notas no cubren": "What your notes do not cover",
+"Mantenimiento": "Maintenance",
+"Mi cerebro": "My brain",
+"Modo de consulta": "Question mode",
+"Modos de consulta": "Question modes",
+"Mostrar a partir de": "Show from",
+"Mover a la papelera": "Move to bin",
+"Nada que revisar.": "Nothing to review.",
+"No encuentro notas tuyas sobre eso. Prueba con otras palabras o pregunta en modo Ciencia.": "I cannot find any of your notes about that. Try other words or ask in Science mode.",
+"No hay trabajos nuevos desde tu última pasada. Prueba con más días o amplía tu perfil.": "No new works since your last run. Try more days or broaden your profile.",
+"No se ha podido extraer texto de este archivo (¿es un PDF escaneado?).": "No text could be extracted from this file (is it a scanned PDF?).",
+"Nota restaurada": "Note restored",
+"Notas casi vacías": "Almost empty notes",
+"Notas consultadas:": "Notes consulted:",
+"Notas fusionadas": "Notes merged",
+"Notas huérfanas (sin enlaces)": "Orphan notes (no links)",
+"Notas:": "Notes:",
+"O pega el texto": "Or paste the text",
+"Papelera": "Bin",
+"Papelera ({0})": "Bin ({0})",
+"Pasar el radar": "Run the radar",
+"Planificando la investigación…": "Planning the research…",
+"Posibles duplicados": "Possible duplicates",
+"Preguntar a la ciencia": "Ask science",
+"Preguntar a mi cerebro": "Ask my brain",
+"Preparando las búsquedas…": "Preparing the searches…",
+"Proponer notas": "Propose notes",
+"Publicados en los últimos": "Published in the last",
+"Puntuando {0} trabajos según tu perfil…": "Scoring {0} works against your profile…",
+"Radar": "Radar",
+"Radar de novedades": "News radar",
+"Redactando el informe…": "Writing the report…",
+"Respuesta desde tus notas": "Answer from your notes",
+"Restaurar": "Restore",
+"Resumen": "Summary",
+"Revisar mi cerebro": "Review my brain",
+"Revisar mi cerebro encuentra, sin IA, enlaces rotos, notas huérfanas o casi vacías y posibles duplicados, que puedes fusionar. Autoenlazar convierte en [[enlace]] la primera mención de cada título. Lo borrado va a la papelera y se puede restaurar; la papelera también se sincroniza con Drive. Ctrl+K abre la búsqueda de notas y acciones.": "Review my brain finds, without AI, broken links, orphan or almost empty notes and possible duplicates, which you can merge. Auto-link turns the first mention of each title into a [[link]]. Deleted notes go to the bin and can be restored; the bin is also synced with Drive. Ctrl+K opens the search for notes and actions.",
+"Revisión del cerebro": "Brain review",
+"Revisión hecha por código, sin IA y sin coste. Nada cambia hasta que pulses un botón.": "Review done by code, without AI and at no cost. Nothing changes until you press a button.",
+"Rondas de investigación": "Research rounds",
+"Sal del ejemplo para capturar tus documentos": "Leave the example to capture your documents",
+"Siguiente: radar": "Next: radar",
+"Sin resultados": "No results",
+"Sin trabajos con resumen para esta subpregunta.": "No works with an abstract for this sub-question.",
+"Subpregunta {0} de {1}: buscando en OpenAlex…": "Sub-question {0} of {1}: searching OpenAlex…",
+"Subpregunta {0} de {1}: leyendo {2} resúmenes…": "Sub-question {0} of {1}: reading {2} abstracts…",
+"Tipo de notas": "Type of notes",
+"Tu perfil de intereses": "Your interest profile",
+"Vaciar la papelera": "Empty the bin",
+"Ya existe: se enlazará": "Already exists: it will be linked",
+"s.doc.ayuda": "Upload a PDF, Word, text or Markdown file, or paste the text. The AI turns it into atomic notes linked to the ones you already have, each with a literal quote that the code checks in the document.",
+"s.modo.cerebro": "Answers only with your notes, quoting them",
+"s.modo.ciencia": "Quick answer with OpenAlex works",
+"s.modo.profunda": "Several agents: plan, search per sub-question, critique and report",
+"s.pal.ayuda": "↑↓ to move · Enter to open · Esc to close",
+"s.pal.ph": "Search for a note or an action…",
+"s.perfil.ayuda": "Write topics of high interest and what does not interest you. It is stored only in this browser.",
+"s.perfil.ph": "Example: data envelopment analysis (DEA) in hospitals; AI for evidence synthesis; biostatistics applied to health sciences. Little interest in: computer vision.",
+"s.radar.lede": "Describe your interests and SinapsIA will search OpenAlex for recently published works. The AI scores from 0 to 10 how well each fits your profile; works you have already seen do not come back.",
+"s.ronda1": "1 · plan, search, critique and report",
+"s.ronda2": "2 · also researches the gaps found by the critic",
+"{0} de {1} verificadas": "{0} of {1} verified",
+"{0} enlaces añadidos": "{0} links added",
+"{0} islas · {1} notas sueltas": "{0} islands · {1} loose notes",
+"{0} trabajos revisados · {1} encajan con tu perfil.": "{0} works reviewed · {1} fit your profile.",
+"«{0}» está en la papelera: puedes restaurarla": "“{0}” is in the bin: you can restore it",
+"«{0}»: {1} caracteres extraídos.": "“{0}”: {1} characters extracted.",
+"¿Eliminar definitivamente? No se podrá recuperar.": "Delete permanently? It cannot be recovered.",
+"¿Fusionar «{0}» dentro de «{1}»? La primera irá a la papelera.": "Merge “{0}” into “{1}”? The first will go to the bin.",
+"¿Vaciar la papelera? No se podrá recuperar.": "Empty the bin? It cannot be recovered.",
+"Última pasada: {0} · búsquedas: {1}": "Last run: {0} · searches: {1}",
 "hero.h1": "Ask science. <em>Build your second brain.</em>"
 },
 "pt": {
@@ -1651,9 +1882,9 @@ const I18N = {
 "Sale de tu ordenador": "Sai do seu computador",
 "s.zl": "<li>As suas notas, neste navegador e, se o ligar, num ficheiro da sua pasta do Google Drive</li><li>As suas chaves de IA e do OpenAlex, só neste navegador</li><li>As verificações de citações e DOI, feitas pelo código</li>",
 "s.zn": "<li>As palavras de pesquisa, para o OpenAlex; os DOI, para o Crossref</li><li>A sua pergunta, os resumos encontrados e as suas notas relacionadas, para o seu fornecedor de IA (com dados pessoais mascarados e aviso prévio)</li><li>Se ditar no Chrome, o áudio, para o serviço de voz da Google</li>",
-"s.paso1": "Passo 1 de 3",
-"s.paso2": "Passo 2 de 3",
-"s.paso3": "Passo 3 de 3",
+"s.paso1": "Passo 1 de 4",
+"s.paso2": "Passo 2 de 4",
+"s.paso3": "Passo 3 de 4",
 "Consulta": "Consulta",
 "s.consulta.lede": "Pergunte o que quiser investigar, por escrito ou com o microfone. A SinapsIA pesquisa trabalhos académicos, responde só com o que dizem os seus resumos, marca com ✓ cada afirmação cuja citação o código verificou e guarda a resposta no seu cérebro.",
 "Guardar cada respuesta en el cerebro": "Guardar cada resposta no cérebro",
@@ -1691,7 +1922,7 @@ const I18N = {
 "Notas en Markdown (ZIP)": "Notas em Markdown (ZIP)",
 "s.md.ayuda": "O ZIP de Markdown conserva as [[ligações]]: abre-se como cofre no Obsidian ou no Logseq.",
 "Grafo de conocimiento": "Grafo de conhecimento",
-"s.grafo.lede": "Cada ponto é uma nota e cada linha, uma ligação. Clique numa nota para a abrir. As notas isoladas são ideias que ainda não ligou.",
+"s.grafo.lede": "Cada ponto é uma nota e cada linha, uma ligação. Passe por cima para ver as vizinhas, arraste as notas para as ordenar e clique numa para a abrir. Cada ilha é um grupo de ideias ligadas entre si; as notas soltas ainda não as ligou.",
 "Grafo de notas y enlaces": "Grafo de notas e ligações",
 "Notas más conectadas": "Notas mais ligadas",
 "Clave de OpenAlex (gratuita)": "Chave do OpenAlex (gratuita)",
@@ -1841,6 +2072,135 @@ const I18N = {
 "Fuente ficticia de ejemplo": "Fonte fictícia de exemplo",
 "La cita no aparece en el resumen de {0}: no la des por buena.": "A citação não aparece no resumo de {0}: não a dê como válida.",
 "La IA citó una fuente ({0}) que no estaba entre las encontradas.": "A IA citou uma fonte ({0}) que não estava entre as encontradas.",
+"s.paso4": "Passo 4 de 4",
+"30 días": "30 dias",
+"7 días": "7 dias",
+"90 días": "90 dias",
+"Acción": "Ação",
+"Autoenlazar": "Ligar automaticamente",
+"Aún no has pasado el radar de novedades.": "Ainda não passou o radar de novidades.",
+"Buscar y ejecutar": "Pesquisar e executar",
+"Buscar y ejecutar (Ctrl+K)": "Pesquisar e executar (Ctrl+K)",
+"Captura PDF, Word, texto o Markdown: la IA propone notas atómicas con una cita literal que el código busca en el documento, enlazadas con [[títulos]] que ya tienes. Tú eliges cuáles guardar. Avisa si el documento ya estaba capturado.": "Capture PDF, Word, texto ou Markdown: a IA propõe notas atómicas com uma citação literal que o código procura no documento, ligadas a [[títulos]] que já tem. É o utilizador que escolhe quais guardar. Avisa se o documento já tinha sido capturado.",
+"Capturar documento": "Capturar documento",
+"Ciencia": "Ciência",
+"Ciencia: una búsqueda y una respuesta rápida. Investigación profunda: un planificador divide la pregunta en subpreguntas, cada una se investiga con sus propias fuentes verificadas, un crítico busca huecos y contradicciones y se redacta un informe solo con lo verificado (avisa antes de las llamadas que hará). Mi cerebro: responde solo con tus notas, y el código comprueba cada cita.": "Ciência: uma pesquisa e uma resposta rápida. Investigação profunda: um planeador divide a pergunta em subperguntas, cada uma é investigada com as suas fontes verificadas, um crítico procura lacunas e contradições e redige-se um relatório só com o verificado (avisa antes das chamadas que vai fazer). O meu cérebro: responde só com as suas notas, e o código verifica cada citação.",
+"Cifras que no están en tus notas: {0}. Compruébalas.": "Números que não estão nas suas notas: {0}. Verifique-os.",
+"Cita no encontrada en el documento": "Citação não encontrada no documento",
+"Cita verificada": "Citação verificada",
+"Clase o reunión": "Aula ou reunião",
+"Color del grafo": "Cor do grafo",
+"Color por PARA": "Cor por PARA",
+"Color por islas": "Cor por ilhas",
+"Con tu perfil de intereses, SinapsIA busca trabajos recientes en OpenAlex, la IA puntúa de 0 a 10 cuánto encajan y verás solo los que superen tu umbral. Los ya vistos no se repiten. La portada te recuerda pasarlo si llevas una semana sin hacerlo.": "Com o seu perfil de interesses, a SinapsIA pesquisa trabalhos recentes no OpenAlex, a IA pontua de 0 a 10 quanto encaixam e só vê os que superam o seu limiar. Os já vistos não se repetem. A página inicial lembra-o de o passar se estiver há uma semana sem o fazer.",
+"Conceptos técnicos": "Conceitos técnicos",
+"Conclusiones": "Conclusões",
+"Contradicción:": "Contradição:",
+"Crear la nota": "Criar a nota",
+"Descartar": "Descartar",
+"Describe tu perfil de intereses con algo más de detalle": "Descreva o seu perfil de interesses com um pouco mais de detalhe",
+"Documento": "Documento",
+"Documento capturado: {0} notas nuevas enlazadas": "Documento capturado: {0} notas novas ligadas",
+"Documentos": "Documentos",
+"El crítico revisa la evidencia…": "O crítico revê a evidência…",
+"El crítico señala": "O crítico assinala",
+"El documento es largo: solo se han usado sus primeros 40.000 caracteres.": "O documento é longo: só foram usados os primeiros 40 000 caracteres.",
+"El radar busca novedades según tu perfil.": "O radar procura novidades segundo o seu perfil.",
+"El texto es demasiado corto para sacar notas (mínimo 200 caracteres).": "O texto é demasiado curto para tirar notas (mínimo 200 caracteres).",
+"Eliminar definitivamente": "Eliminar definitivamente",
+"Enlaces rotos": "Ligações quebradas",
+"Este documento se parece mucho a «{0}», que ya capturaste. ¿Capturarlo de nuevo?": "Este documento é muito parecido com «{0}», que já capturou. Capturá-lo de novo?",
+"Ficha de artículo científico": "Ficha de artigo científico",
+"Fusionar en «{0}»": "Fundir em «{0}»",
+"Guardado en tu cerebro: el informe y {0} fuente(s) verificada(s)": "Guardado no seu cérebro: o relatório e {0} fonte(s) verificada(s)",
+"Hace {0} días que no pasas el radar de novedades.": "Há {0} dias que não passa o radar de novidades.",
+"Hay {0} menciones a títulos de otras notas sin enlazar, en {1} notas. Se convertirá en [[enlace]] la primera mención de cada título (como mucho 5 por nota).": "Há {0} menções a títulos de outras notas sem ligação, em {1} notas. A primeira menção de cada título passará a [[ligação]] (no máximo 5 por nota).",
+"Hueco:": "Lacuna:",
+"Ideas atómicas": "Ideias atómicas",
+"Informe: {0}": "Relatório: {0}",
+"Investigación profunda": "Investigação profunda",
+"investigación profunda": "investigação profunda",
+"Investigación profunda · {0} subpreguntas · {1} fuentes": "Investigação profunda · {0} subperguntas · {1} fontes",
+"La IA está leyendo el documento…": "A IA está a ler o documento…",
+"La IA no ha propuesto búsquedas. Prueba de nuevo.": "A IA não propôs pesquisas. Tente de novo.",
+"La IA no ha propuesto un plan. Prueba de nuevo o reformula la pregunta.": "A IA não propôs um plano. Tente de novo ou reformule a pergunta.",
+"La investigación profunda hará unas {0} llamadas a la IA y hasta {1} búsquedas en OpenAlex, y puede tardar varios minutos. ¿Continuar?": "A investigação profunda fará cerca de {0} chamadas à IA e até {1} pesquisas no OpenAlex, e pode demorar vários minutos. Continuar?",
+"La papelera está vacía.": "O lixo está vazio.",
+"Las notas borradas se quedan aquí (también en Drive) hasta que las elimines definitivamente.": "As notas apagadas ficam aqui (também no Drive) até as eliminar definitivamente.",
+"Leyendo {0} notas tuyas…": "A ler {0} notas suas…",
+"Leyendo «{0}»…": "A ler «{0}»…",
+"Limitaciones:": "Limitações:",
+"Lo que tus notas no cubren": "O que as suas notas não cobrem",
+"Mantenimiento": "Manutenção",
+"Mi cerebro": "O meu cérebro",
+"Modo de consulta": "Modo de consulta",
+"Modos de consulta": "Modos de consulta",
+"Mostrar a partir de": "Mostrar a partir de",
+"Mover a la papelera": "Mover para o lixo",
+"Nada que revisar.": "Nada a rever.",
+"No encuentro notas tuyas sobre eso. Prueba con otras palabras o pregunta en modo Ciencia.": "Não encontro notas suas sobre isso. Experimente outras palavras ou pergunte no modo Ciência.",
+"No hay trabajos nuevos desde tu última pasada. Prueba con más días o amplía tu perfil.": "Não há trabalhos novos desde a última passagem. Experimente mais dias ou alargue o seu perfil.",
+"No se ha podido extraer texto de este archivo (¿es un PDF escaneado?).": "Não foi possível extrair texto deste ficheiro (é um PDF digitalizado?).",
+"Nota restaurada": "Nota restaurada",
+"Notas casi vacías": "Notas quase vazias",
+"Notas consultadas:": "Notas consultadas:",
+"Notas fusionadas": "Notas fundidas",
+"Notas huérfanas (sin enlaces)": "Notas órfãs (sem ligações)",
+"Notas:": "Notas:",
+"O pega el texto": "Ou cole o texto",
+"Papelera": "Lixo",
+"Papelera ({0})": "Lixo ({0})",
+"Pasar el radar": "Passar o radar",
+"Planificando la investigación…": "A planear a investigação…",
+"Posibles duplicados": "Possíveis duplicados",
+"Preguntar a la ciencia": "Perguntar à ciência",
+"Preguntar a mi cerebro": "Perguntar ao meu cérebro",
+"Preparando las búsquedas…": "A preparar as pesquisas…",
+"Proponer notas": "Propor notas",
+"Publicados en los últimos": "Publicados nos últimos",
+"Puntuando {0} trabajos según tu perfil…": "A pontuar {0} trabalhos segundo o seu perfil…",
+"Radar": "Radar",
+"Radar de novedades": "Radar de novidades",
+"Redactando el informe…": "A redigir o relatório…",
+"Respuesta desde tus notas": "Resposta a partir das suas notas",
+"Restaurar": "Restaurar",
+"Resumen": "Resumo",
+"Revisar mi cerebro": "Rever o meu cérebro",
+"Revisar mi cerebro encuentra, sin IA, enlaces rotos, notas huérfanas o casi vacías y posibles duplicados, que puedes fusionar. Autoenlazar convierte en [[enlace]] la primera mención de cada título. Lo borrado va a la papelera y se puede restaurar; la papelera también se sincroniza con Drive. Ctrl+K abre la búsqueda de notas y acciones.": "Rever o meu cérebro encontra, sem IA, ligações quebradas, notas órfãs ou quase vazias e possíveis duplicados, que pode fundir. Ligar automaticamente converte em [[ligação]] a primeira menção de cada título. O que apaga vai para o lixo e pode ser restaurado; o lixo também se sincroniza com o Drive. Ctrl+K abre a pesquisa de notas e ações.",
+"Revisión del cerebro": "Revisão do cérebro",
+"Revisión hecha por código, sin IA y sin coste. Nada cambia hasta que pulses un botón.": "Revisão feita por código, sem IA e sem custo. Nada muda até premir um botão.",
+"Rondas de investigación": "Rondas de investigação",
+"Sal del ejemplo para capturar tus documentos": "Saia do exemplo para capturar os seus documentos",
+"Siguiente: radar": "Seguinte: radar",
+"Sin resultados": "Sem resultados",
+"Sin trabajos con resumen para esta subpregunta.": "Sem trabalhos com resumo para esta subpergunta.",
+"Subpregunta {0} de {1}: buscando en OpenAlex…": "Subpergunta {0} de {1}: a pesquisar no OpenAlex…",
+"Subpregunta {0} de {1}: leyendo {2} resúmenes…": "Subpergunta {0} de {1}: a ler {2} resumos…",
+"Tipo de notas": "Tipo de notas",
+"Tu perfil de intereses": "O seu perfil de interesses",
+"Vaciar la papelera": "Esvaziar o lixo",
+"Ya existe: se enlazará": "Já existe: será ligada",
+"s.doc.ayuda": "Carregue um PDF, Word, texto ou Markdown, ou cole o texto. A IA converte-o em notas atómicas ligadas às que já tem, cada uma com uma citação literal que o código verifica no documento.",
+"s.modo.cerebro": "Responde só com as suas notas, citando-as",
+"s.modo.ciencia": "Resposta rápida com trabalhos do OpenAlex",
+"s.modo.profunda": "Vários agentes: plano, pesquisa por subpergunta, crítica e relatório",
+"s.pal.ayuda": "↑↓ para se mover · Enter para abrir · Esc para fechar",
+"s.pal.ph": "Procure uma nota ou uma ação…",
+"s.perfil.ayuda": "Escreva temas de grande interesse e o que não lhe interessa. É guardado apenas neste navegador.",
+"s.perfil.ph": "Exemplo: análise envoltória de dados (DEA) em hospitais; IA para síntese de evidência; bioestatística aplicada às ciências da saúde. Pouco interesse em: visão computacional.",
+"s.radar.lede": "Descreva os seus interesses e a SinapsIA procurará no OpenAlex os trabalhos publicados recentemente. A IA pontua de 0 a 10 quanto cada um encaixa no seu perfil; os que já viu não voltam a aparecer.",
+"s.ronda1": "1 · plano, pesquisa, crítica e relatório",
+"s.ronda2": "2 · investiga também as lacunas encontradas pelo crítico",
+"{0} de {1} verificadas": "{0} de {1} verificadas",
+"{0} enlaces añadidos": "{0} ligações adicionadas",
+"{0} islas · {1} notas sueltas": "{0} ilhas · {1} notas soltas",
+"{0} trabajos revisados · {1} encajan con tu perfil.": "{0} trabalhos revistos · {1} encaixam no seu perfil.",
+"«{0}» está en la papelera: puedes restaurarla": "«{0}» está no lixo: pode restaurá-la",
+"«{0}»: {1} caracteres extraídos.": "«{0}»: {1} caracteres extraídos.",
+"¿Eliminar definitivamente? No se podrá recuperar.": "Eliminar definitivamente? Não poderá ser recuperada.",
+"¿Fusionar «{0}» dentro de «{1}»? La primera irá a la papelera.": "Fundir «{0}» em «{1}»? A primeira irá para o lixo.",
+"¿Vaciar la papelera? No se podrá recuperar.": "Esvaziar o lixo? Não poderá ser recuperado.",
+"Última pasada: {0} · búsquedas: {1}": "Última passagem: {0} · pesquisas: {1}",
 "hero.h1": "Pergunte à ciência. <em>Construa o seu segundo cérebro.</em>"
 }
 };
@@ -1870,8 +2230,8 @@ function fuenteDe(w) {
     tipo: w.type || '', resumen: resumenDe(w.abstract_inverted_index), crossref: 'pendiente'
   };
 }
-function urlOpenAlex(consulta, clave, n = 8) {
-  const p = new URLSearchParams({search: consulta, filter: 'has_abstract:true', per_page: String(n), select: OA_CAMPOS});
+function urlOpenAlex(consulta, clave, n = 8, desde = '') {
+  const p = new URLSearchParams({search: consulta, filter: 'has_abstract:true' + (desde ? ',from_publication_date:' + desde : ''), per_page: String(n), select: OA_CAMPOS});
   if (clave) p.set('api_key', clave);
   return 'https://api.openalex.org/works?' + p.toString();
 }
@@ -1935,7 +2295,7 @@ const ahora = () => new Date().toISOString();
 function nuevaNota(d = {}) {
   const t0 = ahora();
   return {id: d.id || uid('n'), tipo: d.tipo || 'idea', titulo: String(d.titulo || '').trim(), texto: String(d.texto || ''), para: PARA.includes(d.para) ? d.para : 'recursos',
-    etiquetas: d.etiquetas || [], rel: d.rel || [], fuente: d.fuente || null, cita: d.cita || '', creada: d.creada || t0, mod: d.mod || t0};
+    etiquetas: d.etiquetas || [], rel: d.rel || [], fuente: d.fuente || null, cita: d.cita || '', origen: d.origen || '', huella: d.huella || '', borrada: d.borrada || null, creada: d.creada || t0, mod: d.mod || t0};
 }
 const wikilinks = texto => [...String(texto || '').matchAll(/\[\[([^\[\]\n]{1,120})\]\]/g)].map(m => m[1].trim());
 /* enlaces salientes de una nota: [[Título]] que exista + relaciones explícitas (rel), sin duplicados ni a sí misma */
@@ -1980,10 +2340,93 @@ const sobranCopias = (nombres, max = 14) => nombres.filter(n => /^sinapsia-\d{4}
 /* ── formato de referencia (APA simplificado) para notas y descargas ── */
 const refDe = f => `${f.autores || 's. a.'} (${f.anio || 's. f.'}). ${f.titulo}.${f.revista ? ' ' + f.revista + '.' : ''}${f.doi ? ' https://doi.org/' + f.doi : ''}`;
 
+/* ══ ampliaciones (1.2): papelera, revisión, fusión, autoenlazado, islas, documentos, radar, investigación profunda ══ */
+/* papelera: una nota borrada sigue en el expediente con «borrada» (viaja a Drive y se puede restaurar); vaciar la papelera la convierte en lápida */
+const activas = notas => notas.filter(n => !n.borrada);
+const enPapelera = notas => notas.filter(n => n.borrada).sort((a, b) => String(b.borrada).localeCompare(String(a.borrada)));
+
+/* islas del grafo (componentes conexas): id → número de isla, de la mayor a la menor */
+function islas(g) {
+  const ady = Object.fromEntries(g.nodos.map(n => [n.id, []])); g.aristas.forEach(([a, b]) => { ady[a]?.push(b); ady[b]?.push(a); });
+  const vis = new Set(), comps = [];
+  for (const n of g.nodos) { if (vis.has(n.id)) continue; const cola = [n.id], c = []; vis.add(n.id); while (cola.length) { const x = cola.shift(); c.push(x); for (const y of ady[x]) if (!vis.has(y)) { vis.add(y); cola.push(y); } } comps.push(c); }
+  comps.sort((a, b) => b.length - a.length);
+  const de = {}; comps.forEach((c, i) => c.forEach(id => { de[id] = i; }));
+  return {de, n: comps.length, aisladas: comps.filter(c => c.length === 1).length};
+}
+
+/* huella de un texto (trigramas de palabras) y parecido de Jaccard: detecta documentos y notas repetidos sin IA */
+function huellaDe(txt) { const w = norm(txt).split(' ').filter(x => x.length > 2), s = new Set(); for (let i = 0; i + 2 < w.length && s.size < 4000; i++) s.add(w[i] + ' ' + w[i + 1] + ' ' + w[i + 2]); return [...s]; }
+function jaccard(a, b) { const A = new Set(a), B = new Set(b); if (!A.size || !B.size) return 0; let c = 0; A.forEach(x => { if (B.has(x)) c++; }); return c / (A.size + B.size - c); }
+
+/* revisión del cerebro (por código, sin coste): enlaces rotos, notas huérfanas, vacías y posibles duplicados */
+function revision(notas) {
+  const N = activas(notas), rot = [], huer = [], vac = [], dup = [];
+  N.forEach(n => { rotos(n, N).forEach(w => rot.push({nota: n.id, titulo: w})); if (String(n.texto || '').replace(/\s+/g, ' ').trim().length < 40) vac.push(n.id); });
+  const g = grafo(N); g.nodos.forEach(x => { if (!x.grado) huer.push(x.id); });
+  const hs = N.map(n => huellaDe(n.texto || ''));
+  for (let i = 0; i < N.length; i++) for (let j = i + 1; j < N.length; j++) {
+    const st = simTitulo(N[i].titulo, N[j].titulo), sx = jaccard(hs[i], hs[j]);
+    if ((st >= 0.8 && tokens(N[i].titulo).size >= 2) || norm(N[i].titulo) === norm(N[j].titulo) || sx >= 0.5) dup.push([N[i].id, N[j].id, Math.round(Math.max(st, sx) * 100)]);
+  }
+  return {rotos: rot, huerfanas: huer, vacias: vac, duplicados: dup};
+}
+
+/* fusionar B en A: une texto, etiquetas y relaciones; los [[enlaces]] y relaciones a B pasan a A; B va a la papelera */
+const reEsc = s => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+function fusionaNotas(notas, idA, idB, cuando = ahora()) {
+  const A = notas.find(n => n.id === idA), B = notas.find(n => n.id === idB); if (!A || !B || idA === idB) return notas;
+  const reB = new RegExp('\\[\\[\\s*' + reEsc(B.titulo.trim()) + '\\s*\\]\\]', 'gi');
+  return notas.map(n => {
+    if (n.id === idA) return {...n, texto: (n.texto || '').trim() + '\n\n' + (B.texto || '').trim().replace(reB, ''), etiquetas: [...new Set([...n.etiquetas, ...B.etiquetas])], rel: [...new Set([...(n.rel || []), ...(B.rel || [])])].filter(x => x !== idA && x !== idB), fuente: n.fuente || B.fuente, cita: n.cita || B.cita, mod: cuando};
+    if (n.id === idB) return {...n, borrada: cuando, mod: cuando};
+    const tx = (n.texto || '').replace(reB, '[[' + A.titulo + ']]'), rl = [...new Set((n.rel || []).map(x => x === idB ? idA : x))];
+    return tx !== n.texto || rl.join() !== (n.rel || []).join() ? {...n, texto: tx, rel: rl, mod: cuando} : n;
+  });
+}
+
+/* autoenlazar: la primera mención literal de otro título (≥ 4 letras) se convierte en [[título]]; no toca lo ya enlazado */
+function autoenlaza(texto, titulos, propio = '', max = 5) {
+  let out = String(texto || ''), n = 0;
+  const ya = new Set(wikilinks(out).map(norm));
+  const cands = [...new Set(titulos)].filter(x => x && x.trim().length >= 4 && norm(x) !== norm(propio) && !ya.has(norm(x))).sort((a, b) => b.length - a.length);
+  for (const tit of cands) {
+    if (n >= max) break;
+    const partes = out.split(/(\[\[[^\]]*\]\])/);
+    const re = new RegExp('(^|[^\\p{L}\\p{N}])(' + reEsc(tit.trim()) + ')(?=$|[^\\p{L}\\p{N}])', 'iu');
+    let hecho = false;
+    for (let i = 0; i < partes.length && !hecho; i += 2) { if (re.test(partes[i])) { partes[i] = partes[i].replace(re, (m, a) => a + '[[' + tit.trim() + ']]'); hecho = true; } }
+    if (hecho) { out = partes.join(''); n++; }
+  }
+  return {texto: out, n};
+}
+
+/* documentos → notas atómicas: la IA propone, el código comprueba la cita en el documento y no duplica títulos existentes */
+function procesaDocumento(raw, textoDoc, titulosExistentes) {
+  const exist = new Map(titulosExistentes.map(x => [norm(x), x])), vistos = new Set();
+  const notas = (Array.isArray(raw.notas) ? raw.notas : []).map(x => ({titulo: String(x.titulo || '').trim().slice(0, 140), texto: String(x.texto || '').trim(), cita: String(x.cita || '').trim()}))
+    .filter(x => x.titulo && x.texto && !vistos.has(norm(x.titulo)) && vistos.add(norm(x.titulo)))
+    .map(x => ({...x, verificada: !!x.cita && esFiel(textoDoc, x.cita), existe: exist.get(norm(x.titulo)) || null}));
+  return {resumen: String(raw.resumen || '').trim(), notas};
+}
+const PLANTILLAS = {libre: 'Notas atómicas: una idea por nota, con título claro.', paper: 'Ficha de artículo: pregunta, método, resultados principales, limitaciones y aplicabilidad, cada una como nota.', concepto: 'Conceptos técnicos: una nota por concepto, con definición, ejemplo y relación con otros conceptos.', clase: 'Notas de clase o reunión: ideas clave, decisiones, tareas y dudas pendientes.'};
+
+/* radar: la IA puntúa cada trabajo de 0 a 10 según el perfil; el código descarta referencias inventadas y ordena */
+function procesaPuntuaciones(raw, fuentes, umbral = 7) {
+  const porRef = Object.fromEntries(fuentes.map(f => [f.ref, f])), out = [];
+  (Array.isArray(raw.puntuaciones) ? raw.puntuaciones : []).forEach(p => { const f = porRef[String(p.ref || '').trim().toUpperCase()]; const v = Math.max(0, Math.min(10, Math.round(+p.nota))); if (f && Number.isFinite(v) && !out.some(o => o.id === f.id)) out.push({id: f.id, nota: v, motivo: String(p.motivo || '').trim().slice(0, 240)}); });
+  return out.filter(o => o.nota >= umbral).sort((a, b) => b.nota - a.nota);
+}
+const diasDesde = iso => iso ? Math.floor((Date.now() - new Date(iso).getTime()) / 864e5) : null;
+
+/* investigación profunda: llamadas previstas (plan + una por subpregunta + crítico [+ segunda ronda] + informe) */
+const llamadasProfunda = (nSub, rondas) => 1 + nSub + 1 + (rondas > 1 ? 3 : 0) + 1;
+
 /* ══ SinapsIA · interfaz. La lógica pura (OpenAlex, Crossref, verificación, cerebro, grafo, fusión) está en nucleo.js ══ */
-const STEPS = ['Inicio', 'Consulta', 'Cerebro', 'Grafo'];
-const NAV = [['Empezar', 'Prueba con el ejemplo: no necesita clave.'], ['Siguiente: tu cerebro', 'Pregunta escribiendo o con el micrófono.'], ['Siguiente: el grafo', 'Enlaza notas escribiendo [[Título]].'], ['Volver al inicio', 'Pulsa un punto para abrir su nota.']];
-const RENDER = {0: pintaInicio, 1: pintaConsulta, 2: pintaCerebro, 3: pintaGrafo};
+const STEPS = ['Inicio', 'Consulta', 'Cerebro', 'Grafo', 'Radar'];
+const NA = () => activas(S.cerebro.notas);   // notas fuera de la papelera
+const NAV = [['Empezar', 'Prueba con el ejemplo: no necesita clave.'], ['Siguiente: tu cerebro', 'Pregunta escribiendo o con el micrófono.'], ['Siguiente: el grafo', 'Enlaza notas escribiendo [[Título]].'], ['Siguiente: radar', 'Pulsa un punto para abrir su nota.'], ['Volver al inicio', 'El radar busca novedades según tu perfil.']];
+const RENDER = {0: pintaInicio, 1: pintaConsulta, 2: pintaCerebro, 3: pintaGrafo, 4: pintaRadar};
 const GLOS = [
   ['¿Qué hace?', 'Responde preguntas de investigación con trabajos académicos reales de OpenAlex (todas las disciplinas) y te ayuda a guardar lo útil en un segundo cerebro de notas enlazadas.'],
   ['¿De dónde salen las respuestas?', 'Solo de los resúmenes de los trabajos que el código ha recuperado. La IA no puede citar nada que no esté en esa lista. Cada afirmación lleva una cita literal de su resumen, y el código comprueba que está: ✓ si aparece, ⚠ si no.'],
@@ -1992,6 +2435,10 @@ const GLOS = [
   ['Segundo cerebro (PARA)', 'Proyectos: lo que tiene un objetivo y una fecha. Áreas: responsabilidades que mantienes. Recursos: temas que te interesan. Archivo: lo que ya no está activo. Capturas una fuente, la destilas con tus palabras y la enlazas con [[Título]].'],
   ['Drive', 'Conecta una carpeta de Google Drive para ordenador (Chrome o Edge de escritorio). SinapsIA guarda allí sinapsia-cerebro.json, lo fusiona nota a nota con lo que haya y hace una copia diaria (conserva las 14 últimas). Si editas la misma nota en dos equipos a la vez, gana la última guardada. En móvil u otros navegadores, usa «Abrir expediente» y «Descargar expediente».'],
   ['Voz', 'Pulsa el micrófono y habla: al terminar, la pregunta se envía sola (Chrome y Edge; el audio pasa por el servicio de voz del navegador). El altavoz lee las respuestas con la voz de tu sistema, sin coste.'],
+  ['Modos de consulta', 'Ciencia: una búsqueda y una respuesta rápida. Investigación profunda: un planificador divide la pregunta en subpreguntas, cada una se investiga con sus propias fuentes verificadas, un crítico busca huecos y contradicciones y se redacta un informe solo con lo verificado (avisa antes de las llamadas que hará). Mi cerebro: responde solo con tus notas, y el código comprueba cada cita.'],
+  ['Documentos', 'Captura PDF, Word, texto o Markdown: la IA propone notas atómicas con una cita literal que el código busca en el documento, enlazadas con [[títulos]] que ya tienes. Tú eliges cuáles guardar. Avisa si el documento ya estaba capturado.'],
+  ['Radar', 'Con tu perfil de intereses, SinapsIA busca trabajos recientes en OpenAlex, la IA puntúa de 0 a 10 cuánto encajan y verás solo los que superen tu umbral. Los ya vistos no se repiten. La portada te recuerda pasarlo si llevas una semana sin hacerlo.'],
+  ['Mantenimiento', 'Revisar mi cerebro encuentra, sin IA, enlaces rotos, notas huérfanas o casi vacías y posibles duplicados, que puedes fusionar. Autoenlazar convierte en [[enlace]] la primera mención de cada título. Lo borrado va a la papelera y se puede restaurar; la papelera también se sincroniza con Drive. Ctrl+K abre la búsqueda de notas y acciones.'],
   ['Claves', 'La clave de IA (OpenAI, Gemini o Claude) y la de OpenAlex se guardan solo en este navegador. Nunca van al fichero de Drive ni a las descargas.']
 ];
 const PARA_TX = {proyectos: 'Proyectos', areas: 'Áreas', recursos: 'Recursos', archivo: 'Archivo'};
@@ -2068,7 +2515,8 @@ function estado(e, txt = '') { ESTADO = e; pintaCore(); $('sxEstado').textConten
 /* ── pantalla 0 ── */
 function pintaInicio() {
   pintaDrive();
-  const n = S.cerebro.notas.length;
+  const n = NA().length, dr = diasDesde(S.radar?.ultima);
+  $('inicioRadar').innerHTML = !S.esEjemplo && radarPerfil() && (dr === null || dr >= 7) ? `${esc(dr === null ? t('Aún no has pasado el radar de novedades.') : t('Hace {0} días que no pasas el radar de novedades.', dr))} <button class="btn btn-ghost btn-sm" type="button" id="btnIrRadar">${esc(t('Pasar el radar'))}</button>` : '';
   $('inicioProj').innerHTML = S.esEjemplo ? `${esc(t('Estás viendo el ejemplo.'))} <button class="btn btn-ghost btn-sm" id="btnSalirEj0" type="button">${esc(t('Salir del ejemplo'))}</button>`
     : n ? `${esc(n === 1 ? t('Tu cerebro tiene 1 nota.') : t('Tu cerebro tiene {0} notas.', n))} <button class="btn btn-ghost btn-sm" id="btnCont" type="button">${esc(t('Abrirlo'))}</button>` : '';
 }
@@ -2077,6 +2525,7 @@ $('btnEjemplo').onclick = () => { aplicaEjemplo(); guarda(); go(1); toast(t('Eje
 document.addEventListener('click', e => {
   const b = e.target.closest('button'); if (!b) return;
   if (b.id === 'btnCont') go(2);
+  if (b.id === 'btnIrRadar') go(4);
   if (b.id === 'btnSalirEj0' || b.id === 'btnSalirEj') { salirEjemplo(); toast(t('Has vuelto a tu cerebro')); (RENDER[step] || (() => {}))(); }
 });
 
@@ -2139,7 +2588,9 @@ async function preguntar() {
   if (q.length < 8) return toast(t('Escribe una pregunta algo más larga'));
   if (!pideClave()) return;
   if (S.esEjemplo) salirEjemplo();
-  const rel = relevantes(q, S.cerebro.notas, 4);
+  if (MODO === 'cerebro') return preguntaCerebro(q);
+  if (MODO === 'profunda') return investigaProfunda(q);
+  const rel = relevantes(q, NA(), 4);
   const sq = scrub(q); let masks = sq.n;
   const ns = rel.map((n, i) => { const s = scrub((n.texto || '').slice(0, 600)); masks += s.n; return {ref: 'N' + (i + 1), id: n.id, titulo: n.titulo, texto: n.texto, envio: s.t.replace(/\n+/g, ' ')}; });
   const muestra = `PREGUNTA: ${sq.t}` + (ns.length ? `\n\n${t('NOTAS TUYAS RELACIONADAS')} (${ns.length}):\n` + ns.map(n => `${n.ref} · ${n.titulo}: ${n.envio}`).join('\n') : '');
@@ -2179,17 +2630,19 @@ $('btnLimpiaChat').onclick = () => { if (!S.chat.length) return; if (!confirm(t(
 const CR_TX = {ok: 'DOI verificado en Crossref', distinto: 'El DOI existe, pero con otro título', no: 'DOI no encontrado en Crossref', 'sin-doi': 'Sin DOI', error: 'Crossref no respondió', pendiente: 'Sin comprobar', ejemplo: 'Fuente ficticia de ejemplo'};
 const CR_CL = {ok: 'ok', distinto: 'aviso', no: 'error', 'sin-doi': '', error: '', pendiente: '', ejemplo: 'aviso'};
 const AF_TX = {'cita-no-verificada': 'La cita no aparece en el resumen de {0}: no la des por buena.', 'fuente-inexistente': 'La IA citó una fuente ({0}) que no estaba entre las encontradas.'};
-const capturada = id => S.cerebro.notas.find(n => n.fuente && n.fuente.id === id);
+const capturada = id => NA().find(n => n.fuente && n.fuente.id === id);
 function tarjetaFuente(f, ref) {
   const url = f.doi ? 'https://doi.org/' + f.doi : f.id && !f.id.startsWith('EJ') ? 'https://openalex.org/' + f.id : '';
   const cap = capturada(f.id);
-  return `<article class="sx-src${f.retractado ? ' ret' : ''}" id="src-${esc(f.id)}"><span class="sx-ref">${esc(ref)}</span>
+  return `<article class="sx-src${f.retractado ? ' ret' : ''}" id="src-${esc(f.id)}">${ref ? `<span class="sx-ref">${esc(ref)}</span>` : ''}
     <h4>${url ? `<a href="${esc(url)}" target="_blank" rel="noopener">${esc(f.titulo)}</a>` : esc(f.titulo)}</h4>
     <p class="sx-src-m">${esc(f.autores || '—')} · ${esc(f.anio || '')}${f.revista ? ' · <i>' + esc(f.revista) + '</i>' : ''}</p>
     <p class="sx-badges"><span class="fa-chip ${CR_CL[f.crossref] || ''}">${esc(t(CR_TX[f.crossref] || CR_TX.pendiente))}</span>${f.retractado ? `<span class="fa-chip error">${esc(t('Retractado'))}</span>` : ''}${f.tipo === 'ejemplo' ? '' : `<span class="fa-chip">${esc(t('{0} citas', nf(f.citas || 0)))}</span>`}${f.oa ? `<a class="fa-chip ok" href="${esc(f.oa)}" target="_blank" rel="noopener">${esc(t('Acceso abierto'))}</a>` : ''}</p>
     <button class="btn btn-sm ${cap ? 'btn-ghost' : 'btn-primary'}" type="button" data-cap="${esc(f.id)}">${ico(cap ? 'check' : 'bookmark')}<span>${esc(cap ? t('En tu cerebro') : t('Capturar'))}</span></button></article>`;
 }
 function pintaMsg(m, i) {
+  if (m.modo === 'cerebro') return pintaMsgCerebro(m, i);
+  if (m.modo === 'profunda') return pintaMsgProfunda(m, i);
   if (m.rol === 'yo') return `<div class="sx-msg yo"><p>${esc(m.texto)}</p></div>`;
   if (m.rol === 'err') return `<div class="sx-msg err"><p>${esc(m.texto)}</p></div>`;
   const r = m.res;
@@ -2203,11 +2656,11 @@ function pintaMsg(m, i) {
     <p class="sx-resp">${esc(r.respuesta)}</p>
     ${r.afirmaciones.length ? `<ol class="sx-afs">${r.afirmaciones.map(a => `<li class="${a.estado === 'ok' ? 'ok' : 'no'}"><span class="sx-st" aria-label="${esc(a.estado === 'ok' ? t('Verificada') : t('No verificada'))}">${a.estado === 'ok' ? '✓' : '⚠'}</span><div><b>${esc(a.texto)}</b> ${a.fuente ? `<a class="sx-reflink" href="#src-${esc(a.fuente)}">${esc(refDeId[a.fuente] || a.ref)}</a>` : ''}
       <small>${a.estado === 'ok' ? '«' + esc(a.cita) + '»' : esc(t(AF_TX[a.estado], a.ref))}</small></div></li>`).join('')}</ol>` : ''}
-    ${r.conexiones.length ? `<div class="sx-con"><b>${ico('nucleo')} ${esc(t('Con tu cerebro'))}</b>${r.conexiones.map(c => { const n = S.cerebro.notas.find(x => x.id === c.nota); return n ? `<p><button class="sx-link" type="button" data-abre="${esc(n.id)}">${esc(n.titulo)}</button> — ${esc(c.relacion)}</p>` : ''; }).join('')}</div>` : ''}
+    ${r.conexiones.length ? `<div class="sx-con"><b>${ico('nucleo')} ${esc(t('Con tu cerebro'))}</b>${r.conexiones.map(c => { const n = NA().find(x => x.id === c.nota); return n ? `<p><button class="sx-link" type="button" data-abre="${esc(n.id)}">${esc(n.titulo)}</button> — ${esc(c.relacion)}</p>` : ''; }).join('')}</div>` : ''}
     ${r.huecos ? `<div class="sx-huecos"><b>${esc(t('Lo que estas fuentes no responden'))}</b> ${esc(r.huecos)}</div>` : ''}
     ${(r.nuevos || []).length ? `<div class="aviso">${esc(t('Cifras que no están en las fuentes ni en tus notas: {0}. Compruébalas.', r.nuevos.join(', ')))}</div>` : ''}
     <div class="sx-srcs">${fs.map(f => tarjetaFuente(f, refDeId[f.id])).join('')}</div>
-    <div class="actions">${m.guardada && S.cerebro.notas.some(n => n.id === m.guardada) ? `<button class="btn btn-ghost btn-sm" type="button" data-abre="${esc(m.guardada)}">${ico('check')}<span>${esc(t('Guardada en tu cerebro: abrir'))}</span></button>` : `<button class="btn btn-primary btn-sm" type="button" data-guarda="${i}">${ico('nucleo')}<span>${esc(t('Guardar en mi cerebro'))}</span></button>`}<button class="btn btn-ghost btn-sm" type="button" data-lee="${i}">${ico('voz')}<span>${esc(t('Leer en voz alta'))}</span></button></div>
+    <div class="actions">${m.guardada && NA().some(n => n.id === m.guardada) ? `<button class="btn btn-ghost btn-sm" type="button" data-abre="${esc(m.guardada)}">${ico('check')}<span>${esc(t('Guardada en tu cerebro: abrir'))}</span></button>` : `<button class="btn btn-primary btn-sm" type="button" data-guarda="${i}">${ico('nucleo')}<span>${esc(t('Guardar en mi cerebro'))}</span></button>`}<button class="btn btn-ghost btn-sm" type="button" data-lee="${i}">${ico('voz')}<span>${esc(t('Leer en voz alta'))}</span></button></div>
     <p class="help">${esc(t('Búsqueda: {0}', (m.consultas || []).join(' · ')))} · ${esc(t('SinapsIA lee resúmenes, no artículos completos: consulta el artículo antes de citarlo.'))}</p></div>`;
 }
 function pintaChat(alFinal = true) {
@@ -2216,7 +2669,7 @@ function pintaChat(alFinal = true) {
   if (alFinal) { const ult = c.querySelector('.sx-msg.ia:last-of-type'), yo = [...c.querySelectorAll('.sx-msg.yo')].pop(); const ancla = S.chat.at(-1)?.rol === 'ia' ? (yo || ult) : null; c.scrollTop = ancla ? ancla.offsetTop - c.offsetTop - 8 : c.scrollHeight; }
   pintaCore();
 }
-function pintaConsulta() { pintaChat(); if (!busy) estado(ESTADO === 'hablando' ? 'hablando' : 'reposo'); $('btnLeer').setAttribute('aria-pressed', String(leerOn())); $('btnAuto').setAttribute('aria-pressed', String(autoOn())); pintaDrive(); }
+function pintaConsulta() { pintaModos(); pintaChat(); if (!busy) estado(ESTADO === 'hablando' ? 'hablando' : 'reposo'); $('btnLeer').setAttribute('aria-pressed', String(leerOn())); $('btnAuto').setAttribute('aria-pressed', String(autoOn())); pintaDrive(); }
 $('chat').addEventListener('click', e => {
   const b = e.target.closest('[data-cap],[data-guarda],[data-lee],[data-abre],[data-sug]'); if (!b) return;
   if (b.dataset.sug) { $('pregunta').value = b.dataset.sug; $('pregunta').focus(); return; }
@@ -2238,7 +2691,7 @@ function captura(fid, silencio = false) {
 }
 function guardaRespuesta(i, auto = false) {
   const m = S.chat[i]; if (!m?.res) return;
-  if (m.guardada && S.cerebro.notas.some(n => n.id === m.guardada)) return;
+  if (m.guardada && NA().some(n => n.id === m.guardada)) return;
   const r = m.res, ok = r.afirmaciones.filter(a => a.estado === 'ok');
   const fuentesNotas = [...new Set(ok.map(a => a.fuente))].map(fid => captura(fid, true)).filter(Boolean);
   const idea = nuevaNota({tipo: 'idea', para: 'recursos', titulo: m.q.slice(0, 110),
@@ -2279,22 +2732,23 @@ $('vozNo').onclick = () => $('mVoz').classList.remove('on');
 
 /* ── cerebro: lista, filtros PARA, editor, enlaces ── */
 function cambioCerebro() { guarda(); programaDrive(); if ($('chipCerebro')) pintaDrive(); }
-const notaSel = () => S.cerebro.notas.find(n => n.id === S.sel);
+const notaSel = () => NA().find(n => n.id === S.sel);
 function pintaCerebro() {
   $('ejBar').hidden = !S.esEjemplo;
-  const N = S.cerebro.notas, cnt = k => k === 'todas' ? N.length : N.filter(n => n.para === k).length;
+  const N = NA(), cnt = k => k === 'todas' ? N.length : N.filter(n => n.para === k).length;
   $('tabsPara').innerHTML = ['todas', ...PARA].map(k => `<button type="button" data-para="${k}" aria-pressed="${S.filtro === k}" style="--c:${PARA_COL[k] || '#0F2237'}">${esc(k === 'todas' ? t('Todas') : t(PARA_TX[k]))} <small>${cnt(k)}</small></button>`).join('');
   pintaLista(); pintaEditor(); pintaDrive();
+  const np = enPapelera(S.cerebro.notas).length; $('btnPapeleraTx').textContent = np ? t('Papelera ({0})', np) : t('Papelera');
 }
 function pintaLista() {
-  const q = norm($('busca').value), N = S.cerebro.notas;
+  const q = norm($('busca').value), N = NA();
   const L = N.filter(n => (S.filtro === 'todas' || n.para === S.filtro) && (!q || norm(n.titulo + ' ' + n.texto + ' ' + n.etiquetas.join(' ')).includes(q))).sort((a, b) => String(b.mod).localeCompare(String(a.mod)));
   $('lista').innerHTML = L.length ? L.map(n => { const k = enlacesDe(n, N).length + retroenlaces(n.id, N).length; return `<button type="button" class="sx-nota${n.id === S.sel ? ' sel' : ''}" data-nota="${esc(n.id)}" style="--c:${PARA_COL[n.para]}" aria-current="${n.id === S.sel}">
-    <span class="sx-nota-t">${ico(n.tipo === 'fuente' ? 'book' : 'bulb')}<b>${esc(n.titulo || t('(sin título)'))}</b></span><small>${esc(String(n.texto || '').replace(/\[\[|\]\]/g, '').slice(0, 110))}</small><span class="sx-nota-m">${esc(t(PARA_TX[n.para]))} · ${esc(k === 1 ? t('1 enlace') : t('{0} enlaces', k))}</span></button>`; }).join('')
+    <span class="sx-nota-t">${ico(n.tipo === 'fuente' ? 'book' : n.tipo === 'documento' ? 'doc' : 'bulb')}<b>${esc(n.titulo || t('(sin título)'))}</b></span><small>${esc(String(n.texto || '').replace(/\[\[|\]\]/g, '').slice(0, 110))}</small><span class="sx-nota-m">${esc(t(PARA_TX[n.para]))} · ${esc(k === 1 ? t('1 enlace') : t('{0} enlaces', k))}</span></button>`; }).join('')
     : `<p class="empty">${esc(N.length ? t('Ninguna nota coincide con el filtro.') : t('Tu cerebro está vacío. Pregunta algo y captura las fuentes que te sirvan, o crea una nota.'))}</p>`;
 }
 function pintaEditor() {
-  const n = notaSel(), N = S.cerebro.notas;
+  const n = notaSel(), N = NA();
   if (!n) { $('editor').innerHTML = `<p class="empty">${esc(t('Elige una nota de la lista o crea una nueva.'))}</p>`; return; }
   const f = n.fuente;
   $('editor').innerHTML = `<div class="field"><label for="edTit">${esc(t('Título'))}</label><input type="text" id="edTit" value="${esc(n.titulo)}"></div>
@@ -2303,7 +2757,7 @@ function pintaEditor() {
     <div class="field"><label for="edTxt">${esc(n.tipo === 'fuente' ? t('Tu destilado (con tus palabras)') : t('Texto'))}</label><textarea id="edTxt" rows="9">${esc(n.texto)}</textarea><p class="help">${esc(t('Enlaza otra nota escribiendo [[su título]].'))}</p></div>
     ${f ? `<div class="sx-fbox"><b>${ico('book')} ${esc(t('Fuente'))}</b><p>${esc(refDe(f))}</p><p class="sx-badges"><span class="fa-chip ${CR_CL[f.crossref] || ''}">${esc(t(CR_TX[f.crossref] || CR_TX.pendiente))}</span>${f.retractado ? `<span class="fa-chip error">${esc(t('Retractado'))}</span>` : ''}</p>${n.cita ? `<p class="sx-cita">«${esc(n.cita)}»</p>` : ''}${f.resumen ? `<details><summary>${esc(t('Resumen original'))}</summary><p>${esc(f.resumen)}</p></details>` : ''}</div>` : ''}
     <div class="sx-links" id="edLinks"></div>
-    <div class="actions"><button class="btn btn-ghost btn-sm" id="edPreg" type="button">${ico('mic')}<span>${esc(t('Preguntar sobre esta nota'))}</span></button><button class="btn btn-ghost btn-sm" id="edBorra" type="button">${ico('trash')}<span>${esc(t('Borrar'))}</span></button></div>`;
+    <div class="actions"><button class="btn btn-ghost btn-sm" id="edPreg" type="button">${ico('mic')}<span>${esc(t('Preguntar sobre esta nota'))}</span></button><button class="btn btn-ghost btn-sm" id="edBorra" type="button">${ico('trash')}<span>${esc(t('Mover a la papelera'))}</span></button></div>`;
   pintaEnlacesEd(n);
   const toca = () => { n.mod = ahora(); cambioCerebro(); };
   $('edTit').oninput = e => { n.titulo = e.target.value; toca(); };
@@ -2312,11 +2766,11 @@ function pintaEditor() {
   $('edTags').onchange = e => { n.etiquetas = e.target.value.split(',').map(s => s.trim()).filter(Boolean); toca(); pintaLista(); };
   $('edTxt').oninput = e => { n.texto = e.target.value; toca(); };
   $('edTxt').onchange = () => { pintaLista(); pintaEnlacesEd(n); };   // no repinta el editor entero: el botón que se esté pulsando seguiría existiendo
-  $('edBorra').onclick = () => { if (!confirm(t('¿Borrar la nota «{0}»?', n.titulo || t('(sin título)')))) return; S.cerebro.notas = S.cerebro.notas.filter(x => x.id !== n.id); S.cerebro.borrados = [...(S.cerebro.borrados || []), n.id]; S.sel = null; cambioCerebro(); pintaCerebro(); };
+  $('edBorra').onclick = () => { n.borrada = n.mod = ahora(); S.sel = null; cambioCerebro(); pintaCerebro(); toast(t('«{0}» está en la papelera: puedes restaurarla', n.titulo || t('(sin título)'))); };
   $('edPreg').onclick = () => { $('pregunta').value = n.tipo === 'idea' ? n.titulo : t('¿Qué más se sabe sobre «{0}»?', n.titulo); go(1); $('pregunta').focus(); };
 }
 function pintaEnlacesEd(n) {
-  const N = S.cerebro.notas, sal = enlacesDe(n, N).map(id => N.find(x => x.id === id)), ret = retroenlaces(n.id, N), rt = rotos(n, N);
+  const N = NA(), sal = enlacesDe(n, N).map(id => N.find(x => x.id === id)), ret = retroenlaces(n.id, N), rt = rotos(n, N);
   const html = `<div><b>${esc(t('Enlaza con'))}</b>${sal.length ? sal.map(x => `<button class="sx-link" type="button" data-nota="${esc(x.id)}">${esc(x.titulo)}</button>`).join('') : `<span class="muted">—</span>`}${rt.map(w => `<button class="sx-link roto" type="button" data-crea="${esc(w)}" title="${esc(t('Crear esta nota'))}">${esc(w)} +</button>`).join('')}</div>
     <div><b>${esc(t('Le enlazan'))}</b>${ret.length ? ret.map(x => `<button class="sx-link" type="button" data-nota="${esc(x.id)}">${esc(x.titulo)}</button>`).join('') : `<span class="muted">—</span>`}</div>`;
   const el = $('edLinks'); if (el._h !== html) { el._h = html; el.innerHTML = html; }   // repintar solo si cambia: si no, se perdería el clic en un enlace
@@ -2332,12 +2786,12 @@ $('btnNueva').onclick = () => { const n = nuevaNota({titulo: t('Nueva nota'), pa
 
 /* ── descargas: bibliografía (CSV) y bóveda Markdown (ZIP, compatible con Obsidian/Logseq) ── */
 $('btnBib').onclick = () => {
-  const F = S.cerebro.notas.filter(n => n.fuente); if (!F.length) return toast(t('Aún no has capturado ninguna fuente'));
+  const F = NA().filter(n => n.fuente); if (!F.length) return toast(t('Aún no has capturado ninguna fuente'));
   dl('sinapsia-bibliografia.csv', csvDe([t('referencia'), 'DOI', t('año'), t('citas'), 'Crossref', t('retractado'), t('cita_verificada'), 'PARA'], F.map(n => [refDe(n.fuente), n.fuente.doi, n.fuente.anio, n.fuente.citas, n.fuente.crossref, n.fuente.retractado ? t('sí') : t('no'), n.cita, t(PARA_TX[n.para])])), 'text/csv;charset=utf-8');
 };
 const nombreFich = s => String(s || 'nota').replace(/[\\/:*?"<>|#^\[\]]/g, ' ').replace(/\s+/g, ' ').trim().slice(0, 90) || 'nota';
 $('btnMd').onclick = async () => {
-  const N = S.cerebro.notas; if (!N.length) return toast(t('Tu cerebro está vacío'));
+  const N = NA(); if (!N.length) return toast(t('Tu cerebro está vacío'));
   const ficheros = {}, usados = new Set();
   N.forEach(n => {
     let nom = nombreFich(n.titulo); while (usados.has(nom.toLowerCase())) nom += ' ·'; usados.add(nom.toLowerCase());
@@ -2358,7 +2812,7 @@ function pintaDrive() {
     rec: t('La carpeta «{0}» necesita permiso de nuevo.', DIR?.name || ''), sync: t('Sincronizando…'), ej: t('El ejemplo no se sincroniza.'), err: t('No se pudo escribir en la carpeta. Comprueba que existe y que Drive está en marcha.')}[S.esEjemplo ? 'ej' : DRV];
   $('driveEstado').textContent = tx; $('driveEstado').className = DRV === 'ok' && !S.esEjemplo ? 'ok' : DRV === 'err' || DRV === 'rec' ? 'mal' : '';
   $('driveCard').dataset.estado = S.esEjemplo ? 'ej' : DRV;
-  const chip = $('chipCerebro'); if (chip) { chip.className = 'sx-chipcer ' + (DRV === 'ok' && !S.esEjemplo ? 'ok' : DRV === 'rec' || DRV === 'err' ? 'mal' : ''); chip.textContent = S.esEjemplo ? t('Cerebro de ejemplo') : DRV === 'ok' ? t('Cerebro en Drive: {0} notas', S.cerebro.notas.length) : DRV === 'rec' ? t('Reconecta la carpeta del cerebro') : t('Cerebro solo en este navegador: conectar Drive'); }
+  const chip = $('chipCerebro'); if (chip) { chip.className = 'sx-chipcer ' + (DRV === 'ok' && !S.esEjemplo ? 'ok' : DRV === 'rec' || DRV === 'err' ? 'mal' : ''); chip.textContent = S.esEjemplo ? t('Cerebro de ejemplo') : DRV === 'ok' ? t('Cerebro en Drive: {0} notas', NA().length) : DRV === 'rec' ? t('Reconecta la carpeta del cerebro') : t('Cerebro solo en este navegador: conectar Drive'); }
   $('btnCarpetaTx').textContent = DRV === 'rec' ? t('Reconectar carpeta') : DIR ? t('Cambiar carpeta') : t('Conectar carpeta');
 }
 async function leeFich(dir, nombre) { try { const fh = await dir.getFileHandle(nombre); return await (await fh.getFile()).text(); } catch { return null; } }
@@ -2406,16 +2860,20 @@ $('fileExp').onchange = async e => {
 $('btnDescExp').onclick = () => { if (S.esEjemplo) return toast(t('Sal del ejemplo para descargar tu expediente')); dl(FICH, JSON.stringify(expediente(S.cerebro), null, 1), 'application/json'); };
 
 /* ── grafo: simulación de fuerzas en un lienzo ── */
-let G = null, _raf = null;
+let G = null, _raf = null, GMODO = localStorage.getItem(APP + '_gmodo') || 'para';
+const ISLA_COL = ['#F07A55', '#5AA9EC', '#A08BF2', '#E8B04B', '#4CC3A6', '#E58FB6', '#C3D3E2'];
 const reducido = () => window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
 function pintaGrafo() {
-  const N = S.cerebro.notas, gr = grafo(N), cv = $('lienzo'), w = cv.parentElement.clientWidth || 800, h = Math.max(380, Math.min(620, Math.round(w * 0.6))), dpr = window.devicePixelRatio || 1;
+  const N = NA(), gr = grafo(N), cv = $('lienzo'), w = cv.parentElement.clientWidth || 800, h = Math.max(380, Math.min(620, Math.round(w * 0.6))), dpr = window.devicePixelRatio || 1;
   cv.width = w * dpr; cv.height = h * dpr; cv.style.height = h + 'px';
   const prev = G ? Object.fromEntries(G.nodos.map(n => [n.id, n])) : {};
   const nodos = gr.nodos.map((n, i) => { const p = prev[n.id]; const a = i * 2.39996; return {...n, x: p ? p.x : w / 2 + Math.cos(a) * (40 + 9 * i), y: p ? p.y : h / 2 + Math.sin(a) * (40 + 9 * i), vx: 0, vy: 0}; });
   const idx = Object.fromEntries(nodos.map((n, i) => [n.id, i]));
-  G = {nodos, aristas: gr.aristas.map(([a, b]) => [idx[a], idx[b]]), w, h, dpr, hover: -1, tick: 0};
-  $('leyenda').innerHTML = PARA.map(p => `<span><i style="background:${PARA_COL_G[p]}"></i>${esc(t(PARA_TX[p]))}</span>`).join('') + `<span>${esc(t('{0} notas · {1} enlaces', nodos.length, gr.aristas.length))}</span>`;
+  const isl = islas(gr); nodos.forEach(n => { n.isla = isl.de[n.id]; if (prev[n.id]?.fijo) n.fijo = true; });
+  const ady = nodos.map(() => new Set()); gr.aristas.forEach(([a, b]) => { ady[idx[a]].add(idx[b]); ady[idx[b]].add(idx[a]); });
+  G = {nodos, aristas: gr.aristas.map(([a, b]) => [idx[a], idx[b]]), ady, w, h, dpr, hover: -1, tick: 0};
+  $$('#grafoModo [data-gm]').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.gm === GMODO)));
+  $('leyenda').innerHTML = (GMODO === 'para' ? PARA.map(p => `<span><i style="background:${PARA_COL_G[p]}"></i>${esc(t(PARA_TX[p]))}</span>`).join('') : '') + `<span>${esc(t('{0} notas · {1} enlaces', nodos.length, gr.aristas.length))}</span><span>${esc(t('{0} islas · {1} notas sueltas', isl.n, isl.aisladas))}</span>`;
   const top = [...nodos].sort((a, b) => b.grado - a.grado).filter(n => n.grado).slice(0, 8);
   $('topNotas').innerHTML = top.length ? top.map(n => `<button class="sx-link" type="button" data-abre-g="${esc(n.id)}">${esc(n.titulo)} <small>${n.grado}</small></button>`).join('') : `<p class="empty">${esc(t('Aún no hay enlaces. Escribe [[Título de otra nota]] dentro de una nota para conectarlas.'))}</p>`;
   cancelAnimationFrame(_raf);
@@ -2426,26 +2884,350 @@ function paso() {
   const L = Math.max(70, Math.min(w, h) * 0.24), K = L * L * 0.9;   // longitud de enlace y repulsión a escala del lienzo
   for (let i = 0; i < n; i++) for (let j = i + 1; j < n; j++) { const a = nodos[i], b = nodos[j]; let dx = a.x - b.x, dy = a.y - b.y; const d2 = dx * dx + dy * dy + 0.01, f = K / d2 / Math.sqrt(d2); dx *= f; dy *= f; a.vx += dx; a.vy += dy; b.vx -= dx; b.vy -= dy; }
   for (const [i, j] of aristas) { const a = nodos[i], b = nodos[j], dx = b.x - a.x, dy = b.y - a.y, d = Math.sqrt(dx * dx + dy * dy) || 1, f = (d - L) * 0.04; a.vx += dx / d * f; a.vy += dy / d * f; b.vx -= dx / d * f; b.vy -= dy / d * f; }
-  for (const a of nodos) { a.vx += (w / 2 - a.x) * 0.003; a.vy += (h / 2 - a.y) * 0.003; a.vx *= 0.82; a.vy *= 0.82; a.x = Math.max(16, Math.min(w - 16, a.x + Math.max(-8, Math.min(8, a.vx)))); a.y = Math.max(16, Math.min(h - 16, a.y + Math.max(-8, Math.min(8, a.vy)))); }
+  for (const a of nodos) { if (a.fijo) { a.vx = a.vy = 0; continue; } a.vx += (w / 2 - a.x) * 0.003; a.vy += (h / 2 - a.y) * 0.003; a.vx *= 0.82; a.vy *= 0.82; a.x = Math.max(16, Math.min(w - 16, a.x + Math.max(-8, Math.min(8, a.vx)))); a.y = Math.max(16, Math.min(h - 16, a.y + Math.max(-8, Math.min(8, a.vy)))); }
 }
 function dibuja() {
   const cv = $('lienzo'), c = cv.getContext('2d'), {nodos, aristas, w, h, dpr} = G, tk = G.tick;
   c.setTransform(dpr, 0, 0, dpr, 0, 0); c.clearRect(0, 0, w, h);
   c.strokeStyle = 'rgba(255,255,255,.04)'; c.lineWidth = 1; for (let x = 0; x < w; x += 32) { c.beginPath(); c.moveTo(x, 0); c.lineTo(x, h); c.stroke(); } for (let y = 0; y < h; y += 32) { c.beginPath(); c.moveTo(0, y); c.lineTo(w, y); c.stroke(); }
-  aristas.forEach(([i, j], k) => { const a = nodos[i], b = nodos[j], on = G.hover === i || G.hover === j; c.strokeStyle = on ? 'rgba(240,122,85,.95)' : 'rgba(195,211,226,.35)'; c.lineWidth = on ? 2 : 1.2; c.beginPath(); c.moveTo(a.x, a.y); c.lineTo(b.x, b.y); c.stroke();
+  const foco = G.hover >= 0, vecina = i => !foco || i === G.hover || G.ady[G.hover].has(i);
+  aristas.forEach(([i, j], k) => { const a = nodos[i], b = nodos[j], on = G.hover === i || G.hover === j; c.strokeStyle = on ? 'rgba(240,122,85,.95)' : foco ? 'rgba(195,211,226,.08)' : 'rgba(195,211,226,.35)'; c.lineWidth = on ? 2 : 1.2; c.beginPath(); c.moveTo(a.x, a.y); c.lineTo(b.x, b.y); c.stroke();
     if (!reducido()) { const p = ((tk / 90) + k * 0.17) % 1; c.fillStyle = 'rgba(253,235,228,.9)'; c.beginPath(); c.arc(a.x + (b.x - a.x) * p, a.y + (b.y - a.y) * p, 1.8, 0, 7); c.fill(); } });
-  nodos.forEach((n, i) => { const r = 8 + Math.min(12, n.grado * 2.6), col = PARA_COL_G[n.para] || '#A9C0D4';
-    c.shadowColor = col; c.shadowBlur = G.hover === i ? 34 : 18; c.fillStyle = col; c.beginPath(); c.arc(n.x, n.y, r, 0, 7); c.fill(); c.shadowBlur = 0;
+  nodos.forEach((n, i) => { const r = 8 + Math.min(12, n.grado * 2.6), col = GMODO === 'islas' ? (n.grado ? ISLA_COL[n.isla % ISLA_COL.length] : '#7C93AC') : PARA_COL_G[n.para] || '#A9C0D4';
+    c.globalAlpha = vecina(i) ? 1 : 0.18; c.shadowColor = col; c.shadowBlur = G.hover === i ? 34 : 18; c.fillStyle = col; c.beginPath(); c.arc(n.x, n.y, r, 0, 7); c.fill(); c.shadowBlur = 0;
     if (n.tipo === 'fuente') { c.strokeStyle = '#0F2237'; c.lineWidth = 2; c.beginPath(); c.arc(n.x, n.y, r * 0.45, 0, 7); c.stroke(); }
-    if (n.grado || G.hover === i || nodos.length < 14) { c.font = `${G.hover === i ? 700 : 500} 12px "Instrument Sans",system-ui,sans-serif`; c.fillStyle = G.hover === i ? '#FFFFFF' : '#C3D3E2'; const tx = n.titulo.length > 34 ? n.titulo.slice(0, 33) + '…' : n.titulo; c.fillText(tx, Math.max(4, Math.min(n.x + r + 5, w - c.measureText(tx).width - 4)), n.y + 4); } });
+    if ((n.grado || G.hover === i || nodos.length < 14) && vecina(i)) { c.font = `${G.hover === i ? 700 : 500} 12px "Instrument Sans",system-ui,sans-serif`; c.fillStyle = G.hover === i ? '#FFFFFF' : '#C3D3E2'; const tx = n.titulo.length > 34 ? n.titulo.slice(0, 33) + '…' : n.titulo; c.fillText(tx, Math.max(4, Math.min(n.x + r + 5, w - c.measureText(tx).width - 4)), n.y + 4); } c.globalAlpha = 1; });
   if (!nodos.length) { c.fillStyle = '#C3D3E2'; c.font = '15px "Instrument Sans",system-ui,sans-serif'; const tx = t('Tu grafo aparecerá aquí cuando tengas notas.'); c.fillText(tx, Math.max(8, (w - c.measureText(tx).width) / 2), h / 2); }
 }
 function anima() { G.tick++; if (G.tick < 400) paso(); dibuja(); if (step === 3) _raf = requestAnimationFrame(anima); }
 const nodoEn = ev => { const r = $('lienzo').getBoundingClientRect(), x = ev.clientX - r.left, y = ev.clientY - r.top; let mejor = -1, md = 22 * 22; G?.nodos.forEach((n, i) => { const d = (n.x - x) ** 2 + (n.y - y) ** 2; if (d < md) { md = d; mejor = i; } }); return mejor; };
-$('lienzo').addEventListener('mousemove', ev => { if (!G) return; const i = nodoEn(ev); if (i !== G.hover) { G.hover = i; $('lienzo').style.cursor = i >= 0 ? 'pointer' : 'default'; if (reducido()) dibuja(); } });
-$('lienzo').addEventListener('click', ev => { if (!G) return; const i = nodoEn(ev); if (i >= 0) { S.sel = G.nodos[i].id; guarda(); go(2); } });
+/* puntero (ratón y táctil): pasar por encima resalta vecinas; arrastrar fija la nota; pulsar sin mover la abre */
+let ARR = null;
+$('lienzo').addEventListener('pointerdown', ev => { if (!G) return; const i = nodoEn(ev); if (i < 0) return; ARR = {i, x: ev.clientX, y: ev.clientY, movido: false}; $('lienzo').setPointerCapture(ev.pointerId); G.hover = i; });
+$('lienzo').addEventListener('pointermove', ev => {
+  if (!G) return;
+  if (ARR) { if (Math.abs(ev.clientX - ARR.x) + Math.abs(ev.clientY - ARR.y) > 4) ARR.movido = true; if (ARR.movido) { const r = $('lienzo').getBoundingClientRect(), n = G.nodos[ARR.i]; n.x = Math.max(16, Math.min(G.w - 16, ev.clientX - r.left)); n.y = Math.max(16, Math.min(G.h - 16, ev.clientY - r.top)); n.fijo = true; if (reducido() || G.tick >= 400) dibuja(); } return; }
+  const i = nodoEn(ev); if (i !== G.hover) { G.hover = i; $('lienzo').style.cursor = i >= 0 ? 'pointer' : 'default'; if (reducido() || G.tick >= 400) dibuja(); }
+});
+$('lienzo').addEventListener('pointerup', ev => { if (!G || !ARR) return; const a = ARR; ARR = null; if (!a.movido) { S.sel = G.nodos[a.i].id; guarda(); go(2); } });
+$('lienzo').addEventListener('pointerleave', () => { if (G && !ARR && G.hover >= 0) { G.hover = -1; dibuja(); } });
+$('grafoModo').onclick = e => { const b = e.target.closest('[data-gm]'); if (!b) return; GMODO = b.dataset.gm; localStorage.setItem(APP + '_gmodo', GMODO); pintaGrafo(); };
 $('topNotas').addEventListener('click', e => { const b = e.target.closest('[data-abre-g]'); if (b) { S.sel = b.dataset.abreG; guarda(); go(2); } });
 window.addEventListener('resize', () => { if (step === 3) pintaGrafo(); });
+
+/* ══ 1.2 · modos de consulta ══ */
+let MODO = localStorage.getItem(APP + '_modo') || 'ciencia';
+function pintaModos() { $$('.sx-modos [data-modo]').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.modo === MODO))); $('optProfunda').hidden = MODO !== 'profunda'; }
+$$('.sx-modos [data-modo]').forEach(b => b.onclick = () => { MODO = b.dataset.modo; localStorage.setItem(APP + '_modo', MODO); pintaModos(); $('pregunta').focus(); });
+const resumenSi = (f, pref = '') => `${f.ref} · ${f.titulo} (${f.anio || 's. f.'})${f.retractado ? ' · RETRACTADA' : ''}\n${pref}${f.resumen}`;
+const afsHtml = (afs, refDeId, notaLink) => afs.length ? `<ol class="sx-afs">${afs.map(a => `<li class="${a.estado === 'ok' ? 'ok' : 'no'}"><span class="sx-st" aria-label="${esc(a.estado === 'ok' ? t('Verificada') : t('No verificada'))}">${a.estado === 'ok' ? '✓' : '⚠'}</span><div><b>${esc(a.texto)}</b> ${a.fuente ? (notaLink ? `<button class="sx-reflink" type="button" data-abre="${esc(a.fuente)}">${esc(a.ref)}</button>` : `<a class="sx-reflink" href="#src-${esc(a.fuente)}">${esc(refDeId[a.fuente] || a.ref)}</a>`) : ''}
+  <small>${a.estado === 'ok' ? '«' + esc(a.cita) + '»' : esc(t(AF_TX[a.estado], a.ref))}</small></div></li>`).join('')}</ol>` : '';
+const cabMsg = (chips) => `<div class="sx-msg-h"><span class="sx-core sx-core-xs" data-estado="reposo" aria-hidden="true"><i></i><b></b></span><b>SinapsIA</b>${chips}</div>`;
+
+/* Mi cerebro: responde solo con tus notas; el código comprueba cada cita en la nota */
+const PROMPT_CER = (q, ns) => `Responde a la pregunta usando EXCLUSIVAMENTE las notas personales N1…N${ns.length} del usuario. No uses conocimiento propio. Si las notas no bastan, dilo.
+Devuelve SOLO este JSON:
+{"respuesta":"respuesta directa en 2-5 frases, pensada para leerse en voz alta",
+ "afirmaciones":[{"texto":"afirmación concreta","fuente":"N2","cita":"fragmento LITERAL de esa nota (de 5 a 30 palabras), copiado sin cambiar nada"}],
+ "huecos":"qué no cubren tus notas sobre esta pregunta, en una frase"}
+${INSTR_IDIOMA()}
+
+PREGUNTA: ${q}
+
+NOTAS:
+${ns.map(n => `${n.ref} · ${n.titulo}\n${n.resumen}`).join('\n\n')}`;
+async function preguntaCerebro(q) {
+  const rel = relevantes(q, NA(), 8);
+  S.chat.push({rol: 'yo', texto: q, modo: 'cerebro'}); $('pregunta').value = '';
+  if (!rel.length) { S.chat.push({rol: 'ia', modo: 'cerebro', q, res: null}); guarda(); return pintaChat(); }
+  const sq = scrub(q); let masks = sq.n;
+  const ns = rel.map((n, i) => { const s = scrub((n.texto || '').slice(0, 1500)); masks += s.n; return {ref: 'N' + (i + 1), id: n.id, titulo: n.titulo, resumen: s.t}; });
+  if (!(await pideEnvio(`PREGUNTA: ${sq.t}\n\n${t('NOTAS TUYAS RELACIONADAS')} (${ns.length}):\n` + ns.map(n => `${n.ref} · ${n.titulo}: ${n.resumen}`).join('\n'), masks))) { S.chat.splice(-1); return pintaChat(); }
+  busy = true; $('btnPreguntar').disabled = true; detenVoz(); pintaChat();
+  try {
+    estado('pensando', t('Leyendo {0} notas tuyas…', ns.length));
+    const raw = await llmJSON([{role: 'system', content: 'Eres SinapsIA. Solo usas las notas del usuario. Respondes SOLO con JSON válido.'}, {role: 'user', content: PROMPT_CER(sq.t, ns)}], {max: 1500});
+    const res = procesaRespuesta(raw, ns, []);
+    S.chat.push({rol: 'ia', modo: 'cerebro', q, res, notas: ns.map(n => n.id)}); await guardaYa(); habla(res.respuesta);
+  } catch (e) { S.chat.push({rol: 'err', texto: e.message}); toast(e.message, 8000); }
+  finally { busy = false; $('btnPreguntar').disabled = false; if (ESTADO !== 'hablando') estado('reposo'); pintaChat(true); guarda(); }
+}
+function pintaMsgCerebro(m, i) {
+  if (m.rol === 'yo') return `<div class="sx-msg yo"><p><small class="sx-modo-tag">${esc(t('Mi cerebro'))}</small> ${esc(m.texto)}</p></div>`;
+  const r = m.res;
+  if (!r) return `<div class="sx-msg ia">${cabMsg('')}<p>${esc(t('No encuentro notas tuyas sobre eso. Prueba con otras palabras o pregunta en modo Ciencia.'))}</p></div>`;
+  const v = verificadas(r), ns = (m.notas || []).map(id => S.cerebro.notas.find(n => n.id === id)).filter(Boolean);
+  return `<div class="sx-msg ia sx-msg-cer" data-msg="${i}">${cabMsg(`<span class="fa-chip ${v === r.afirmaciones.length && v ? 'ok' : 'aviso'}">${esc(t('{0} de {1} afirmaciones con cita verificada', v, r.afirmaciones.length))}</span><span class="fa-chip">${esc(t('Respuesta desde tus notas'))}</span>`)}
+    <p class="sx-resp">${esc(r.respuesta)}</p>${afsHtml(r.afirmaciones, {}, true)}
+    ${r.huecos ? `<div class="sx-huecos"><b>${esc(t('Lo que tus notas no cubren'))}</b> ${esc(r.huecos)}</div>` : ''}
+    ${(r.nuevos || []).length ? `<div class="aviso">${esc(t('Cifras que no están en tus notas: {0}. Compruébalas.', r.nuevos.join(', ')))}</div>` : ''}
+    <p class="help">${esc(t('Notas consultadas:'))} ${ns.map(n => `<button class="sx-link" type="button" data-abre="${esc(n.id)}">${esc(n.titulo)}</button>`).join(' · ')}</p>
+    <div class="actions"><button class="btn btn-ghost btn-sm" type="button" data-lee="${i}">${ico('voz')}<span>${esc(t('Leer en voz alta'))}</span></button></div></div>`;
+}
+
+/* Investigación profunda: planificador → investigador por subpregunta (fuentes verificadas) → crítico → [2.ª ronda] → informe */
+const PROMPT_PLAN_PROF = q => `Eres el planificador de una investigación bibliográfica. Divide la pregunta en 3 o 4 subpreguntas complementarias que juntas la respondan. Para cada una, da una consulta de búsqueda para OpenAlex en inglés (3-8 palabras clave, sin operadores).
+Devuelve SOLO este JSON: {"subpreguntas":[{"pregunta":"…","consulta":"…"}]}
+${INSTR_IDIOMA()}
+
+PREGUNTA: ${q}`;
+const PROMPT_CRITICO = (q, secs) => `Eres un crítico académico. Revisa la evidencia verificada reunida para la pregunta y detecta huecos (aspectos sin evidencia), contradicciones entre fuentes y, si hace falta, hasta 2 subpreguntas nuevas para cubrir los huecos (con su consulta para OpenAlex en inglés).
+Devuelve SOLO este JSON: {"huecos":["…"],"contradicciones":["…"],"nuevas":[{"pregunta":"…","consulta":"…"}]}
+${INSTR_IDIOMA()}
+
+PREGUNTA: ${q}
+
+EVIDENCIA VERIFICADA:
+${secs.map((s, k) => `## ${s.pregunta}\n` + s.res.afirmaciones.filter(a => a.estado === 'ok').map(a => `- [S${k + 1}] ${a.texto}`).join('\n')).join('\n\n')}`;
+const PROMPT_INFORME = (q, secs, crit) => `Redacta el informe final de una investigación usando SOLO estas afirmaciones verificadas (no añadas datos, cifras ni fuentes). Cita entre corchetes la sección de la que sale cada idea, como [S1].
+Devuelve SOLO este JSON: {"informe":"3-6 párrafos separados por \\n\\n","conclusiones":["…"],"limitaciones":"una o dos frases"}
+${INSTR_IDIOMA()}
+
+PREGUNTA: ${q}
+
+${secs.map((s, k) => `## [S${k + 1}] ${s.pregunta}\n` + s.res.afirmaciones.filter(a => a.estado === 'ok').map(a => `- ${a.texto}`).join('\n')).join('\n\n')}
+
+HUECOS SEÑALADOS POR EL CRÍTICO: ${(crit.huecos || []).join('; ') || '—'}
+CONTRADICCIONES: ${(crit.contradicciones || []).join('; ') || '—'}`;
+async function investigaSub(sp, k, total) {
+  estado('buscando', t('Subpregunta {0} de {1}: buscando en OpenAlex…', k, total));
+  const fuentes = (await buscaOpenAlex(sp.consulta)).slice(0, 6).map((f, i) => ({...f, ref: 'F' + (i + 1)}));
+  if (!fuentes.length) return {pregunta: sp.pregunta, consulta: sp.consulta, res: {respuesta: '', afirmaciones: [], conexiones: [], huecos: t('Sin trabajos con resumen para esta subpregunta.'), nuevos: [], fuentes: []}};
+  await Promise.all(fuentes.map(compruebaDOI));
+  estado('pensando', t('Subpregunta {0} de {1}: leyendo {2} resúmenes…', k, total, fuentes.length));
+  const raw = await llmJSON([{role: 'system', content: 'Eres el investigador de SinapsIA. Solo usas los resúmenes que se te dan. Respondes SOLO con JSON válido.'}, {role: 'user', content: PROMPT_SINT(sp.pregunta, fuentes, [])}], {max: 2000});
+  fuentes.forEach(f => { S.fuentes[f.id] = sinResumen(f); S.fuentes[f.id].resumen = f.resumen; });
+  return {pregunta: sp.pregunta, consulta: sp.consulta, res: procesaRespuesta(raw, fuentes, [])};
+}
+async function investigaProfunda(q) {
+  const rondas = +$('rondas').value || 1, llam = llamadasProfunda(4, rondas);
+  if (!confirm(t('La investigación profunda hará unas {0} llamadas a la IA y hasta {1} búsquedas en OpenAlex, y puede tardar varios minutos. ¿Continuar?', llam, rondas > 1 ? 6 : 4))) return;
+  const sq = scrub(q);
+  if (!(await pideEnvio(`PREGUNTA: ${sq.t}`, sq.n))) return;
+  busy = true; $('btnPreguntar').disabled = true; detenVoz();
+  S.chat.push({rol: 'yo', texto: q, modo: 'profunda'}); $('pregunta').value = ''; pintaChat(); guarda();
+  try {
+    estado('pensando', t('Planificando la investigación…'));
+    const plan = await llmJSON([{role: 'system', content: 'Respondes SOLO con JSON válido.'}, {role: 'user', content: PROMPT_PLAN_PROF(sq.t)}], {max: 600});
+    const subs = (plan.subpreguntas || []).filter(x => x && x.pregunta && x.consulta).slice(0, 4);
+    if (!subs.length) throw new Error(t('La IA no ha propuesto un plan. Prueba de nuevo o reformula la pregunta.'));
+    const secs = []; for (let k = 0; k < subs.length; k++) secs.push(await investigaSub(subs[k], k + 1, subs.length));
+    estado('pensando', t('El crítico revisa la evidencia…'));
+    let crit = await llmJSON([{role: 'system', content: 'Respondes SOLO con JSON válido.'}, {role: 'user', content: PROMPT_CRITICO(sq.t, secs)}], {max: 900});
+    if (rondas > 1) { const nuevas = (crit.nuevas || []).filter(x => x && x.pregunta && x.consulta).slice(0, 2); for (let k = 0; k < nuevas.length; k++) secs.push(await investigaSub(nuevas[k], secs.length + 1, subs.length + nuevas.length)); }
+    estado('pensando', t('Redactando el informe…'));
+    const inf = await llmJSON([{role: 'system', content: 'Eres el redactor de SinapsIA. Solo usas la evidencia verificada. Respondes SOLO con JSON válido.'}, {role: 'user', content: PROMPT_INFORME(sq.t, secs, crit)}], {max: 2500});
+    const material = secs.map(x => x.res.afirmaciones.filter(a => a.estado === 'ok').map(a => a.texto).join(' ') + ' ' + x.res.fuentes.map(id => (S.fuentes[id]?.resumen || '') + ' ' + (S.fuentes[id]?.anio || '')).join(' ')).join(' ');
+    const informe = String(inf.informe || '').trim(), m = {rol: 'ia', modo: 'profunda', q, secciones: secs, critica: {huecos: crit.huecos || [], contradicciones: crit.contradicciones || []}, informe, conclusiones: (inf.conclusiones || []).map(String), limitaciones: String(inf.limitaciones || ''), nuevos: numerosNuevos(informe + ' ' + (inf.conclusiones || []).join(' '), material)};
+    S.chat.push(m);
+    if (autoOn()) guardaInforme(S.chat.length - 1, true);
+    await guardaYa(); habla(informe.split('\n\n')[0]);
+  } catch (e) { S.chat.push({rol: 'err', texto: e.message}); toast(e.message, 8000); }
+  finally { busy = false; $('btnPreguntar').disabled = false; if (ESTADO !== 'hablando') estado('reposo'); pintaChat(true); guarda(); }
+}
+function pintaMsgProfunda(m, i) {
+  if (m.rol === 'yo') return `<div class="sx-msg yo"><p><small class="sx-modo-tag">${esc(t('Investigación profunda'))}</small> ${esc(m.texto)}</p></div>`;
+  const afs = m.secciones.flatMap(s => s.res.afirmaciones), v = afs.filter(a => a.estado === 'ok').length, nf_ = new Set(m.secciones.flatMap(s => s.res.fuentes)).size;
+  const guard = m.guardada && NA().some(n => n.id === m.guardada);
+  return `<div class="sx-msg ia sx-msg-prof" data-msg="${i}">${cabMsg(`<span class="fa-chip">${esc(t('Investigación profunda · {0} subpreguntas · {1} fuentes', m.secciones.length, nf_))}</span><span class="fa-chip ${v === afs.length && v ? 'ok' : 'aviso'}">${esc(t('{0} de {1} afirmaciones con cita verificada', v, afs.length))}</span>`)}
+    <div class="sx-informe">${m.informe.split(/\n{2,}/).map(p => `<p>${esc(p)}</p>`).join('')}</div>
+    ${m.conclusiones.length ? `<div class="sx-con"><b>${esc(t('Conclusiones'))}</b><ul>${m.conclusiones.map(c => `<li>${esc(c)}</li>`).join('')}</ul></div>` : ''}
+    ${m.critica.huecos.length || m.critica.contradicciones.length ? `<div class="sx-huecos"><b>${esc(t('El crítico señala'))}</b><ul>${m.critica.huecos.map(h => `<li>${esc(t('Hueco:'))} ${esc(h)}</li>`).join('')}${m.critica.contradicciones.map(h => `<li>${esc(t('Contradicción:'))} ${esc(h)}</li>`).join('')}</ul></div>` : ''}
+    ${m.limitaciones ? `<p class="help">${esc(t('Limitaciones:'))} ${esc(m.limitaciones)}</p>` : ''}
+    ${m.nuevos.length ? `<div class="aviso">${esc(t('Cifras que no están en las fuentes ni en tus notas: {0}. Compruébalas.', m.nuevos.join(', ')))}</div>` : ''}
+    ${m.secciones.map((s, k) => { const fs = s.res.fuentes.map(id => S.fuentes[id]).filter(Boolean), refs = Object.fromEntries(s.res.fuentes.map((id, j) => [id, 'F' + (j + 1)])); return `<details class="sx-sec"><summary><b>[S${k + 1}]</b> ${esc(s.pregunta)} <small>${esc(t('{0} de {1} verificadas', verificadas(s.res), s.res.afirmaciones.length))}</small></summary>${afsHtml(s.res.afirmaciones, refs, false)}${s.res.huecos ? `<p class="help">${esc(s.res.huecos)}</p>` : ''}<div class="sx-srcs">${fs.map(f => tarjetaFuente(f, refs[f.id])).join('')}</div></details>`; }).join('')}
+    <div class="actions">${guard ? `<button class="btn btn-ghost btn-sm" type="button" data-abre="${esc(m.guardada)}">${ico('check')}<span>${esc(t('Guardada en tu cerebro: abrir'))}</span></button>` : `<button class="btn btn-primary btn-sm" type="button" data-guarda-inf="${i}">${ico('nucleo')}<span>${esc(t('Guardar en mi cerebro'))}</span></button>`}<button class="btn btn-ghost btn-sm" type="button" data-lee-inf="${i}">${ico('voz')}<span>${esc(t('Leer en voz alta'))}</span></button></div>
+    <p class="help">${esc(t('SinapsIA lee resúmenes, no artículos completos: consulta el artículo antes de citarlo.'))}</p></div>`;
+}
+function guardaInforme(i, auto = false) {
+  const m = S.chat[i]; if (!m || m.modo !== 'profunda' || (m.guardada && NA().some(n => n.id === m.guardada))) return;
+  const ok = m.secciones.flatMap(s => s.res.afirmaciones.filter(a => a.estado === 'ok'));
+  const fnotas = [...new Set(ok.map(a => a.fuente))].map(fid => captura(fid, true)).filter(Boolean);
+  const idea = nuevaNota({tipo: 'idea', para: 'recursos', titulo: t('Informe: {0}', m.q).slice(0, 120), etiquetas: [t('investigación profunda')],
+    texto: m.informe + (m.conclusiones.length ? '\n\n' + t('Conclusiones') + ':\n' + m.conclusiones.map(c => '- ' + c).join('\n') : '') + '\n\n' + t('Evidencia verificada:') + '\n' + ok.map(a => `- ${a.texto} — [[${S.fuentes[a.fuente]?.titulo || a.ref}]]`).join('\n'),
+    rel: fnotas.map(n => n.id)});
+  S.cerebro.notas.push(idea); m.guardada = idea.id; if (!auto) S.sel = idea.id; cambioCerebro();
+  toast(t('Guardado en tu cerebro: el informe y {0} fuente(s) verificada(s)', fnotas.length));
+}
+$('chat').addEventListener('click', e => {
+  const b = e.target.closest('[data-guarda-inf],[data-lee-inf]'); if (!b) return;
+  if (b.dataset.guardaInf) { guardaInforme(+b.dataset.guardaInf); pintaChat(false); }
+  if (b.dataset.leeInf) { const m = S.chat[+b.dataset.leeInf]; if (m) habla(m.informe, true); }
+});
+
+/* ══ 1.2 · capturar documentos: notas atómicas con cita comprobada en el documento ══ */
+let DOC = null;   // {nombre, texto, huella, prop}
+const PROMPT_DOC = (txt, plant, titulos) => `Convierte el documento en notas para un segundo cerebro. ${PLANTILLAS[plant] || PLANTILLAS.libre}
+- Entre 3 y 12 notas. Cada nota: título breve y claro; texto de 2 a 6 frases con tus palabras; una "cita": fragmento LITERAL del documento (de 8 a 30 palabras) que la respalde, copiado sin cambiar nada.
+- Si una nota se relaciona con alguno de estos títulos que el usuario YA tiene, enlázalo en el texto escribiendo [[título exacto]]. Si una idea ya existe con ese mismo título, usa exactamente ese título.
+TÍTULOS EXISTENTES: ${titulos.slice(0, 150).join(' · ') || '—'}
+Devuelve SOLO este JSON: {"resumen":"resumen del documento en 2-3 frases","notas":[{"titulo":"…","texto":"…","cita":"…"}]}
+${INSTR_IDIOMA()}
+
+DOCUMENTO:
+${txt}`;
+$('btnDoc').onclick = () => { if (S.esEjemplo) return toast(t('Sal del ejemplo para capturar tus documentos')); DOC = null; $('docPrev').innerHTML = ''; $('docInfo').textContent = ''; $('mDoc').classList.add('on'); };
+$('docFile').onchange = async e => {
+  const f = e.target.files[0]; if (!f) return;
+  $('docInfo').textContent = t('Leyendo «{0}»…', f.name);
+  try { const r = await extrae(f); if (!r.texto?.trim()) throw new Error(t('No se ha podido extraer texto de este archivo (¿es un PDF escaneado?).')); DOC = {nombre: f.name.replace(/\.[^.]+$/, '')}; $('docTexto').value = r.texto; $('docInfo').textContent = t('«{0}»: {1} caracteres extraídos.', f.name, nf(r.texto.length)); }
+  catch (er) { $('docInfo').textContent = er.message; }
+};
+$('docProcesar').onclick = async () => {
+  const txt = $('docTexto').value.trim(); if (txt.length < 200) return toast(t('El texto es demasiado corto para sacar notas (mínimo 200 caracteres).'));
+  if (!pideClave()) return;
+  const nombre = DOC?.nombre || txt.split('\n')[0].slice(0, 80), huella = huellaDe(txt).slice(0, 200);
+  const prev = NA().filter(n => n.tipo === 'documento' && n.huella).map(n => [n, jaccard(huella, n.huella.split('|'))]).sort((a, b) => b[1] - a[1])[0];
+  if (prev && prev[1] >= 0.6 && !confirm(t('Este documento se parece mucho a «{0}», que ya capturaste. ¿Capturarlo de nuevo?', prev[0].titulo))) return;
+  const sc = scrub(txt.slice(0, 40000));
+  if (!(await pideEnvio(sc.t, sc.n))) return;
+  const b = $('docProcesar'); b.disabled = true; $('docPrev').innerHTML = `<p class="help">${esc(t('La IA está leyendo el documento…'))}</p>`;
+  try {
+    const raw = await llmJSON([{role: 'system', content: 'Eres SinapsIA. Conviertes documentos en notas fieles al texto. Respondes SOLO con JSON válido.'}, {role: 'user', content: PROMPT_DOC(sc.t, $('docPlant').value, NA().map(n => n.titulo))}], {max: 4000});
+    DOC = {nombre, texto: sc.t, huella: huella.join('|'), prop: procesaDocumento(raw, sc.t, NA().map(n => n.titulo)), recortado: txt.length > 40000};
+    pintaDocPrev();
+  } catch (e) { $('docPrev').innerHTML = `<div class="aviso">${esc(e.message)}</div>`; }
+  finally { b.disabled = false; }
+};
+function pintaDocPrev() {
+  const pr = DOC.prop;
+  $('docPrev').innerHTML = `${DOC.recortado ? `<div class="aviso">${esc(t('El documento es largo: solo se han usado sus primeros 40.000 caracteres.'))}</div>` : ''}<p><b>${esc(t('Resumen'))}:</b> ${esc(pr.resumen)}</p>
+    <ul class="sx-docnotas">${pr.notas.map((n, k) => `<li>${n.existe ? `<b>${esc(n.existe)}</b>` : `<label><input type="checkbox" data-dn="${k}" checked> <b>${esc(n.titulo)}</b></label>`} ${n.existe ? `<span class="fa-chip">${esc(t('Ya existe: se enlazará'))}</span>` : ''}<span class="fa-chip ${n.verificada ? 'ok' : 'aviso'}">${esc(n.verificada ? t('Cita verificada') : t('Cita no encontrada en el documento'))}</span><p>${esc(n.texto)}</p>${n.cita ? `<small>«${esc(n.cita)}»</small>` : ''}</li>`).join('')}</ul>
+    <div class="actions"><button class="btn btn-primary" id="docGuardar" type="button">${ico('nucleo')}<span>${esc(t('Guardar en mi cerebro'))}</span></button></div>`;
+  $('docGuardar').onclick = guardaDoc;
+}
+function guardaDoc() {
+  const pr = DOC.prop, sel = [...[...$('docPrev').querySelectorAll('[data-dn]')].filter(x => x.checked).map(x => pr.notas[+x.dataset.dn]), ...pr.notas.filter(n => n.existe)];   // las que ya existen se enlazan siempre
+  const doc = nuevaNota({tipo: 'documento', para: 'recursos', titulo: DOC.nombre, origen: DOC.nombre, huella: DOC.huella, texto: pr.resumen});
+  const nuevas = sel.filter(n => !n.existe).map(n => nuevaNota({tipo: 'idea', para: 'recursos', titulo: n.titulo, origen: DOC.nombre, rel: [doc.id], texto: n.texto + (n.verificada ? `\n\n«${n.cita}» — [[${DOC.nombre}]]` : `\n\n— [[${DOC.nombre}]]`)}));
+  const titulos = [...nuevas.map(n => n.titulo), ...sel.filter(n => n.existe).map(n => n.existe)];
+  doc.texto += titulos.length ? '\n\n' + t('Notas:') + ' ' + titulos.map(x => `[[${x}]]`).join(' · ') : '';
+  S.cerebro.notas.push(doc, ...nuevas); S.sel = doc.id; cambioCerebro();
+  $('mDoc').classList.remove('on'); $('docTexto').value = ''; $('docFile').value = ''; DOC = null;
+  toast(t('Documento capturado: {0} notas nuevas enlazadas', nuevas.length)); go(2);
+}
+
+/* ══ 1.2 · revisión del cerebro (por código) ══ */
+const tituloDe = id => S.cerebro.notas.find(n => n.id === id)?.titulo || '?';
+function pintaRevision() {
+  const r = revision(S.cerebro.notas), lnk = id => `<button class="sx-link" type="button" data-rv-abre="${esc(id)}">${esc(tituloDe(id))}</button>`;
+  const N = NA(), auto = N.map(n => [n, autoenlaza(n.texto, N.map(x => x.titulo), n.titulo)]).filter(x => x[1].n), nAuto = auto.reduce((a, x) => a + x[1].n, 0);
+  const sec = (tit, n, html) => `<section class="sx-rv"><h3>${esc(tit)} <small>${n}</small></h3>${n ? html : `<p class="help">${esc(t('Nada que revisar.'))}</p>`}</section>`;
+  $('revRes').innerHTML = `<p class="help">${esc(t('Revisión hecha por código, sin IA y sin coste. Nada cambia hasta que pulses un botón.'))}</p>`
+    + sec(t('Enlaces rotos'), r.rotos.length, `<ul>${r.rotos.map(x => `<li>${lnk(x.nota)} → [[${esc(x.titulo)}]] <button class="btn btn-ghost btn-sm" type="button" data-rv-crea="${esc(x.titulo)}">${esc(t('Crear la nota'))}</button></li>`).join('')}</ul>`)
+    + sec(t('Posibles duplicados'), r.duplicados.length, `<ul>${r.duplicados.map(([a, b, p]) => `<li>${lnk(a)} ≈ ${lnk(b)} <small>(${p} %)</small><br><button class="btn btn-ghost btn-sm" type="button" data-rv-fus="${esc(a)}|${esc(b)}">${esc(t('Fusionar en «{0}»', tituloDe(a)))}</button> <button class="btn btn-ghost btn-sm" type="button" data-rv-fus="${esc(b)}|${esc(a)}">${esc(t('Fusionar en «{0}»', tituloDe(b)))}</button></li>`).join('')}</ul>`)
+    + sec(t('Notas huérfanas (sin enlaces)'), r.huerfanas.length, `<p>${r.huerfanas.map(lnk).join(' · ')}</p>`)
+    + sec(t('Notas casi vacías'), r.vacias.length, `<p>${r.vacias.map(lnk).join(' · ')}</p>`)
+    + sec(t('Autoenlazar'), nAuto, `<p>${esc(t('Hay {0} menciones a títulos de otras notas sin enlazar, en {1} notas. Se convertirá en [[enlace]] la primera mención de cada título (como mucho 5 por nota).', nAuto, auto.length))}</p><button class="btn btn-primary btn-sm" type="button" id="rvAuto">${esc(t('Autoenlazar'))}</button>`);
+}
+$('btnRevisa').onclick = () => { pintaRevision(); $('mRevision').classList.add('on'); };
+$('revRes').addEventListener('click', e => {
+  const b = e.target.closest('button'); if (!b) return;
+  if (b.dataset.rvAbre) { S.sel = b.dataset.rvAbre; $('mRevision').classList.remove('on'); go(2); return; }
+  if (b.dataset.rvCrea) { S.cerebro.notas.push(nuevaNota({titulo: b.dataset.rvCrea})); cambioCerebro(); }
+  if (b.dataset.rvFus) { const [a, bb] = b.dataset.rvFus.split('|'); if (!confirm(t('¿Fusionar «{0}» dentro de «{1}»? La primera irá a la papelera.', tituloDe(bb), tituloDe(a)))) return; S.cerebro.notas = fusionaNotas(S.cerebro.notas, a, bb); S.sel = a; cambioCerebro(); toast(t('Notas fusionadas')); }
+  if (b.id === 'rvAuto') { const N = NA(), tit = N.map(x => x.titulo); let k = 0; N.forEach(n => { const r = autoenlaza(n.texto, tit, n.titulo); if (r.n) { n.texto = r.texto; n.mod = ahora(); k += r.n; } }); cambioCerebro(); toast(t('{0} enlaces añadidos', k)); }
+  pintaRevision(); if (step === 2) pintaCerebro();
+});
+
+/* ══ 1.2 · papelera ══ */
+function pintaPapelera() {
+  const P = enPapelera(S.cerebro.notas);
+  $('papRes').innerHTML = P.length ? `<p class="help">${esc(t('Las notas borradas se quedan aquí (también en Drive) hasta que las elimines definitivamente.'))}</p><ul class="sx-pap">${P.map(n => `<li><b>${esc(n.titulo || t('(sin título)'))}</b> <small>${esc(new Date(n.borrada).toLocaleDateString(locale()))}</small> <button class="btn btn-ghost btn-sm" type="button" data-pap-res="${esc(n.id)}">${esc(t('Restaurar'))}</button> <button class="btn btn-ghost btn-sm" type="button" data-pap-del="${esc(n.id)}">${esc(t('Eliminar definitivamente'))}</button></li>`).join('')}</ul><div class="actions"><button class="btn btn-ghost btn-sm" type="button" id="papVaciar">${ico('trash')}<span>${esc(t('Vaciar la papelera'))}</span></button></div>`
+    : `<p class="empty">${esc(t('La papelera está vacía.'))}</p>`;
+}
+const purga = ids => { S.cerebro.notas = S.cerebro.notas.filter(n => !ids.includes(n.id)); S.cerebro.borrados = [...new Set([...(S.cerebro.borrados || []), ...ids])]; };
+$('btnPapelera').onclick = () => { pintaPapelera(); $('mPapelera').classList.add('on'); };
+$('papRes').addEventListener('click', e => {
+  const b = e.target.closest('button'); if (!b) return;
+  if (b.dataset.papRes) { const n = S.cerebro.notas.find(x => x.id === b.dataset.papRes); n.borrada = null; n.mod = ahora(); toast(t('Nota restaurada')); }
+  if (b.dataset.papDel) { if (!confirm(t('¿Eliminar definitivamente? No se podrá recuperar.'))) return; purga([b.dataset.papDel]); }
+  if (b.id === 'papVaciar') { if (!confirm(t('¿Vaciar la papelera? No se podrá recuperar.'))) return; purga(enPapelera(S.cerebro.notas).map(n => n.id)); }
+  cambioCerebro(); pintaPapelera(); if (step === 2) pintaCerebro();
+});
+
+/* ══ 1.2 · paleta de comandos (Ctrl+K) ══ */
+let PAL = [], palSel = 0;
+const ACCIONES = () => [
+  ['Nueva nota', () => { go(2); $('btnNueva').click(); }], ['Preguntar a la ciencia', () => { MODO = 'ciencia'; localStorage.setItem(APP + '_modo', MODO); go(1); $('pregunta').focus(); }],
+  ['Preguntar a mi cerebro', () => { MODO = 'cerebro'; localStorage.setItem(APP + '_modo', MODO); go(1); $('pregunta').focus(); }], ['Investigación profunda', () => { MODO = 'profunda'; localStorage.setItem(APP + '_modo', MODO); go(1); $('pregunta').focus(); }],
+  ['Capturar documento', () => { go(2); $('btnDoc').click(); }], ['Revisar mi cerebro', () => { go(2); $('btnRevisa').click(); }], ['Papelera', () => { go(2); $('btnPapelera').click(); }],
+  ['Grafo de conocimiento', () => go(3)], ['Radar de novedades', () => go(4)], ['Conectar carpeta', () => { go(0); $('driveCard').scrollIntoView({block: 'center'}); }]];
+function pintaPaleta() {
+  const q = norm($('palIn').value);
+  const acc = ACCIONES().map(([k, f]) => ({tipo: 'accion', tit: t(k), f})).filter(x => !q || norm(x.tit).includes(q));
+  const notas = NA().filter(n => !q || norm(n.titulo + ' ' + n.texto).includes(q)).sort((a, b) => (norm(b.titulo).includes(q) ? 1 : 0) - (norm(a.titulo).includes(q) ? 1 : 0) || String(b.mod).localeCompare(String(a.mod))).slice(0, 12).map(n => ({tipo: 'nota', tit: n.titulo || t('(sin título)'), sub: t(PARA_TX[n.para]), f: () => { S.sel = n.id; go(2); }}));
+  PAL = [...acc, ...notas]; palSel = Math.min(palSel, Math.max(0, PAL.length - 1));
+  $('palRes').innerHTML = PAL.length ? PAL.map((x, k) => `<li role="option" id="pal-${k}" aria-selected="${k === palSel}" data-pal="${k}">${ico(x.tipo === 'nota' ? 'bulb' : 'right')}<span>${esc(x.tit)}</span>${x.sub ? `<small>${esc(x.sub)}</small>` : `<small>${esc(t('Acción'))}</small>`}</li>`).join('') : `<li class="empty">${esc(t('Sin resultados'))}</li>`;
+  $('palIn').setAttribute('aria-activedescendant', PAL.length ? 'pal-' + palSel : '');
+  $('pal-' + palSel)?.scrollIntoView({block: 'nearest'});
+}
+function abrePaleta() { if (busy) return; $('mPaleta').classList.add('on'); $('palIn').value = ''; palSel = 0; pintaPaleta(); $('palIn').focus(); }   // foco inmediato: lo que se teclee tras Ctrl+K va a la paleta, no a la nota abierta
+const ejecutaPal = k => { const x = PAL[k]; if (!x) return; $('mPaleta').classList.remove('on'); x.f(); };
+$('btnPaleta').onclick = abrePaleta;
+$('palIn').oninput = () => { palSel = 0; pintaPaleta(); };
+$('palIn').addEventListener('keydown', e => {
+  if (e.key === 'ArrowDown') { e.preventDefault(); palSel = Math.min(palSel + 1, PAL.length - 1); pintaPaleta(); }
+  else if (e.key === 'ArrowUp') { e.preventDefault(); palSel = Math.max(palSel - 1, 0); pintaPaleta(); }
+  else if (e.key === 'Enter') { e.preventDefault(); ejecutaPal(palSel); }
+  else if (e.key === 'Escape') $('mPaleta').classList.remove('on');
+});
+$('palRes').addEventListener('click', e => { const li = e.target.closest('[data-pal]'); if (li) ejecutaPal(+li.dataset.pal); });
+document.addEventListener('keydown', e => { if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'k') { e.preventDefault(); $('mPaleta').classList.contains('on') ? $('mPaleta').classList.remove('on') : abrePaleta(); } });
+
+/* ══ 1.2 · radar de novedades ══ */
+const radarPerfil = () => localStorage.getItem(APP + '_perfil') || '';
+$('perfil').value = radarPerfil();
+$('perfil').oninput = () => localStorage.setItem(APP + '_perfil', $('perfil').value);
+const PROMPT_RADAR_Q = perfil => `Eres un bibliotecario experto. A partir de este perfil de intereses de investigación, genera 3 consultas de búsqueda para OpenAlex (base de datos académica): en inglés, de 3 a 6 palabras clave, específicas, una por cada interés principal. No incluyas lo que el perfil dice que no interesa.
+Devuelve SOLO este JSON: {"consultas":["…","…","…"]}
+
+PERFIL:
+${perfil}`;
+const PROMPT_PUNTUA = (perfil, fs) => `Puntúa de 0 a 10 cuánto encaja cada trabajo con el perfil de intereses (10 = imprescindible, 0 = nada que ver). Penaliza lo que el perfil dice que no interesa. Da un motivo de una frase.
+Devuelve SOLO este JSON: {"puntuaciones":[{"ref":"F1","nota":7,"motivo":"…"}]} con TODOS los trabajos.
+${INSTR_IDIOMA()}
+
+PERFIL:
+${perfil}
+
+TRABAJOS:
+${fs.map(f => `${f.ref} · ${f.titulo} (${f.anio || ''})\n${f.resumen.slice(0, 500)}`).join('\n\n')}`;
+async function pasaRadar() {
+  const perfil = $('perfil').value.trim(); if (perfil.length < 20) return toast(t('Describe tu perfil de intereses con algo más de detalle'));
+  if (busy) return; if (!pideClave()) return; if (S.esEjemplo) salirEjemplo();
+  const sp = scrub(perfil); if (!(await pideEnvio(`PERFIL: ${sp.t}`, sp.n))) return;
+  busy = true; $('btnRadar').disabled = true; const st = x => { $('radarEstado').textContent = x; };
+  try {
+    st(t('Preparando las búsquedas…'));
+    const qs = ((await llmJSON([{role: 'system', content: 'Respondes SOLO con JSON válido.'}, {role: 'user', content: PROMPT_RADAR_Q(sp.t)}], {max: 300})).consultas || []).map(String).filter(Boolean).slice(0, 3);
+    if (!qs.length) throw new Error(t('La IA no ha propuesto búsquedas. Prueba de nuevo.'));
+    const desde = new Date(Date.now() - (+$('radarDias').value) * 864e5).toISOString().slice(0, 10);
+    const R = S.radar || (S.radar = {ultima: null, vistos: [], res: []}), vistos = new Set(R.vistos);
+    const listas = []; for (const q of qs) { st(t('Buscando en OpenAlex: {0}', q)); listas.push(await (async () => { let r; try { r = await fetch(urlOpenAlex(q, oaKey(), 10, desde)); } catch { throw new Error(t('No hay conexión con OpenAlex. Comprueba tu red.')); } if (r.status === 409 || r.status === 429 || r.status === 401 || r.status === 403) throw new Error(oaKey() ? t('OpenAlex ha rechazado la búsqueda: revisa tu clave de OpenAlex o tu cupo diario.') : t('OpenAlex pide una clave gratuita para seguir buscando. Créala en openalex.org y pégala en el botón «IA».')); if (!r.ok) throw new Error(t('OpenAlex no responde ahora mismo ({0}).', r.status)); return ((await r.json()).results || []).map(fuenteDe); })()); }
+    const fs = uneFuentes(listas.map(l => l.filter(f => !vistos.has(f.id) && !capturada(f.id))), 25).map((f, i) => ({...f, ref: 'F' + (i + 1)}));
+    if (!fs.length) { R.ultima = ahora(); R.res = []; st(t('No hay trabajos nuevos desde tu última pasada. Prueba con más días o amplía tu perfil.')); return; }
+    st(t('Puntuando {0} trabajos según tu perfil…', fs.length));
+    const pun = procesaPuntuaciones(await llmJSON([{role: 'system', content: 'Respondes SOLO con JSON válido.'}, {role: 'user', content: PROMPT_PUNTUA(sp.t, fs)}], {max: 3000}), fs, +$('radarUmbral').value);
+    const elegidos = fs.filter(f => pun.some(p => p.id === f.id));
+    st(t('Verificando {0} DOI en Crossref…', elegidos.filter(f => f.doi).length)); await Promise.all(elegidos.map(compruebaDOI));
+    elegidos.forEach(f => { S.fuentes[f.id] = sinResumen(f); S.fuentes[f.id].resumen = f.resumen; });
+    R.vistos = [...new Set([...R.vistos, ...fs.map(f => f.id)])].slice(-3000); R.res = pun; R.ultima = ahora(); R.consultas = qs;
+    st(t('{0} trabajos revisados · {1} encajan con tu perfil.', fs.length, pun.length));
+  } catch (e) { st(e.message); toast(e.message, 8000); }
+  finally { busy = false; $('btnRadar').disabled = false; guarda(); pintaRadarRes(); }
+}
+function pintaRadarRes() {
+  const R = S.radar; if (!R || !R.res) { $('radarRes').innerHTML = ''; return; }
+  $('radarRes').innerHTML = R.res.length ? `<p class="help">${esc(t('Última pasada: {0} · búsquedas: {1}', new Date(R.ultima).toLocaleString(locale()), (R.consultas || []).join(' · ')))}</p><div class="sx-srcs sx-radar">${R.res.map(p => { const f = S.fuentes[p.id]; return f ? `<div class="sx-radar-it"><p class="sx-nota10"><b>${p.nota}</b>/10 · ${esc(p.motivo)}</p>${tarjetaFuente(f, '')}<details><summary>${esc(t('Resumen original'))}</summary><p>${esc(f.resumen)}</p></details><button class="sx-link" type="button" data-descarta="${esc(p.id)}">${esc(t('Descartar'))}</button></div>` : ''; }).join('')}</div>` : '';
+}
+function pintaRadar() { $('perfil').value = radarPerfil(); pintaRadarRes(); }
+$('btnRadar').onclick = pasaRadar;
+$('radarRes').addEventListener('click', e => {
+  const b = e.target.closest('[data-cap],[data-descarta]'); if (!b) return;
+  if (b.dataset.cap) { captura(b.dataset.cap); pintaRadarRes(); }
+  if (b.dataset.descarta) { S.radar.res = S.radar.res.filter(p => p.id !== b.dataset.descarta); guarda(); pintaRadarRes(); }
+});
 
 /* ── arranque ── */
 (async () => {
