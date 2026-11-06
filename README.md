@@ -15,7 +15,12 @@ Asistente de investigación con segundo cerebro y fuentes verificadas. Aplicaci�
 - **Responde solo con los resúmenes recuperados.** Cada afirmación lleva una cita literal del resumen de su fuente y el **código** comprueba que la cita está: ✓ verificada, ⚠ no verificada. También detecta fuentes que la IA cite sin haberlas recibido y cifras que no aparecen en las fuentes.
 - **Segundo cerebro, con guardado automático (activado por defecto):** cada respuesta se guarda como idea enlazada a sus fuentes, y las fuentes con afirmaciones verificadas se capturan como notas con su referencia y la cita; lo no verificado no se guarda solo. Se puede desactivar y guardar a mano. Las notas se organizan con el método PARA (Proyectos, Áreas, Recursos, Archivo) y se enlazan escribiendo `[[Título]]`, con retroenlaces y enlaces rotos que se pueden crear con un clic.
 - **Conexiones con lo que ya sabes:** antes de preguntar, el código busca tus notas relacionadas; la IA indica si la evidencia las apoya, matiza, contradice o amplía.
-- **Grafo de conocimiento** animado de notas y enlaces.
+- **Tres modos de consulta:** *Ciencia* (una búsqueda y respuesta rápida); *Investigación profunda* (un planificador divide la pregunta en 3-4 subpreguntas, cada una se investiga con sus propias fuentes verificadas, un crítico señala huecos y contradicciones —con 2 rondas, investiga además los huecos— y un redactor escribe el informe usando solo afirmaciones verificadas; avisa antes de las llamadas que hará); *Mi cerebro* (responde solo con tus notas y el código comprueba cada cita en la nota; nada sale hacia OpenAlex).
+- **Capturar documentos** (PDF, Word, texto, Markdown): la IA propone notas atómicas, cada una con una cita literal que el código busca en el documento, enlazadas con los títulos que ya tienes; eliges cuáles guardar. Cuatro tipos (ideas atómicas, ficha de artículo, conceptos, clase o reunión). Avisa si el documento ya estaba capturado.
+- **Radar de novedades:** a partir de tu perfil de intereses, busca en OpenAlex trabajos de los últimos 7, 30 o 90 días; la IA los puntúa de 0 a 10 con un motivo y solo ves los que superan tu umbral. Lo ya visto o capturado no se repite; la portada recuerda pasarlo cada semana.
+- **Revisión del cerebro** (por código, sin coste): enlaces rotos, posibles duplicados (con fusión), notas huérfanas y casi vacías; *autoenlazar* convierte en `[[enlace]]` la primera mención de cada título.
+- **Papelera** con restaurar, sincronizada con Drive; **paleta de comandos** (Ctrl+K) para buscar notas y ejecutar acciones.
+- **Grafo de conocimiento** animado, coloreable por PARA o por islas (grupos de notas conectadas), con resaltado de vecinas y notas arrastrables.
 - **El cerebro, primero:** la portada empieza por elegir dónde vive. Con Google Drive para ordenador (Chrome/Edge de escritorio), se elige una carpeta dentro de «Mi unidad»; SinapsIA escribe allí `sinapsia-cerebro.json` y el cliente de Drive lo sube a la nube. En otro ordenador, eligiendo la misma carpeta, se tiene el mismo cerebro. El fichero se fusiona nota a nota (gana la modificación más reciente; los borrados se guardan como lápidas) y se hace una copia diaria (se conservan las 14 últimas). En otros navegadores, abrir y descargar el expediente a mano.
 - **Voz:** dictado de la pregunta (se envía sola al terminar de hablar) y lectura de las respuestas en voz alta con las funciones del navegador.
 - **Descargas:** bibliografía en CSV y bóveda Markdown en ZIP (se abre en Obsidian o Logseq), sin depender de ninguna librería externa.
@@ -29,18 +34,21 @@ Con la propia clave de OpenAI, Google Gemini o Anthropic Claude, y una **clave g
 
 - En el navegador (IndexedDB): las notas, la conversación y las claves.
 - Hacia OpenAlex: las palabras de búsqueda. Hacia Crossref: los DOI.
-- Hacia el proveedor de IA: la pregunta, los resúmenes públicos encontrados y hasta cuatro notas relacionadas, con correos, DNI/NIE y teléfonos enmascarados; antes del primer envío de cada sesión se muestra una muestra de lo que sale y se pide confirmación.
+- Hacia el proveedor de IA: la pregunta, los resúmenes públicos encontrados y tus notas relacionadas (hasta cuatro; hasta ocho en el modo *Mi cerebro*), el texto de los documentos que captures y tu perfil del radar, con correos, DNI/NIE y teléfonos enmascarados; antes del primer envío de cada sesión se muestra una muestra de lo que sale y se pide confirmación.
 - Dictado: en Chrome y Edge el audio se procesa en los servidores de voz del navegador (Google o Microsoft); se avisa antes del primer uso.
 - Drive: el expediente queda en la carpeta que elijas, sincronizada por el cliente de Google Drive.
 
 ## Límites
+
+- La investigación profunda hace unas 7 llamadas a la IA con 1 ronda y unas 10 con 2: cuesta bastante más que una consulta.
+- Los documentos se leen con pdf.js y mammoth cargados desde cdnjs o jsDelivr; un PDF escaneado sin texto no se puede capturar. Se usan como mucho los primeros 40.000 caracteres.
 
 - Lee **resúmenes, no artículos completos**: lo que no está en el resumen no lo sabe. Consulta el artículo antes de citarlo.
 - Cada consulta trae hasta 8 trabajos: no es una revisión sistemática ni garantiza exhaustividad.
 - La verificación comprueba que la cita está en el resumen, no que la afirmación de la IA la interprete correctamente: léela.
 - Si se edita la misma nota en dos equipos a la vez, gana la última guardada; los retrasos de sincronización dependen del cliente de Drive.
 - El dictado solo funciona en navegadores con reconocimiento de voz (Chrome, Edge).
-- Probada con IA, OpenAlex, Crossref, carpeta de Drive y voz **simulados** (63 pruebas en Chromium, 29 de lógica en Node, 0 infracciones WCAG 2.2 AA con axe-core); pendiente de prueba con claves y servicios reales.
+- Probada con IA, OpenAlex, Crossref, carpeta de Drive y voz **simulados** (110 pruebas en Chromium, 44 de lógica en Node, 0 infracciones WCAG 2.2 AA con axe-core); los PDF y Word reales no se han probado (las pruebas usan texto); pendiente de prueba con claves y servicios reales.
 
 ## Autoría
 
@@ -59,5 +67,6 @@ MIT. Véase [LICENSE](LICENSE).
 
 ## Cambios
 
+- **1.2.0** — Modos *Investigación profunda* (multiagente) y *Mi cerebro*; captura de documentos en notas atómicas con citas verificadas; radar de novedades por perfil de intereses; revisión del cerebro con fusión y autoenlazado; papelera sincronizada; paleta Ctrl+K; grafo por islas con vecinas resaltadas y notas arrastrables.
 - **1.1.0** — La carpeta del cerebro (Google Drive para ordenador) pasa a ser el primer paso de la portada, con instrucciones; indicador del cerebro en la consulta; el dictado envía la pregunta al terminar de hablar; guardado automático de respuestas y fuentes verificadas (desactivable); colores de Forja con contraste AA.
 - **1.0.0** — Primera versión.
