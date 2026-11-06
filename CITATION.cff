@@ -8,8 +8,8 @@ authors:
     affiliation: "Universidad Miguel Hernández de Elche"
     orcid: "https://orcid.org/0000-0002-5519-4573"
 doi: "10.5281/zenodo.23985229"
-version: "1.1.0"
-date-released: "2026-11-05"
+version: "1.2.0"
+date-released: "2026-11-06"
 url: "https://fborrasumh.github.io/sinapsia/"
 repository-code: "https://github.com/fborrasumh/sinapsia"
 license: MIT
